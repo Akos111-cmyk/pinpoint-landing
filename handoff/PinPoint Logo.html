@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>PinPoint AI — Logo exports</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f1115;
+    --gold: #C9A13B;
+    --rule-light: #c8c9cc;
+    --rule-dark: #4a4e55;
+    --paper-light: #f4f5f7;
+    --paper-dark: #0f1115;
+    --text-on-dark: #f4f5f7;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ebecef; color: var(--ink); font-family: 'Inter', system-ui, sans-serif; }
+  body { min-height: 100vh; padding: 56px 48px 120px; }
+
+  header {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #6b6f76;
+    font-weight: 700;
+  }
+  header h1 {
+    margin: 6px 0 0;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  header p {
+    margin: 10px 0 0;
+    color: #4a4e55;
+    max-width: 720px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 880px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--paper-light);
+    border-radius: 14px;
+    border: 1px solid #dfe1e5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card.dark {
+    background: var(--paper-dark);
+    border-color: #22262c;
+  }
+  .card .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    border-bottom: 1px solid #e4e6ea;
+    background: #fafbfc;
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #6b6f76;
+    font-weight: 700;
+  }
+  .card.dark .label {
+    background: #161a20;
+    border-bottom-color: #22262c;
+    color: #a6abb2;
+  }
+  .card .label small {
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 500;
+    color: #8a8e95;
+    font-size: 12px;
+  }
+  .card.dark .label small { color: #7a808a; }
+
+  .stage {
+    padding: 72px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    flex: 1;
+  }
+  .stage svg {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    display: block;
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    padding: 14px 18px;
+    border-top: 1px solid #e4e6ea;
+    background: #fafbfc;
+  }
+  .card.dark .actions {
+    background: #161a20;
+    border-top-color: #22262c;
+  }
+  .btn {
+    flex: 1;
+    appearance: none;
+    border: 1px solid #d6d8dc;
+    background: #fff;
+    color: var(--ink);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font: 600 13px/1 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.005em;
+    cursor: pointer;
+    transition: background .12s ease, border-color .12s ease, transform .04s ease;
+  }
+  .btn:hover { background: #f4f5f7; border-color: #c4c7cc; }
+  .btn:active { transform: translateY(1px); }
+  .card.dark .btn {
+    background: #22262c;
+    border-color: #30353c;
+    color: var(--text-on-dark);
+  }
+  .card.dark .btn:hover { background: #2b3036; border-color: #3b4048; }
+
+  .swatches {
+    max-width: 1100px;
+    margin: 32px auto 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 18px 20px;
+    background: var(--paper-light);
+    border: 1px solid #dfe1e5;
+    border-radius: 14px;
+  }
+  .swatch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: #4a4e55;
+    font-weight: 500;
+  }
+  .swatch .chip {
+    width: 22px; height: 22px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.08);
+  }
+  .swatch code {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 12px;
+    color: var(--ink);
+  }
+
+  .note {
+    max-width: 1100px;
+    margin: 20px auto 0;
+    font-size: 12px;
+    color: #6b6f76;
+    line-height: 1.6;
+  }
+  .note code {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 12px;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 24px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--ink);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 999px;
+    opacity: 0;
+    transition: opacity .2s ease, transform .2s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">PinPoint AI · logo exports</div>
+  <h1>Light and dark lockups</h1>
+  <p>Two production-ready SVGs. Both use the dotless "ı" (U+0131) so the gold circle is the only visible tittle, with the dot's position measured against the actual ink stem of the letter — not the glyph advance box — so it lands dead-centre regardless of font rendering. Download either, or copy the raw SVG to clipboard.</p>
+</header>
+
+<div class="grid">
+
+  <!-- LIGHT -->
+  <div class="card" data-mode="light">
+    <div class="label">
+      <span>Light lockup</span>
+      <small>Ink on paper</small>
+    </div>
+    <div class="stage">
+      <svg class="logoSvg" viewBox="0 0 720 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PinPoint AI">
+        <defs>
+          <style>
+            .wm-l { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 120px; letter-spacing: -4px; }
+            .ink-l  { fill: #0f1115; }
+            .gold-l { fill: #C9A13B; }
+            .rule-l { fill: #c8c9cc; }
+          </style>
+        </defs>
+        <text x="0" y="130" class="wm-l ink-l"><tspan class="pre">P</tspan><tspan class="dotI">ı</tspan><tspan class="post">npoint</tspan></text>
+        <circle class="goldDot gold-l" cx="97" cy="38" r="15" />
+        <rect class="rule-l" x="500" y="50" width="3" height="80" rx="1.5"/>
+        <text x="520" y="130" class="wm-l gold-l">AI</text>
+      </svg>
+    </div>
+    <div class="actions">
+      <button class="btn" data-action="download" data-file="pinpoint-ai-light.svg">Download .svg</button>
+      <button class="btn" data-action="copy">Copy SVG</button>
+    </div>
+  </div>
+
+  <!-- DARK -->
+  <div class="card dark" data-mode="dark">
+    <div class="label">
+      <span>Dark lockup</span>
+      <small>Paper on ink</small>
+    </div>
+    <div class="stage">
+      <svg class="logoSvg" viewBox="0 0 720 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PinPoint AI">
+        <defs>
+          <style>
+            .wm-d { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 120px; letter-spacing: -4px; }
+            .paper-d { fill: #f4f5f7; }
+            .gold-d  { fill: #C9A13B; }
+            .rule-d  { fill: #4a4e55; }
+          </style>
+        </defs>
+        <text x="0" y="130" class="wm-d paper-d"><tspan class="pre">P</tspan><tspan class="dotI">ı</tspan><tspan class="post">npoint</tspan></text>
+        <circle class="goldDot gold-d" cx="97" cy="38" r="15" />
+        <rect class="rule-d" x="500" y="50" width="3" height="80" rx="1.5"/>
+        <text x="520" y="130" class="wm-d gold-d">AI</text>
+      </svg>
+    </div>
+    <div class="actions">
+      <button class="btn" data-action="download" data-file="pinpoint-ai-dark.svg">Download .svg</button>
+      <button class="btn" data-action="copy">Copy SVG</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="swatches">
+  <div class="swatch"><span class="chip" style="background:#0f1115"></span><code>#0f1115</code> ink</div>
+  <div class="swatch"><span class="chip" style="background:#f4f5f7"></span><code>#f4f5f7</code> paper</div>
+  <div class="swatch"><span class="chip" style="background:#C9A13B"></span><code>#C9A13B</code> gold</div>
+  <div class="swatch"><span class="chip" style="background:#c8c9cc"></span><code>#c8c9cc</code> rule (light)</div>
+  <div class="swatch"><span class="chip" style="background:#4a4e55"></span><code>#4a4e55</code> rule (dark)</div>
+</div>
+
+<p class="note">
+  Exported SVGs embed an Inter font import so they render identically wherever they're dropped. The gold-dot position is baked into the exported file's <code>cx</code> — measured once, saved as a static coordinate, so no script is needed at runtime.
+</p>
+
+<div class="toast" id="toast">Copied to clipboard</div>
+
+<script>
+// ---------- 1. Align the gold dot on each logo's real ink stem ----------
+function alignDotInSvg(svgEl) {
+  const pre  = svgEl.querySelector('.pre');
+  const dotI = svgEl.querySelector('.dotI');
+  const circ = svgEl.querySelector('.goldDot');
+  if (!pre || !dotI || !circ) return;
+
+  const iBox = dotI.getBBox();
+
+  // Rasterize just the "ı" to find its true ink centre
+  const scale = 4;
+  const w = Math.max(80, Math.ceil(iBox.width * scale) + 80);
+  const h = 720;
+  const cvs = document.createElement('canvas');
+  cvs.width = w; cvs.height = h;
+  const ctx = cvs.getContext('2d');
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, w, h);
+  ctx.fillStyle = '#000';
+  ctx.font = `800 ${120 * scale}px Inter, sans-serif`;
+  ctx.textBaseline = 'alphabetic';
+  ctx.fillText('ı', 20, 130 * scale);
+
+  const data = ctx.getImageData(0, 0, w, h).data;
+  let minX = -1, maxX = -1;
+  for (let x = 0; x < w; x++) {
+    for (let y = 0; y < h; y++) {
+      if (data[(y * w + x) * 4] < 128) {
+        if (minX < 0) minX = x;
+        maxX = x;
+        break;
+      }
+    }
+  }
+  if (minX < 0) return;
+
+  const inkCenterCanvas = (minX + maxX) / 2;
+  const inkOffset = (inkCenterCanvas - 20) / scale;
+  const finalX = iBox.x + inkOffset;
+  circ.setAttribute('cx', finalX.toFixed(2));
+}
+
+function alignAll() {
+  document.querySelectorAll('.logoSvg').forEach(alignDotInSvg);
+}
+
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(alignAll);
+}
+window.addEventListener('load', alignAll);
+setTimeout(alignAll, 400);
+setTimeout(alignAll, 1200);
+
+// ---------- 2. Build a self-contained, exportable SVG ----------
+function buildExportSvg(cardEl) {
+  const mode = cardEl.dataset.mode;
+  const live = cardEl.querySelector('.logoSvg');
+  const cx = parseFloat(live.querySelector('.goldDot').getAttribute('cx'));
+  const isDark = mode === 'dark';
+  const textColor = isDark ? '#f4f5f7' : '#0f1115';
+  const ruleColor = isDark ? '#4a4e55' : '#c8c9cc';
+  const gold      = '#C9A13B';
+
+  // Standalone, drop-anywhere SVG. Imports Inter so it renders identically
+  // wherever it's used.
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 170" role="img" aria-label="PinPoint AI">
+  <defs>
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+      .wm { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 120px; letter-spacing: -4px; }
+    ]]></style>
+  </defs>
+  <text x="0" y="130" class="wm" fill="${textColor}">P&#x131;npoint</text>
+  <circle cx="${cx.toFixed(2)}" cy="38" r="15" fill="${gold}"/>
+  <rect x="500" y="50" width="3" height="80" rx="1.5" fill="${ruleColor}"/>
+  <text x="520" y="130" class="wm" fill="${gold}">AI</text>
+</svg>
+`;
+}
+
+// ---------- 3. Wire up the download / copy buttons ----------
+function flashToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(flashToast._t);
+  flashToast._t = setTimeout(() => t.classList.remove('show'), 1600);
+}
+
+document.querySelectorAll('.card').forEach(card => {
+  card.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Make sure alignment has run at least once
+      alignDotInSvg(card.querySelector('.logoSvg'));
+
+      const svg = buildExportSvg(card);
+      const action = btn.dataset.action;
+
+      if (action === 'download') {
+        const blob = new Blob([svg], { type: 'image/svg+xml' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = btn.dataset.file;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        flashToast('Downloaded ' + btn.dataset.file);
+      } else if (action === 'copy') {
+        navigator.clipboard.writeText(svg).then(
+          () => flashToast('SVG copied to clipboard'),
+          () => flashToast('Copy failed — try download')
+        );
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

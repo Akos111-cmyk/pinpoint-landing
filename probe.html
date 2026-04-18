@@ -1,0 +1,21 @@
+<!doctype html><html><head>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+<style>.wm { font-family: 'Inter',sans-serif; font-weight: 800; font-size: 120px; letter-spacing: -4px; }</style>
+</head><body>
+<svg id="s" viewBox="0 0 720 170" width="720" height="170" xmlns="http://www.w3.org/2000/svg">
+  <text id="t" x="0" y="130" class="wm">Pınpoint</text>
+</svg>
+<script>
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const svg = document.getElementById('s');
+    const ns = 'http://www.w3.org/2000/svg';
+    const mk = (s) => { const t = document.createElementNS(ns,'text'); t.setAttribute('x',0); t.setAttribute('y',130); t.setAttribute('class','wm'); t.textContent = s; svg.appendChild(t); const b = t.getBBox(); t.remove(); return b; };
+    const p = mk('P');
+    const pi = mk('Pı');
+    // Stem center of the ı is roughly midpoint of the ı-only advance between (p.width, pi.width)
+    const stemCenter = (p.width + pi.width) / 2;
+    document.title = 'P=' + p.width + ' Pı=' + pi.width + ' center=' + stemCenter;
+  }, 500);
+});
+</script></body></html>
