@@ -1209,7 +1209,8 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 16px;
-      margin-bottom: 24px;
+      margin: 0 auto 24px;
+      max-width: 900px;
     }
     .pm-callout {
       background: var(--white);
@@ -1217,7 +1218,8 @@
       border-left: 3px solid var(--gold);
       border-radius: var(--radius-lg);
       padding: 32px 36px;
-      max-width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
     }
     .pm-callout-tag {
       font-family: var(--mono);
@@ -1530,6 +1532,8 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
     }
     @media (max-width: 1024px) {
       .who-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1697,6 +1701,8 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       position: relative;
+      max-width: 900px;
+      margin: 0 auto;
     }
     .process-steps::after {
       content: '';
@@ -1744,6 +1750,8 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
     }
     .testi-card {
       background: var(--white);
@@ -2227,7 +2235,7 @@
   <div class="logobar">
     <div class="container">
     <div class="logobar-label">Connects with the tools your team already uses</div>
-    <div style="overflow:hidden;">
+    <div style="overflow:hidden; max-width:900px; margin:0 auto; transform:translateZ(0);">
       <div class="logobar-track" aria-label="Integrations">
 
         <!-- ── Set 1 ── -->
