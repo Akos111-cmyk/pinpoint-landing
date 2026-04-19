@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pinpoint AI — AI Transformation That Delivers</title>
+  <!-- TODO: replace content value with your GSC verification code -->
+  <meta name="google-site-verification" content="REPLACE_WITH_GSC_CODE" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -864,6 +866,9 @@
       grid-template-columns: 1fr 1fr;
       gap: 20px;
       align-items: stretch;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .comp-col {
       background: var(--white);
@@ -874,7 +879,7 @@
       flex-direction: column;
     }
     .comp-col-pill { padding: 16px 24px 12px; text-align: center; }
-    .comp-col-bullets { padding: 16px 24px 20px; margin-top: auto; }
+    .comp-col-bullets { padding: 16px 24px 20px; }
     .comp-pill {
       display: inline-flex;
       align-items: center;
@@ -2094,7 +2099,7 @@
           <li><a href="#faq">FAQ</a></li>
         </ul>
         <div class="nav-actions">
-          <a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/a-kostarevs/30min'});return false;" class="btn btn-gold">Book an Intro</a>
+          <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Book an Intro</a>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -2107,7 +2112,7 @@
     <a href="#who"       onclick="closeDrawer()">Who It's For</a>
     <a href="#process"   onclick="closeDrawer()">The Process</a>
     <a href="#faq"       onclick="closeDrawer()">FAQ</a>
-    <a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/a-kostarevs/30min'});closeDrawer();return false;" style="color:var(--gold);font-weight:700;">Book an Intro →</a>
+    <a href="javascript:void(0)" onclick="openCalendly();closeDrawer();return false;" style="color:var(--gold);font-weight:700;">Book an Intro →</a>
   </div>
 
   <!-- ══════════ HERO ══════════ -->
@@ -2130,7 +2135,7 @@
         </p>
 
         <div class="hero-actions reveal d3" style="justify-content:center;">
-          <a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/a-kostarevs/30min'});return false;" class="btn btn-gold">Book an Intro →</a>
+          <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Book an Intro →</a>
         </div>
 
         <div class="hero-dashboard reveal d4">
@@ -2763,7 +2768,7 @@
       <div class="cta-box reveal">
         <h2 class="section-title">Ready to find where AI will<br>actually move the needle?</h2>
         <p class="section-sub">Start with a free 30-minute Alignment Call. Walk away with clarity on where AI creates real leverage in your business.</p>
-        <a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/a-kostarevs/30min'});return false;" class="btn btn-gold">Book an Intro →</a>
+        <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Book an Intro →</a>
         <p class="cta-trust">For business leaders focused on sustainable AI investments.</p>
       </div>
     </div>
@@ -2784,7 +2789,7 @@
           </a>
           <p class="footer-tagline">Strategy before implementation. Results that last.</p>
         </div>
-        <span class="footer-copy">© 2025 Pinpoint AI. All rights reserved.</span>
+        <span class="footer-copy">© 2025 Pinpoint AI. All rights reserved. · <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:inherit;text-decoration:underline;">Privacy Policy</a> · <a href="javascript:void(0)" onclick="reopenConsent()" style="color:inherit;text-decoration:underline;">Cookie Settings</a></span>
       </div>
     </div>
   </footer>
@@ -2864,6 +2869,117 @@
     setTimeout(alignLogoDots, 400);
     alignLogoDots();
   </script>
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <!-- ══════════ GDPR: COOKIE CONSENT + GA4 + CALENDLY LAZY LOAD ══════════ -->
+  <script>
+    var GA_ID = 'G-XXXXXXXXXX'; // TODO: replace with your GA4 Measurement ID
+
+    function loadGA() {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', GA_ID, { anonymize_ip: true });
+    }
+
+    function openCalendly() {
+      if (window.Calendly) {
+        Calendly.initPopupWidget({ url: 'https://calendly.com/a-kostarevs/30min' });
+        return;
+      }
+      var s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.onload = function() {
+        Calendly.initPopupWidget({ url: 'https://calendly.com/a-kostarevs/30min' });
+      };
+      document.body.appendChild(s);
+    }
+
+    function grantConsent() {
+      localStorage.setItem('cookie_consent', 'granted');
+      loadGA();
+      var banner = document.getElementById('cookie-banner');
+      if (banner) banner.remove();
+    }
+
+    function denyConsent() {
+      localStorage.setItem('cookie_consent', 'denied');
+      var banner = document.getElementById('cookie-banner');
+      if (banner) banner.remove();
+    }
+
+    function reopenConsent() {
+      localStorage.removeItem('cookie_consent');
+      var banner = document.getElementById('cookie-banner');
+      if (banner) { banner.style.display = 'flex'; return; }
+      buildBanner();
+    }
+
+    function openPrivacyModal() {
+      document.getElementById('privacy-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePrivacyModal() {
+      document.getElementById('privacy-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    (function() {
+      var stored = localStorage.getItem('cookie_consent');
+      if (stored === 'granted') { loadGA(); }
+      else if (!stored) { buildBanner(); }
+    })();
+
+    function buildBanner() {
+      var b = document.createElement('div');
+      b.id = 'cookie-banner';
+      b.innerHTML =
+        '<p style="margin:0;flex:1;font-size:13px;line-height:1.5;">We use cookies to understand how visitors use our site (Google Analytics). No personal data is sold. <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:#C9A84C;text-decoration:underline;">Privacy Policy</a></p>' +
+        '<div style="display:flex;gap:10px;flex-shrink:0;">' +
+          '<button onclick="denyConsent()" style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-family:inherit;">Decline</button>' +
+          '<button onclick="grantConsent()" style="background:#C9A84C;border:none;color:#fff;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;">Accept</button>' +
+        '</div>';
+      b.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1a1a1a;color:#fff;padding:16px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 -2px 12px rgba(0,0,0,0.15);';
+      document.body.appendChild(b);
+    }
+  </script>
+
+  <!-- ══════════ PRIVACY POLICY MODAL ══════════ -->
+  <div id="privacy-modal" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:24px;">
+    <div style="background:#fff;border-radius:12px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto;padding:40px;position:relative;font-family:'Plus Jakarta Sans',sans-serif;color:#1a1a1a;">
+      <button onclick="closePrivacyModal()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;line-height:1;" aria-label="Close">&times;</button>
+      <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;">Privacy Policy</h2>
+      <p style="font-size:12px;color:#888;font-family:'DM Mono',monospace;margin-bottom:24px;">Last updated: April 2026</p>
+
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Data Controller</h3>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Pinpoint AI<br>Contact for data requests: <a href="mailto:privacy@pinpointai.com" style="color:#C9A84C;">privacy@pinpointai.com</a></p>
+
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">What Data We Collect</h3>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">This website does not collect personal data directly. When you book a meeting, <strong>Calendly</strong> collects your name, email address, and timezone. We receive only the meeting confirmation. If you accept analytics cookies, <strong>Google Analytics</strong> collects anonymised usage data (pages visited, session duration, approximate location). IP addresses are anonymised.</p>
+
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Cookies</h3>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;"><strong>Analytics cookies</strong> (Google Analytics) — set only after you accept. Used to understand how visitors use the site. <strong>Functional cookies</strong> (Calendly) — set inside the booking widget when you choose to book a meeting. Calendly manages its own consent.</p>
+
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Third-Party Processors</h3>
+      <ul style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;padding-left:20px;">
+        <li><a href="https://calendly.com/privacy" target="_blank" style="color:#C9A84C;">Calendly</a> — meeting scheduling</li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" style="color:#C9A84C;">Google Analytics</a> — site analytics (with consent)</li>
+        <li>Google Fonts — typography (CSS only, no cookies)</li>
+      </ul>
+
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Legal Basis</h3>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Analytics: your consent (Art. 6(1)(a) GDPR). Meeting scheduling: legitimate interest in responding to a business inquiry (Art. 6(1)(f) GDPR).</p>
+
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Your Rights</h3>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">You have the right to access, correct, delete, or export your personal data. To exercise these rights, contact <a href="mailto:privacy@pinpointai.com" style="color:#C9A84C;">privacy@pinpointai.com</a>. You may also withdraw analytics consent at any time via the Cookie Settings link in the footer.</p>
+
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Retention</h3>
+      <p style="font-size:14px;color:#555;line-height:1.7;">Google Analytics data is retained for 14 months. Calendly data is retained per <a href="https://calendly.com/privacy" target="_blank" style="color:#C9A84C;">Calendly's policy</a>.</p>
+    </div>
+  </div>
 </body>
 </html>
