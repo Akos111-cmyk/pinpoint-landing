@@ -1524,7 +1524,7 @@
     /* ══════════════════════════════
        WHO IS THIS FOR
     ══════════════════════════════ */
-    .who { background: var(--white); }
+    .who { background: var(--bg); }
     .who-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
     .who-grid {
       display: grid;
@@ -2847,20 +2847,38 @@
       });
     });
 
-    // Align gold dot using actual rendered screen position of the ı tspan,
-    // then convert back to SVG viewBox coordinates.
+    // Align gold dot by drawing the characters on canvas at the same 120px
+    // font-size as the SVG, so canvas px == SVG viewBox units directly.
     function alignDotInSvg(svgEl) {
-      const dotI = svgEl.querySelector('tspan.dotI');
       const circ = svgEl.querySelector('circle.goldDot');
-      if (!dotI || !circ) return;
+      if (!circ) return;
+      // Wait until Inter is loaded so measurements are accurate.
+      if (document.fonts && !document.fonts.check('800 120px Inter')) return;
       try {
-        const rects = dotI.getClientRects();
-        if (!rects.length || !rects[0].width) return;
-        const svgRect = svgEl.getBoundingClientRect();
-        if (!svgRect.width) return;
-        const scaleX = 720 / svgRect.width;
-        const centerX = rects[0].left + rects[0].width / 2 - svgRect.left;
-        circ.setAttribute('cx', (centerX * scaleX).toFixed(2));
+        const cvs = document.createElement('canvas');
+        cvs.width = 400; cvs.height = 240;
+        const ctx = cvs.getContext('2d');
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(0, 0, 400, 240);
+        ctx.fillStyle = '#000';
+        ctx.font = '800 120px Inter, sans-serif';
+        ctx.textBaseline = 'alphabetic';
+        // P advance minus letter-spacing (-4px) = where ı starts in SVG coords
+        const iStart = Math.round(ctx.measureText('P').width - 4);
+        ctx.fillText('\u0131', iStart, 180);
+        const data = ctx.getImageData(0, 0, 400, 240).data;
+        let minX = -1, maxX = -1;
+        for (let x = 0; x < 400; x++) {
+          for (let y = 0; y < 240; y++) {
+            if (data[(y * 400 + x) * 4] < 128) {
+              if (minX < 0) minX = x;
+              maxX = x;
+              break;
+            }
+          }
+        }
+        if (minX < 0) return;
+        circ.setAttribute('cx', ((minX + maxX) / 2).toFixed(2));
       } catch (_) {}
     }
     function alignLogoDots() {
@@ -2871,6 +2889,7 @@
     }
     window.addEventListener('load', alignLogoDots);
     setTimeout(alignLogoDots, 400);
+    setTimeout(alignLogoDots, 1500);
     alignLogoDots();
   </script>
   <!-- ══════════ GDPR: COOKIE CONSENT + GA4 + CALENDLY LAZY LOAD ══════════ -->
