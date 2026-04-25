@@ -61,7 +61,7 @@
 
     /* ── Shared ── */
     .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    section { padding: 72px 0; }
+    section { padding: 36px 0; }
 
     .chip {
       display: inline-flex;
@@ -200,7 +200,7 @@
     .nav-actions { display: flex; align-items: center; gap: 12px; }
 
     .lang-toggle {
-      display: flex; align-items: center; gap: 6px;
+      display: flex; align-items: center; gap: 2px;
       font-family: var(--mono);
       font-size: 12px; font-weight: 500;
       letter-spacing: 0.08em;
@@ -208,7 +208,7 @@
     .lang-toggle a {
       color: var(--text-3);
       text-decoration: none;
-      padding: 2px 4px;
+      padding: 2px 2px;
       transition: color 0.15s;
     }
     .lang-toggle a:hover { color: var(--text); }
@@ -2007,7 +2007,7 @@
     }
 
     @media (max-width: 768px) {
-      section { padding: 56px 0; }
+      section { padding: 28px 0; }
       .container { padding: 0 16px; }
       .nav-menu, .nav-actions { display: none; }
       .hamburger { display: flex; }
@@ -2072,7 +2072,7 @@
     }
 
     @media (max-width: 480px) {
-      section { padding: 40px 0; }
+      section { padding: 20px 0; }
       .container { padding: 0 12px; }
       .hero-h1 { font-size: 26px; line-height: 1.2; }
       .hero-pills { display: none; }
@@ -2144,12 +2144,12 @@
           <li><a href="#faq">BUJ</a></li>
         </ul>
         <div class="nav-actions">
+          <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Bezmaksas konsultācija</a>
           <div class="lang-toggle" aria-label="Valoda">
             <a href="/" onclick="setLang('en')">EN</a>
             <span class="sep">|</span>
             <a href="/lv/" class="active" onclick="setLang('lv')">LV</a>
           </div>
-          <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Pieteikties konsultācijai</a>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -2167,7 +2167,7 @@
       <span class="sep">|</span>
       <a href="/lv/" class="active" onclick="setLang('lv');closeDrawer()">LV</a>
     </div>
-    <a href="javascript:void(0)" onclick="openCalendly();closeDrawer();return false;" style="color:var(--gold);font-weight:700;">Pieteikties ievadsarunai →</a>
+    <a href="javascript:void(0)" onclick="openCalendly();closeDrawer();return false;" style="color:var(--gold);font-weight:700;">Bezmaksas konsultācija →</a>
   </div>
 
   <!-- ══════════ HERO ══════════ -->
@@ -2181,16 +2181,16 @@
         </div>
 
         <h1 class="hero-h1 reveal d1">
-          Atrodi vājās vietas. Aprēķini to izmaksas.<br>
-          Un tikai tad izstrādā <span class="highlight">piemērotāko AI risinājumu.</span>
+          Atrodam problēmu. Kvantificējam to.<br>
+          Tad izstrādājam <span class="highlight">pareizo AI risinājumu.</span>
         </h1>
 
         <p class="hero-p reveal d2">
-          Mēs auditējam jūsu darba procesus, identificējam automatizācijas iespējas ar augstāko investīciju atdevi (ROI), kā arī izstrādājam un ieviešam AI aģentus — lai jūsu investīcija atpelnītos jau viena ceturkšņa laikā.
+          Mēs auditējam jūsu darbplūsmas, atklājam automatizācijas ar augstāko ROI, izstrādājam un ieviešam AI aģentus — lai jūsu ieguldījums atmaksātos viena ceturkšņa laikā.
         </p>
 
         <div class="hero-actions reveal d3" style="justify-content:center;">
-          <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Pieteikties ievadsarunai →</a>
+          <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Bezmaksas konsultācija →</a>
         </div>
 
         <div class="hero-dashboard reveal d4">
@@ -2380,9 +2380,9 @@
   <section class="pain" id="pain">
     <div class="container">
       <div class="pain-header reveal">
-        <div class="chip">Vecā un jaunā pieeja</div>
-        <h2 class="section-title">Jūs izmantojat AI. Bet tas nestrādā jūsu labā.</h2>
-        <p class="section-sub">Lielākā daļa komandu izmanto AI kā palīgu, bet visu darbu tik un tā paveic pašas. Mūsdienīgi AI aģenti pieslēdzas jūsu rīkiem un izdara darbu jūsu vietā.</p>
+        <div class="chip">Vecā pieeja pret jauno</div>
+        <h2 class="section-title">AI tiek izmantots, bet tas nesniedz rezultātus.</h2>
+        <p class="section-sub">Lielākā daļa komandu izmanto AI kā palīgu — un joprojām visu darbu veic paši. Mūsdienīgi AI aģenti integrējas uzņēmuma rīkos un reāli paveic darbu.</p>
       </div>
 
       <div class="comp-cols">
@@ -2396,12 +2396,12 @@
             <div class="pf-caption">Jūs jautājat → AI atbild → Jūs joprojām darāt visu paši</div>
           </div>
           <div class="comp-col-bullets">
-            <div class="comp-section-title">AI bez sistēmas nozīmē tikai liekus soļus</div>
+            <div class="comp-section-title">AI bez sistēmas ir tikai lieki soļi</div>
             <ul class="comp-list">
-              <li><span class="comp-icon x">✕</span>Jautājat ChatGPT, saņemat atbildi, bet darbu tik un tā izdarāt paši</li>
-              <li><span class="comp-icon x">✕</span>Dati ir izkaisīti dažādās lietotnēs — nav vienota informācijas avota</li>
-              <li><span class="comp-icon x">✕</span>Nav AI stratēģijas — rīki tiek ieviesti haotiski un bez mērāma rezultāta</li>
-              <li><span class="comp-icon x">✕</span>Budžets tiek izšķiests abonementiem, kurus neviens nevar pamatot</li>
+              <li><span class="comp-icon x">✕</span>Tiek uzdoti jautājumi ChatGPT, saņemtas atbildes, bet darbs joprojām jāveic manuāli</li>
+              <li><span class="comp-icon x">✕</span>Dati ir fragmentēti dažādās lietotnēs — nav vienota patiesības avota</li>
+              <li><span class="comp-icon x">✕</span>Nav AI stratēģijas — rīki tiek pievienoti haotiski, bez izmērāmas ietekmes</li>
+              <li><span class="comp-icon x">✕</span>Budžets tiek izšķiests par abonementiem, kurus neviens nespēj pamatot</li>
             </ul>
           </div>
         </div>
@@ -2416,12 +2416,12 @@
             <div class="pf-caption">Dod norādes AI vienreiz → AI patstāvīgi paveic rutīnas darbus</div>
           </div>
           <div class="comp-col-bullets">
-            <div class="comp-section-title">Aģenti, kas reāli strādā. Rezultāti, kurus varat izmērīt.</div>
+            <div class="comp-section-title">Aģenti, kas strādā. Rezultāti, kurus iespējams izmērīt.</div>
             <ul class="comp-list">
-              <li><span class="comp-icon check">✓</span>Katrs darba process ir auditēts, katra vājā vieta – izmērīta</li>
-              <li><span class="comp-icon check">✓</span>Izkaisītie dati ir apvienoti automatizētās darba plūsmās</li>
-              <li><span class="comp-icon check">✓</span>Katrs ieteikums ir pamatots ar prognozēto investīciju atdevi (ROI)</li>
-              <li><span class="comp-icon check">✓</span>Risinājumi tiek reāli izstrādāti un ieviesti — nevis tikai apkopoti prezentācijā</li>
+              <li><span class="comp-icon check">✓</span>Katra darbplūsma tiek auditēta, katrs šķērslis — kvantificēts</li>
+              <li><span class="comp-icon check">✓</span>Fragmentēti dati tiek apvienoti automatizētās darbplūsmās</li>
+              <li><span class="comp-icon check">✓</span>Katrs ieteikums ir pamatots ar prognozētu ROI</li>
+              <li><span class="comp-icon check">✓</span>Izstrādāts un ieviests praksē — nevis tikai prezentācija</li>
             </ul>
           </div>
         </div>
@@ -2433,41 +2433,41 @@
   <section class="solutions" id="solutions">
     <div class="container">
       <div class="solutions-header reveal">
-        <div class="chip">Kā tas strādā</div>
-        <h2 class="section-title">No audita līdz strādājošiem aģentiem — viens process, no sākuma līdz beigām</h2>
+        <div class="chip">Kā tas darbojas</div>
+        <h2 class="section-title">No audita līdz strādājošiem aģentiem — viens process no sākuma līdz beigām</h2>
         <p class="section-sub">Pieci soļi. Viens projektu vadītājs. Nekādu pārsteigumu.</p>
       </div>
       <div class="how-steps">
         <div class="step reveal d1">
           <div class="step-header"><div class="step-num">01</div><div class="step-title">Kartēšana</div></div>
-          <p class="step-desc">Darba seminārā analizējam jūsu procesus. Atrodam visu, kas ir garlaicīgs, vienveidīgs un apgrūtinošs.</p>
+          <p class="step-desc">Darbnīcās analizējam jūsu procesus. Atrodam to, kas ir garlaicīgs, atkārtojas un sagādā grūtības.</p>
         </div>
         <div class="step reveal d2">
           <div class="step-header"><div class="step-num">02</div><div class="step-title">Identificēšana</div></div>
-          <p class="step-desc">Atrodam automatizācijas iespējas ar visaugstāko atdevi pret ieguldīto darbu.</p>
+          <p class="step-desc">Identificējam automatizācijas iespējas ar labāko ietekmes un ieguldīto pūļu attiecību.</p>
         </div>
         <div class="step reveal d3">
           <div class="step-header"><div class="step-num">03</div><div class="step-title">Izvēle</div></div>
-          <p class="step-desc">Izvēlamies piemērotākos rīkus — pirmajā vietā biznesa vajadzības, pēc tam tehnoloģijas.</p>
+          <p class="step-desc">Izvēlamies piemērotākos rīkus — pirmajā vietā biznesa vajadzības, otrajā tehnoloģijas.</p>
         </div>
         <div class="step reveal d4">
           <div class="step-header"><div class="step-num">04</div><div class="step-title">Izstrāde</div></div>
-          <p class="step-desc">Ieviešam ātros uzlabojumus. Mērām rezultātus. Pilnveidojam, saglabājot cilvēka kontroli pār procesu.</p>
+          <p class="step-desc">Nodrošinām ātros ieguvumus. Mērām rezultātus. Veicam iterācijas, saglabājot cilvēka iesaisti.</p>
         </div>
         <div class="step reveal d4">
           <div class="step-header"><div class="step-num">05</div><div class="step-title">Pilnveidošana</div></div>
-          <p class="step-desc">Paplašinām automatizāciju uz nākamajiem procesiem, tiklīdz pirmais ir veiksmīgi sevi pierādījis.</p>
+          <p class="step-desc">Pārejam pie nākamā procesa, tiklīdz pirmais ir sevi pierādījis.</p>
         </div>
       </div>
       <div class="pm-callout reveal">
-        <div class="pm-callout-tag">Projektu vadība — iekļauta cenā</div>
-        <div class="pm-callout-title">Projektu vadība nav atsevišķa izmaksu pozīcija. Tā ir neatņemama katras sadarbības sastāvdaļa.</div>
-        <p class="pm-callout-desc">Katra sadarbība ietver strukturētu projekta izpildi: statusa atskaites, skaidrus atskaites punktus un lēmumu reģistru — lai nekas nepazustu starp rindām. Vairāk nekā 18 gadu pieredze uzņēmumu operatīvajā darbībā ļauj mums uzreiz saredzēt, kas nedarbojas, kāpēc tas nedarbojas un kā to salabot.</p>
+        <div class="pm-callout-tag">Projektu vadība — iekļauta</div>
+        <div class="pm-callout-title">Projektu vadība nav atsevišķa pozīcija tāmē. Tā ir iestrādāta katrā sadarbībā.</div>
+        <p class="pm-callout-desc">Katra sadarbība ietver strukturētu izpildi: statusa atjauninājumus, skaidrus atskaites punktus un lēmumu reģistru — lai nekas nepaliktu nepamanīts. Vairāk nekā 18 gadu pieredze operacionālajā darbībā nozīmē, ka mēs zinām, kas nedarbojas, kāpēc tas nedarbojas un kā to salabot.</p>
         <div class="pm-callout-pills">
-          <span class="pm-callout-pill">Iknedēļas statusa atskaites</span>
+          <span class="pm-callout-pill">Iknedēļas statuss</span>
           <span class="pm-callout-pill">Viena kontaktpersona</span>
           <span class="pm-callout-pill">Rakstisks lēmumu reģistrs</span>
-          <span class="pm-callout-pill">Risku un šķēršļu uzraudzība</span>
+          <span class="pm-callout-pill">Risku un šķēršļu uzskaite</span>
         </div>
       </div>
     </div>
@@ -2478,29 +2478,29 @@
     <div class="container">
       <div class="benefits-inner">
         <div class="benefits-content reveal">
-          <div style="text-align:center"><div class="chip">Kāpēc izvēlēties mūs</div></div>
-          <h2 class="section-title">Praktiska pieredze operāciju vadībā, nevis tikai konsultācijas.</h2>
-          <p class="section-sub">Vairāk nekā 18 gadu pieredze praktiskā biznesa procesu optimizācijā sarežģītās un dinamiski mainīgās nozarēs — pārzinot no iekšienes tos pašus procesus, kuri šodien tiek automatizēti.</p>
+          <div style="text-align:center"><div class="chip">Kāpēc mēs</div></div>
+          <h2 class="section-title">Operacionālā pieredze. Ne tikai konsultācijas.</h2>
+          <p class="section-sub">Vairāk nekā 18 gadu praktiska pieredze biznesa procesu optimizācijā sarežģītās, dinamiskās nozarēs — mēs pārzinām no iekšienes tās darba plūsmas, kuras tiek automatizētas.</p>
           <div class="benefits-list">
             <div class="benefit-item">
               <div class="benefit-icon">◆</div>
               <div>
-                <div class="benefit-title">Dziļa izpratne par procesiem un AI virzīta izpilde</div>
-                <p class="benefit-desc">Šāda mēroga praktiskā pieredze ļauj precīzi saredzēt, kur AI sniedz reālu atdevi — un kur ne.</p>
+                <div class="benefit-title">Dziļa procesu ekspertīze, AI spēcināta izpilde</div>
+                <p class="benefit-desc">Šis operacionālās pieredzes dziļums ļauj skaidri saprast, kur AI sniedz reālu atdevi — un kur nē.</p>
               </div>
             </div>
             <div class="benefit-item">
               <div class="benefit-icon">★</div>
               <div>
-                <div class="benefit-title">Kopsakarību atpazīšana dažādās nozarēs</div>
-                <p class="benefit-desc">Vienas un tās pašas vājās vietas parādās dažādās nozarēs tikai zem citiem nosaukumiem — šo kopsakarību saskatīšana būtiski saīsina audita un diagnostikas laiku.</p>
+                <div class="benefit-title">Starpnozaru likumsakarību atpazīšana</div>
+                <p class="benefit-desc">Tās pašas neefektivitātes ar dažādiem nosaukumiem atkārtojas dažādās nozarēs — šo likumsakarību atpazīšana ievērojami samazina problēmu diagnostikas laiku.</p>
               </div>
             </div>
             <div class="benefit-item">
               <div class="benefit-icon">▲</div>
               <div>
-                <div class="benefit-title">Pārbaudīts reālā darba vidē</div>
-                <p class="benefit-desc">Katra pieeja ir pārbaudīta praksē un reālā biznesa vidē — nevis tikai apkopota teorētiskās prezentācijās.</p>
+                <div class="benefit-title">Pārbaudīts reālā darbībā</div>
+                <p class="benefit-desc">Katra metodoloģija ir pārbaudīta reālā darbībā — nevis teorētiski izstrādāta prezentāciju slaidos.</p>
               </div>
             </div>
           </div>
@@ -2677,17 +2677,17 @@
             <span class="faq-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="faq-panel" id="fq6" role="region" aria-labelledby="fqb6">
-            <div class="faq-panel-inner">Audits kā gala rezultāts ir patstāvīga vērtība — jūs varat paņemt ceļa karti un īstenot to ar savu komandu vai citu partneri. Nav nekādu saistību turpināt ar ieviešanu. Daudzi klienti izmanto auditu, lai iegūtu iekšēju atbalstu pirms apņemšanās uz būvēšanas posmu.</div>
+            <div class="faq-panel-inner">Audita gala rezultāts ir pilnvērtīgs un patstāvīgs produkts — jūs varat paņemt rīcības plānu (ceļa karti) un īstenot to ar savu komandu vai citu partneri. Jums nav nekādu saistību turpināt sadarbību ieviešanas posmā. Daudzi klienti izmanto auditu, lai iegūtu iekšējo saskaņojumu un atbalstu pirms lēmuma pieņemšanas par izstrādes posma uzsākšanu.</div>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-trigger" aria-expanded="false" aria-controls="fq8" id="fqb8">
-            Vai man ir vajadzīga iekšēja IT komanda, lai tas strādātu?
+            Vai ir nepieciešama iekšējā IT komanda, lai šo īstenotu?
             <span class="faq-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="faq-panel" id="fq8" role="region" aria-labelledby="fqb8">
-            <div class="faq-panel-inner">Nē. Process ir veidots uzņēmumu īpašniekiem un nodaļu vadītājiem, ne inženieriem. Jums nepieciešama pieeja savām sistēmām un skaidrs redzējums par biznesa mērķiem. Visu tehnisko arhitektūru, integrāciju darbus un rīku izvēli pārvaldīsim mēs — jūsu loma ir zināt savu biznesu, ne saprast tehnoloģijas.</div>
+            <div class="faq-panel-inner">Nē. Process ir veidots uzņēmuma vadībai un nodaļu vadītājiem, nevis IT inženieriem. Jums nepieciešama tikai piekļuve savām sistēmām un skaidrs redzējums par biznesa mērķiem. Visu tehnisko arhitektūru, integrācijas darbus un rīku izvēli nodrošinām mēs — jūsu uzdevums ir pārzināt savu biznesu, nevis orientēties tehnoloģijās.</div>
           </div>
         </div>
 
@@ -2699,10 +2699,10 @@
   <section class="cta-section" id="cta">
     <div class="container">
       <div class="cta-box reveal">
-        <h2 class="section-title">Gatavi atrast, kur AI<br>patiešām pavirzīs jūsu biznesu?</h2>
-        <p class="section-sub">Sāciet ar bezmaksas 30 minūšu sākotnējo konsultāciju. Iziesiet ar skaidrību par to, kur AI rada reālu sviru jūsu biznesā.</p>
-        <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Pieteikties ievadsarunai →</a>
-        <p class="cta-trust">Biznesa līderiem, kas domā par ilgtspējīgām AI investīcijām.</p>
+        <h2 class="section-title">Gatavi atklāt, kur AI patiešām<br>nesīs reālus rezultātus?</h2>
+        <p class="section-sub">Sāciet ar bezmaksas 30 minūšu iepazīšanās sarunu. Jūs iegūsiet pilnīgu skaidrību par to, kur AI var radīt reālu izrāvienu un pievienoto vērtību jūsu biznesam.</p>
+        <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Bezmaksas konsultācija →</a>
+        <p class="cta-trust">Biznesa līderiem, kuri fokusējas uz ilgtspējīgām AI investīcijām.</p>
       </div>
     </div>
   </section>
@@ -2720,7 +2720,7 @@
               <text x="520" y="130" fill="#C9A84C" style="font-family:'Inter',sans-serif;font-weight:800;font-size:120px;letter-spacing:-4px;">AI</text>
             </svg>
           </a>
-          <p class="footer-tagline">Stratēģija pirms ieviešanas. Rezultāti, kas paliek.</p>
+          <p class="footer-tagline">Stratēģija pirms ieviešanas. Ilgtspējīgi rezultāti.</p>
         </div>
         <span class="footer-copy">© 2025 Pinpoint AI. Visas tiesības aizsargātas. · <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:inherit;text-decoration:underline;">Privātuma politika</a> · <a href="javascript:void(0)" onclick="reopenConsent()" style="color:inherit;text-decoration:underline;">Sīkdatņu iestatījumi</a></span>
       </div>

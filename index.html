@@ -2391,68 +2391,8 @@
           <div class="comp-col-pill">
             <div class="comp-pill problem">⊗ Problem</div>
           </div>
-          <div class="mock-problem">
-            <div class="pf-main-row">
-              <!-- Left: You Ask + AI Answers -->
-              <div class="pf-left-nodes">
-                <div class="pf-node">
-                  <div class="pf-circle">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round">
-                      <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-                    </svg>
-                  </div>
-                  <span class="pf-label">You ask</span>
-                </div>
-                <div class="pf-connector"><div class="pf-connector-line"></div></div>
-                <div class="pf-node">
-                  <div class="pf-circle">
-                    <img src="icons/chatgpt.webp" alt="ChatGPT">
-                  </div>
-                  <span class="pf-label">AI answers</span>
-                </div>
-              </div>
-              <!-- Stretchy connector into scatter zone -->
-              <div class="pf-connector pf-connector-stretch"><div class="pf-connector-line"></div></div>
-              <!-- Right: You node + scattered tools with SVG arrows -->
-              <div class="pf-scatter">
-                <div class="pf-you-node">
-                  <div class="pf-circle pf-circle-dashed">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round">
-                      <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-                    </svg>
-                  </div>
-                  <span class="pf-label">You do<br>the work</span>
-                </div>
-                <!-- Double-sided dashed arrows: person center ≈ (31,75) in viewBox -->
-                <svg class="pf-svg" viewBox="0 0 200 176">
-                  <defs>
-                    <marker id="pf-ah-e" markerWidth="5" markerHeight="5" refX="4.5" refY="2.5" orient="auto">
-                      <polygon points="0,0 5,2.5 0,5" fill="#C4C9D4"/>
-                    </marker>
-                    <marker id="pf-ah-s" markerWidth="5" markerHeight="5" refX="0.5" refY="2.5" orient="auto">
-                      <polygon points="5,0 0,2.5 5,5" fill="#C4C9D4"/>
-                    </marker>
-                  </defs>
-                  <!-- endpoints stop at badge left edge so arrowhead is not hidden under badge -->
-                  <!-- Gmail: badge left=90,top=3,h=26 → left-edge mid=(90,16) -->
-                  <line x1="56" y1="59" x2="87" y2="16" stroke="#C4C9D4" stroke-width="1.2" stroke-dasharray="4 3" marker-start="url(#pf-ah-s)" marker-end="url(#pf-ah-e)"/>
-                  <!-- Slack: badge left=108,top=40,h=26 → (108,53) -->
-                  <line x1="60" y1="69" x2="105" y2="53" stroke="#C4C9D4" stroke-width="1.2" stroke-dasharray="4 3" marker-start="url(#pf-ah-s)" marker-end="url(#pf-ah-e)"/>
-                  <!-- Teams: badge left=112,top=75,h=26 → (112,88) -->
-                  <line x1="61" y1="78" x2="109" y2="88" stroke="#C4C9D4" stroke-width="1.2" stroke-dasharray="4 3" marker-start="url(#pf-ah-s)" marker-end="url(#pf-ah-e)"/>
-                  <!-- HubSpot: badge left=105,top=112,h=26 → (105,125) -->
-                  <line x1="58" y1="87" x2="102" y2="125" stroke="#C4C9D4" stroke-width="1.2" stroke-dasharray="4 3" marker-start="url(#pf-ah-s)" marker-end="url(#pf-ah-e)"/>
-                  <!-- Sheets: badge left=75,top=148,h=26 → (75,161) -->
-                  <line x1="51" y1="97" x2="72" y2="158" stroke="#C4C9D4" stroke-width="1.2" stroke-dasharray="4 3" marker-start="url(#pf-ah-s)" marker-end="url(#pf-ah-e)"/>
-                </svg>
-                <!-- Scattered tool badges -->
-                <div class="pf-tool" style="left:90px;top:3px"><img src="icons/gmail.png" alt="Gmail"><span class="pf-tool-name">Gmail</span></div>
-                <div class="pf-tool" style="left:108px;top:40px"><img src="icons/slack-logo.png" alt="Slack"><span class="pf-tool-name">Slack</span></div>
-                <div class="pf-tool" style="left:112px;top:75px"><img src="icons/teams.png" alt="Teams" style="width:20px;height:20px;margin:-3px"><span class="pf-tool-name">Teams</span></div>
-                <div class="pf-tool" style="left:105px;top:112px"><img src="icons/hubspot.png" alt="HubSpot"><span class="pf-tool-name">HubSpot</span></div>
-                <div class="pf-tool" style="left:75px;top:148px"><img src="icons/sheets.png" alt="Sheets"><span class="pf-tool-name">Sheets</span></div>
-              </div>
-            </div>
+          <div class="mock-problem" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;">
+            <img src="problem-workflow.png" alt="Problem — AI without a system" style="max-width:75%;max-height:210px;object-fit:contain;display:block;">
             <div class="pf-caption">You ask → AI answers → You still do everything yourself</div>
           </div>
           <div class="comp-col-bullets">
@@ -2471,71 +2411,9 @@
           <div class="comp-col-pill">
             <div class="comp-pill solution">◆ Solution</div>
           </div>
-          <div class="mock-matrix">
-            <div class="mock-matrix-axis-y-wrap">
-              <div class="mock-matrix-axis-y">Impact →</div>
-              <div style="flex:1">
-                <div class="mock-matrix-axis-x" style="margin-bottom:4px;margin-top:0;">
-                  <span>← Easy to start</span>
-                  <span>Harder to build →</span>
-                </div>
-                <div class="mock-matrix-grid">
-                  <div class="mock-matrix-q qw">
-                    <div class="mock-q-label">★ Quick Wins</div>
-                    <div class="mock-dot-item">
-                      <div class="mock-dot-circle" style="background:#8B5CF6;"></div>
-                      <span class="mock-dot-label">AI scores &amp; qualifies leads</span>
-                    </div>
-                    <div class="mock-dot-item">
-                      <div class="mock-dot-circle" style="background:#C9A84C;"></div>
-                      <span class="mock-dot-label">CRM stays updated automatically</span>
-                    </div>
-                    <div class="mock-dot-item">
-                      <div class="mock-dot-circle" style="background:#3B82F6;"></div>
-                      <span class="mock-dot-label">AI sorts &amp; routes inquiries</span>
-                    </div>
-                    <div class="mock-dot-item">
-                      <div class="mock-dot-circle" style="background:#64748B;"></div>
-                      <span class="mock-dot-label">Auto-match invoices</span>
-                    </div>
-                    <div class="mock-dot-item">
-                      <div class="mock-dot-circle" style="background:#64748B;"></div>
-                      <span class="mock-dot-label">Weekly reports, written for you</span>
-                    </div>
-                  </div>
-                  <div class="mock-matrix-q">
-                    <div class="mock-q-label">Big Bets</div>
-                    <div class="mock-dot-item">
-                      <div class="mock-dot-circle" style="background:#94A3B8;"></div>
-                      <span class="mock-dot-label">Connect all your systems</span>
-                    </div>
-                    <div class="mock-dot-item">
-                      <div class="mock-dot-circle" style="background:#94A3B8;"></div>
-                      <span class="mock-dot-label">Proposals written automatically</span>
-                    </div>
-                  </div>
-                  <div class="mock-matrix-q">
-                    <div class="mock-q-label">Fill-ins</div>
-                    <div class="mock-dot-item">
-                      <div class="mock-dot-circle" style="background:#8B5CF6;"></div>
-                      <span class="mock-dot-label">AI drafts &amp; schedules social posts</span>
-                    </div>
-                    <div class="mock-dot-item">
-                      <div class="mock-dot-circle" style="background:#64748B;"></div>
-                      <span class="mock-dot-label">Contact list nurtured &amp; clean</span>
-                    </div>
-                  </div>
-                  <div class="mock-matrix-q">
-                    <div class="mock-q-label">Avoid</div>
-                    <div class="mock-dot-item">
-                      <div class="mock-dot-circle" style="background:#CBD5E1;"></div>
-                      <span class="mock-dot-label">Chatbot handles repetitive questions</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p style="font-size:9px;color:var(--text-3);padding:10px 8px 4px;font-style:italic;margin:0;">Example output from the analysis phase — your roadmap will be specific to your business.</p>
+          <div class="mock-solution" style="height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;">
+            <img src="solution-workflow-v1.png" alt="Solution — AI agents at work" style="max-width:75%;max-height:210px;object-fit:contain;display:block;">
+            <div class="pf-caption">Brief AI once → AI handles routine work independently</div>
           </div>
           <div class="comp-col-bullets">
             <div class="comp-section-title">Agents that work. Results you can measure.</div>
@@ -2956,7 +2834,7 @@
   </script>
   <!-- ══════════ GDPR: COOKIE CONSENT + GA4 + CALENDLY LAZY LOAD ══════════ -->
   <script>
-    var GA_ID = 'G-XXXXXXXXXX'; // TODO: replace with your GA4 Measurement ID
+    var GA_ID = 'G-PTGWFQ9LC2';
 
     function loadGA() {
       var s = document.createElement('script');
