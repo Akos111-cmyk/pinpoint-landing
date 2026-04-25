@@ -1243,6 +1243,7 @@
       gap: 16px;
       margin: 0 auto 24px;
       max-width: 900px;
+      align-items: stretch;
     }
     .pm-callout {
       background: var(--white);
@@ -1761,6 +1762,10 @@
       position: relative;
       z-index: 1;
       transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-sizing: border-box;
     }
     .step:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
     .step-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
@@ -2289,85 +2294,85 @@
 
         <!-- ── Set 1 ── -->
         <div class="lbi-item" title="Slack">
-          <img src="icons/slack-logo.png" alt="Slack">
+          <img src="../icons/slack-logo.png" alt="Slack">
           <span class="lbi-label">Slack</span>
         </div>
         <div class="lbi-item" title="HubSpot">
-          <img src="icons/hubspot.png" alt="HubSpot">
+          <img src="../icons/hubspot.png" alt="HubSpot">
           <span class="lbi-label">HubSpot</span>
         </div>
         <div class="lbi-item" title="Google Sheets">
-          <img src="icons/sheets.png" alt="Google Sheets">
+          <img src="../icons/sheets.png" alt="Google Sheets">
           <span class="lbi-label">Sheets</span>
         </div>
         <div class="lbi-item" title="Salesforce">
-          <img src="icons/salesforce-logo.png" alt="Salesforce">
+          <img src="../icons/salesforce-logo.png" alt="Salesforce">
           <span class="lbi-label">Salesforce</span>
         </div>
         <div class="lbi-item" title="Zapier">
-          <img src="icons/zapier.png" alt="Zapier">
+          <img src="../icons/zapier.png" alt="Zapier">
           <span class="lbi-label">Zapier</span>
         </div>
         <div class="lbi-item" title="Make">
-          <img src="icons/make.jpeg" alt="Make">
+          <img src="../icons/make.jpeg" alt="Make">
           <span class="lbi-label">Make</span>
         </div>
         <div class="lbi-item" title="Airtable">
-          <img src="icons/airtable.png" alt="Airtable">
+          <img src="../icons/airtable.png" alt="Airtable">
           <span class="lbi-label">Airtable</span>
         </div>
         <div class="lbi-item" title="ChatGPT">
-          <img src="icons/chatgpt.webp" alt="ChatGPT">
+          <img src="../icons/chatgpt.webp" alt="ChatGPT">
           <span class="lbi-label">ChatGPT</span>
         </div>
         <div class="lbi-item" title="Gmail">
-          <img src="icons/gmail.png" alt="Gmail">
+          <img src="../icons/gmail.png" alt="Gmail">
           <span class="lbi-label">Gmail</span>
         </div>
         <div class="lbi-item" title="ClickUp">
-          <img src="icons/clickup.png" alt="ClickUp">
+          <img src="../icons/clickup.png" alt="ClickUp">
           <span class="lbi-label">ClickUp</span>
         </div>
 
         <!-- ── Set 2 (duplicate for seamless loop) ── -->
         <div class="lbi-item" title="Slack" aria-hidden="true">
-          <img src="icons/slack-logo.png" alt="Slack">
+          <img src="../icons/slack-logo.png" alt="Slack">
           <span class="lbi-label">Slack</span>
         </div>
         <div class="lbi-item" title="HubSpot" aria-hidden="true">
-          <img src="icons/hubspot.png" alt="HubSpot">
+          <img src="../icons/hubspot.png" alt="HubSpot">
           <span class="lbi-label">HubSpot</span>
         </div>
         <div class="lbi-item" title="Google Sheets" aria-hidden="true">
-          <img src="icons/sheets.png" alt="Google Sheets">
+          <img src="../icons/sheets.png" alt="Google Sheets">
           <span class="lbi-label">Sheets</span>
         </div>
         <div class="lbi-item" title="Salesforce" aria-hidden="true">
-          <img src="icons/salesforce-logo.png" alt="Salesforce">
+          <img src="../icons/salesforce-logo.png" alt="Salesforce">
           <span class="lbi-label">Salesforce</span>
         </div>
         <div class="lbi-item" title="Zapier" aria-hidden="true">
-          <img src="icons/zapier.png" alt="Zapier">
+          <img src="../icons/zapier.png" alt="Zapier">
           <span class="lbi-label">Zapier</span>
         </div>
         <div class="lbi-item" title="Make" aria-hidden="true">
-          <img src="icons/make.jpeg" alt="Make">
+          <img src="../icons/make.jpeg" alt="Make">
           <span class="lbi-label">Make</span>
         </div>
         <div class="lbi-item" title="Airtable" aria-hidden="true">
-          <img src="icons/airtable.png" alt="Airtable">
+          <img src="../icons/airtable.png" alt="Airtable">
           <span class="lbi-label">Airtable</span>
         </div>
         <div class="lbi-item" title="ChatGPT" aria-hidden="true">
-          <img src="icons/chatgpt.webp" alt="ChatGPT">
+          <img src="../icons/chatgpt.webp" alt="ChatGPT">
           <span class="lbi-label">ChatGPT</span>
         </div>
         <div class="lbi-item" title="Gmail" aria-hidden="true">
-          <img src="icons/gmail.png" alt="Gmail">
+          <img src="../icons/gmail.png" alt="Gmail">
           <span class="lbi-label">Gmail</span>
         </div>
         <div class="lbi-item" title="ClickUp" aria-hidden="true">
-          <img src="icons/clickup.png" alt="ClickUp">
+          <img src="../icons/clickup.png" alt="ClickUp">
           <span class="lbi-label">ClickUp</span>
         </div>
 
@@ -2391,7 +2396,7 @@
           <div class="comp-col-pill">
             <div class="comp-pill problem">⊗ Problēma</div>
           </div>
-          <div class="mock-problem" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;">
+          <div class="mock-problem" style="height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;">
             <img src="../problem-workflow.png" alt="Problēma — AI bez sistēmas" style="max-width:75%;max-height:210px;object-fit:contain;display:block;">
             <div class="pf-caption">Jūs jautājat → AI atbild → Jūs joprojām darāt visu paši</div>
           </div>
@@ -2588,10 +2593,10 @@
           <div class="testi-stars">★★★★★</div>
           <p class="testi-quote">"Mēs nebijām gaidījuši, ka audita secinājumi būs tik detalizēti — jau tas vien bija to vērts. Tagad mēs precīzi zinām, kam pievērst uzmanību."</p>
           <div class="testi-author">
-            <div class="testi-avatar">SR</div>
+            <div class="testi-avatar">VN</div>
             <div>
-              <div class="testi-name">Smir R.</div>
-              <div class="testi-role">COO · TRC Group</div>
+              <div class="testi-name">Vihan N.</div>
+              <div class="testi-role">COO · Zentry</div>
             </div>
           </div>
         </div>
@@ -2602,7 +2607,7 @@
             <div class="testi-avatar">MV</div>
             <div>
               <div class="testi-name">Maksims V.</div>
-              <div class="testi-role">CEO · NordaGroup AS</div>
+              <div class="testi-role">Direktors · NordaGroup AS</div>
             </div>
           </div>
         </div>
