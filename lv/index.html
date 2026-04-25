@@ -1764,7 +1764,7 @@
       transition: box-shadow 0.2s, transform 0.2s;
       display: flex;
       flex-direction: column;
-      height: 100%;
+      min-height: 160px;
       box-sizing: border-box;
     }
     .step:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
@@ -2003,7 +2003,8 @@
       .process-steps { grid-template-columns: 1fr; gap: 12px; }
       .process-steps::after { display: none; }
       .testi-grid { grid-template-columns: repeat(2, 1fr); }
-      .how-steps { grid-template-columns: repeat(3, 1fr); }
+      .how-steps { grid-template-columns: repeat(5, 1fr); gap: 8px; }
+      .how-steps .step { padding: 18px 12px; }
       .comp-cols { gap: 16px; }
       /* Shrink dashboard slightly */
       .hero-dashboard { font-size: 90%; }
@@ -2046,7 +2047,7 @@
 
       /* Solutions / Steps */
       .solutions-grid { grid-template-columns: 1fr; }
-      .how-steps { grid-template-columns: repeat(2, 1fr); }
+      .how-steps { grid-template-columns: 1fr; }
 
       /* Who is this for */
       .who-card { padding: 20px 16px 24px; }
@@ -2416,7 +2417,7 @@
           <div class="comp-col-pill">
             <div class="comp-pill solution">◆ Risinājums</div>
           </div>
-          <div class="mock-solution" style="height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;">
+          <div class="mock-solution" style="height:270px;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;">
             <img src="../solution-workflow-v1.png" alt="Risinājums — AI aģenti darbā" style="max-width:75%;max-height:210px;object-fit:contain;display:block;">
             <div class="pf-caption">Dod norādes AI vienreiz → AI patstāvīgi paveic rutīnas darbus</div>
           </div>
