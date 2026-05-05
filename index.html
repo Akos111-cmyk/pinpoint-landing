@@ -2120,7 +2120,6 @@
       .footer-tagline { font-size: 11px; }
     }
   </style>
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
 
@@ -2144,7 +2143,7 @@
           <li><a href="#faq">FAQ</a></li>
         </ul>
         <div class="nav-actions">
-          <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Book an Intro</a>
+          <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Book an Intro</a>
           <div class="lang-toggle" aria-label="Language">
             <a href="/" class="active" onclick="setLang('en')">EN</a>
             <span class="sep">|</span>
@@ -2167,7 +2166,7 @@
       <span class="sep">|</span>
       <a href="/lv/" onclick="setLang('lv');closeDrawer()">LV</a>
     </div>
-    <a href="javascript:void(0)" onclick="openCalendly();closeDrawer();return false;" style="color:var(--gold);font-weight:700;">Book an Intro →</a>
+    <a href="javascript:void(0)" onclick="openContactModal();closeDrawer();return false;" style="color:var(--gold);font-weight:700;">Book an Intro →</a>
   </div>
 
   <!-- ══════════ HERO ══════════ -->
@@ -2190,7 +2189,7 @@
         </p>
 
         <div class="hero-actions reveal d3" style="justify-content:center;">
-          <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Book an Intro →</a>
+          <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Book an Intro →</a>
         </div>
 
         <div class="hero-dashboard reveal d4">
@@ -2701,7 +2700,7 @@
       <div class="cta-box reveal">
         <h2 class="section-title">Ready to find where AI will<br>actually move the needle?</h2>
         <p class="section-sub">Start with a free 30-minute Alignment Call. Walk away with clarity on where AI creates real leverage in your business.</p>
-        <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Book an Intro →</a>
+        <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Book an Intro →</a>
         <p class="cta-trust">For business leaders focused on sustainable AI investments.</p>
       </div>
     </div>
@@ -2848,17 +2847,53 @@
       gtag('config', GA_ID, { anonymize_ip: true });
     }
 
-    function openCalendly() {
-      if (window.Calendly) {
-        Calendly.initPopupWidget({ url: 'https://calendly.com/aleks-pinpointagents/30min' });
-        return;
+    function openContactModal() {
+      var m = document.getElementById('contact-modal');
+      m.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      document.getElementById('contact-form-wrap').style.display = '';
+      document.getElementById('contact-success').style.display = 'none';
+      document.getElementById('contact-form').reset();
+      document.getElementById('contact-error').textContent = '';
+    }
+
+    function closeContactModal() {
+      document.getElementById('contact-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    async function submitContactForm(e) {
+      e.preventDefault();
+      var btn = document.getElementById('contact-submit');
+      var errEl = document.getElementById('contact-error');
+      errEl.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      var email   = document.getElementById('cf-email').value.trim();
+      var phone   = document.getElementById('cf-phone').value.trim();
+      var message = document.getElementById('cf-message').value.trim();
+
+      try {
+        var res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, phone: phone, message: message, source: 'EN' }),
+        });
+        var data = await res.json();
+        if (data.ok) {
+          document.getElementById('contact-form-wrap').style.display = 'none';
+          document.getElementById('contact-success').style.display = '';
+        } else {
+          errEl.textContent = data.error || 'Something went wrong. Please try again.';
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        }
+      } catch (err) {
+        errEl.textContent = 'Network error. Please check your connection and try again.';
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
       }
-      var s = document.createElement('script');
-      s.src = 'https://assets.calendly.com/assets/external/widget.js';
-      s.onload = function() {
-        Calendly.initPopupWidget({ url: 'https://calendly.com/aleks-pinpointagents/30min' });
-      };
-      document.body.appendChild(s);
     }
 
     function grantConsent() {
@@ -2922,26 +2957,69 @@
       <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Pinpoint AI<br>Contact for data requests: <a href="mailto:privacy@pinpointagents.com" style="color:#C9A84C;">privacy@pinpointagents.com</a></p>
 
       <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">What Data We Collect</h3>
-      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">This website does not collect personal data directly. When you book a meeting, <strong>Calendly</strong> collects your name, email address, and timezone. We receive only the meeting confirmation. If you accept analytics cookies, <strong>Google Analytics</strong> collects anonymised usage data (pages visited, session duration, approximate location). IP addresses are anonymised.</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">When you submit the contact form, we collect your email address, phone number, and message. This data is stored in Google Sheets and used solely to respond to your inquiry. If you accept analytics cookies, <strong>Google Analytics</strong> collects anonymised usage data (pages visited, session duration, approximate location). IP addresses are anonymised.</p>
 
       <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Cookies</h3>
-      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;"><strong>Analytics cookies</strong> (Google Analytics) — set only after you accept. Used to understand how visitors use the site. <strong>Functional cookies</strong> (Calendly) — set inside the booking widget when you choose to book a meeting. Calendly manages its own consent.</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;"><strong>Analytics cookies</strong> (Google Analytics) — set only after you accept. Used to understand how visitors use the site. No other cookies are set by this website.</p>
 
       <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Third-Party Processors</h3>
       <ul style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;padding-left:20px;">
-        <li><a href="https://calendly.com/privacy" target="_blank" style="color:#C9A84C;">Calendly</a> — meeting scheduling</li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" style="color:#C9A84C;">Google Sheets &amp; Gmail</a> — contact form storage and notification</li>
         <li><a href="https://policies.google.com/privacy" target="_blank" style="color:#C9A84C;">Google Analytics</a> — site analytics (with consent)</li>
         <li>Google Fonts — typography (CSS only, no cookies)</li>
       </ul>
 
       <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Legal Basis</h3>
-      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Analytics: your consent (Art. 6(1)(a) GDPR). Meeting scheduling: legitimate interest in responding to a business inquiry (Art. 6(1)(f) GDPR).</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Contact form: legitimate interest in responding to a business inquiry (Art. 6(1)(f) GDPR). Analytics: your consent (Art. 6(1)(a) GDPR).</p>
 
       <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Your Rights</h3>
       <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">You have the right to access, correct, delete, or export your personal data. To exercise these rights, contact <a href="mailto:privacy@pinpointagents.com" style="color:#C9A84C;">privacy@pinpointagents.com</a>. You may also withdraw analytics consent at any time via the Cookie Settings link in the footer.</p>
 
       <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Retention</h3>
-      <p style="font-size:14px;color:#555;line-height:1.7;">Google Analytics data is retained for 14 months. Calendly data is retained per <a href="https://calendly.com/privacy" target="_blank" style="color:#C9A84C;">Calendly's policy</a>.</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;">Google Analytics data is retained for 14 months. Contact form submissions are retained until you request deletion.</p>
+    </div>
+  </div>
+  <!-- ══════════ CONTACT MODAL ══════════ -->
+  <div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)closeContactModal()">
+    <div style="background:#fff;border-radius:12px;max-width:480px;width:100%;padding:40px;position:relative;font-family:'Plus Jakarta Sans',sans-serif;color:#1a1a1a;">
+      <button onclick="closeContactModal()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;line-height:1;" aria-label="Close">&times;</button>
+
+      <!-- Form state -->
+      <div id="contact-form-wrap">
+        <p style="font-size:11px;font-family:'DM Mono',monospace;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Free Intro</p>
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-0.01em;">Book an Intro</h2>
+        <p style="font-size:14px;color:#6B7280;margin-bottom:28px;line-height:1.6;">Leave your details and we'll be in touch within 1 business day.</p>
+        <form id="contact-form" onsubmit="submitContactForm(event)" novalidate>
+          <div style="margin-bottom:16px;">
+            <label for="cf-email" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Email address *</label>
+            <input id="cf-email" type="email" required placeholder="you@company.com"
+              style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;transition:border-color 0.15s;"
+              onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'">
+          </div>
+          <div style="margin-bottom:16px;">
+            <label for="cf-phone" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Phone number *</label>
+            <input id="cf-phone" type="tel" required placeholder="+371 2X XXX XXX"
+              style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;transition:border-color 0.15s;"
+              onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'">
+          </div>
+          <div style="margin-bottom:24px;">
+            <label for="cf-message" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Message *</label>
+            <textarea id="cf-message" required rows="4" placeholder="Tell us briefly about your business and where you feel AI could help…"
+              style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;resize:vertical;transition:border-color 0.15s;line-height:1.5;"
+              onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'"></textarea>
+          </div>
+          <div id="contact-error" style="font-size:13px;color:#dc2626;margin-bottom:12px;min-height:18px;"></div>
+          <button id="contact-submit" type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:13px 20px;font-size:15px;">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Success state -->
+      <div id="contact-success" style="display:none;text-align:center;padding:16px 0;">
+        <div style="font-size:40px;margin-bottom:16px;">✓</div>
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:10px;">Message sent</h2>
+        <p style="font-size:14px;color:#6B7280;line-height:1.6;margin-bottom:28px;">Thanks — we'll be in touch within 1 business day.</p>
+        <button onclick="closeContactModal()" class="btn btn-gold" style="padding:11px 32px;font-size:14px;">Close</button>
+      </div>
     </div>
   </div>
 </body>
