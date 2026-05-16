@@ -10,6 +10,7 @@
   <link rel="alternate" hreflang="en" href="https://pinpointagents.com/" />
   <link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/" />
   <link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F1117'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23C9A84C'/%3E%3C/svg%3E" />
   <!-- TODO: replace content value with your GSC verification code -->
   <meta name="google-site-verification" content="fFfkN8uYTWwSMPVWG2A3eBOi_J0AdpYLiF723N3JoVE" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2122,6 +2123,98 @@
       /* Footer */
       .footer-tagline { font-size: 11px; }
     }
+
+    /* ══════════════════════════════
+       SURGICAL ADDITIONS — May 2026
+    ══════════════════════════════ */
+
+    /* Inside-the-audit de-emphasis */
+    .solutions-subdued .section-title { font-size: clamp(18px, 2vw, 22px); }
+    .solutions-subdued .chip { background: transparent; border-color: var(--border); color: var(--text-3); }
+
+    /* Sample audit caption */
+    .rp-illustrative {
+      text-align: center;
+      margin-top: 14px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--text-3);
+    }
+    .rp-illustrative::before {
+      content: '◆\00a0';
+      color: var(--gold);
+      font-size: 9px;
+    }
+
+    /* Who: numbered labels */
+    .who-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      line-height: 1;
+      display: inline-block;
+    }
+    .who-card .who-title { margin-bottom: 8px; }
+
+    /* Tenets (replaces testimonials) */
+    .tenets { background: var(--bg); }
+    .tenets-header { text-align: center; max-width: 600px; margin: 0 auto 48px; }
+    .tenets-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .tenet-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 32px 28px;
+      transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s;
+    }
+    .tenet-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold-border);
+      transform: translateY(-2px);
+    }
+    .tenet-mark {
+      font-size: 30px;
+      font-weight: 800;
+      font-style: italic;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+    .tenet-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .tenet-desc {
+      font-size: 14px;
+      color: var(--text-3);
+      line-height: 1.7;
+    }
+    .tenet-anti {
+      text-align: center;
+      margin: 36px auto 0;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text-3);
+      max-width: 520px;
+    }
+    @media (max-width: 768px) {
+      .tenets-grid { grid-template-columns: 1fr; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -2213,29 +2306,6 @@
         }
       ]
     }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Pinpoint AI",
-    "url": "https://pinpointagents.com/lv/",
-    "description": "Pinpoint AI auditē biznesa procesus un ievieš AI aģentus ar augstāko ROI. Investīcija atmaksājas viena ceturkšņa laikā.",
-    "email": "aleks@pinpointagents.com",
-    "inLanguage": "lv",
-    "areaServed": {
-      "@type": "Country",
-      "name": "Latvia"
-    },
-    "serviceType": [
-      "AI Audits",
-      "AI Implementation",
-      "Business Process Automation",
-      "AI Agent Deployment"
-    ],
-    "knowsLanguage": ["lv", "en"],
-    "sameAs": ["https://pinpointagents.com/"]
   }
   </script>
 </head>
@@ -2392,6 +2462,7 @@
             </div>
           </div>
         </div>
+        <p class="rp-illustrative">Audita paraugs — ilustratīvi skaitļnieki</p>
 
       </div>
     </div>
@@ -2547,12 +2618,12 @@
   </section>
 
   <!-- ══════════ HOW WE WORK ══════════ -->
-  <section class="solutions" id="solutions">
+  <section class="solutions solutions-subdued" id="solutions">
     <div class="container">
       <div class="solutions-header reveal">
-        <div class="chip">Kā tas darbojas</div>
-        <h2 class="section-title">No audita līdz strādājošiem aģentiem — viens process no sākuma līdz beigām</h2>
-        <p class="section-sub">Pieci soļi. Viens projektu vadītājs. Nekādu pārsteigumu.</p>
+        <div class="chip">Audita iekšpuse</div>
+        <h2 class="section-title">Pieci darba soļi katra audita iekšpusē</h2>
+        <p class="section-sub">Viens projektu vadītājs. Nekādu pārsteigumu.</p>
       </div>
       <div class="how-steps">
         <div class="step reveal d1">
@@ -2644,23 +2715,28 @@
       </div>
       <div class="who-grid">
         <div class="who-card reveal d1">
-          <div class="who-title-row"><div class="who-icon">💼</div><div class="who-title">Finanses un grāmatvedība</div></div>
+          <div class="who-num">01 / Finanses</div>
+          <div class="who-title">Finanses un grāmatvedība</div>
           <p class="who-desc">Automatizē debitoru un kreditoru uzskaiti, izdevumu kompensēšanu un datu saskaņošanu — stratēģija izklājlapu vietā.</p>
         </div>
         <div class="who-card reveal d2">
-          <div class="who-title-row"><div class="who-icon">📣</div><div class="who-title">Pārdošana un mārketings</div></div>
+          <div class="who-num">02 / Pārdošana</div>
+          <div class="who-title">Pārdošana un mārketings</div>
           <p class="who-desc">Kvalificē potenciālos klientus, automātiski atjaunini CRM, automatizē SEO procesus un nodrošini kampaņu norisi bez manuālas administrēšanas.</p>
         </div>
         <div class="who-card reveal d3">
-          <div class="who-title-row"><div class="who-icon">⚙️</div><div class="who-title">Operatīvā darbība un ražošana</div></div>
+          <div class="who-num">03 / Operācijas</div>
+          <div class="who-title">Operatīvā darbība un ražošana</div>
           <p class="who-desc">Optimizē darba nodošanu, sinhronizē sistēmas un novērs vājos posmus, kas palēnina ražīgumu.</p>
         </div>
         <div class="who-card reveal d4">
-          <div class="who-title-row"><div class="who-icon">👥</div><div class="who-title">Personālvadība</div></div>
+          <div class="who-num">04 / Personāls</div>
+          <div class="who-title">Personālvadība</div>
           <p class="who-desc">Automatizē jauno darbinieku uzņemšanu, dokumentu ievākšanu un atbildes uz standarta jautājumiem — ātrāk un precīzāk.</p>
         </div>
         <div class="who-card reveal d5">
-          <div class="who-title-row"><div class="who-icon">🖥️</div><div class="who-title">Administrācija un IT</div></div>
+          <div class="who-num">05 / IT</div>
+          <div class="who-title">Administrācija un IT</div>
           <p class="who-desc">Samazini neizpildīto pieteikumu skaitu, automatizē rutīnas pieprasījumus un nodrošini nevainojamu iekšējo sistēmu darbību.</p>
         </div>
       </div>
@@ -2692,49 +2768,32 @@
     </div>
   </section>
 
-  <!-- ══════════ TESTIMONIALS ══════════ -->
-  <section class="testimonials" id="testimonials">
+  <!-- ══════════ METODOLOĠIJA — PRINCIPI ══════════ -->
+  <section class="tenets" id="methodology">
     <div class="container">
-      <div class="testimonials-header reveal">
-        <div class="chip">Pārbaudīta pieredze tirgū</div>
-        <h2 class="section-title">Ko saka biznesa līderi</h2>
-        <p class="section-sub">Reāli rezultāti no reāliem projektiem, nevis izskaistināti veiksmes stāsti.</p>
+      <div class="tenets-header reveal">
+        <div class="chip">Kā mēs strādājam</div>
+        <h2 class="section-title">Trīs lietas, kuras mēs vienmēr darām. Un viena, kuru nē.</h2>
+        <p class="section-sub">Nekādu izpušķotāju veiksmes stāstu. Tikai principi, pēc kuriem strādājam katrā projektā.</p>
       </div>
-      <div class="testi-grid">
-        <div class="testi-card reveal d1">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"Mēs nebijām gaidījuši, ka audita secinājumi būs tik detalizēti — jau tas vien bija to vērts. Tagad mēs precīzi zinām, kam pievērst uzmanību."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">VN</div>
-            <div>
-              <div class="testi-name">Vihan N.</div>
-              <div class="testi-role">COO · Zentry</div>
-            </div>
-          </div>
+      <div class="tenets-grid">
+        <div class="tenet-card reveal d1">
+          <div class="tenet-mark">i.</div>
+          <div class="tenet-title">Vispirms kvantificē, tikai tad būvē</div>
+          <p class="tenet-desc">Neviena automatizācija netiek veidota bez skaitļniekiem: ietaupītās stundas, atgūtās naudas summas, atmaksāšanās periods. Ja nevaram to kvantificēt — neiesakām.</p>
         </div>
-        <div class="testi-card reveal d2">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"Beidzot partneris, kurš vispirms domā un tikai tad dara. Mūsu investīciju atdeve (ROI) bija redzama jau pirmo 90 dienu laikā."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">MV</div>
-            <div>
-              <div class="testi-name">Maksims V.</div>
-              <div class="testi-role">Direktors · NordaGroup AS</div>
-            </div>
-          </div>
+        <div class="tenet-card reveal d2">
+          <div class="tenet-mark">ii.</div>
+          <div class="tenet-title">Biznesa vajadzība pirms tehnoloģijas izvēles</div>
+          <p class="tenet-desc">Rīki tiek izvēlēti trešajā solī, nevis pirmajā. Jūsu problēma ir pirmajā vietā; tehnoloģija, kas to risina, — otrajā. Nekādas atkarības no piegādātāja, nekāda mīļākā rīka.</p>
         </div>
-        <div class="testi-card reveal d3">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"Pieeja sākt ar auditu mainīja visu. Tas ļāva mums izvairīties no mēnešiem ilgām un dārgām kļūdām."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">AK</div>
-            <div>
-              <div class="testi-name">Aina K.</div>
-              <div class="testi-role">Stratēģijas VP · Fintech Latvia</div>
-            </div>
-          </div>
+        <div class="tenet-card reveal d3">
+          <div class="tenet-mark">iii.</div>
+          <div class="tenet-title">Vispirms viens, tikai tad pieci</div>
+          <p class="tenet-desc">Viena darbojoša un pierādīta automatizācija ir vērtīgāka par piecām pusbūvētām. Vispirms ātrais ieguvums — izmērīts, uzlabots — tad paplašinām. Saliktie rezultāti, nevis paralēlais haoss.</p>
         </div>
       </div>
+      <p class="tenet-anti">Un viena, kuru nē: iesniegt prezentāciju un teikt, ka darbs paveikts. Katrā projektā tiek piegādāta strādājoša programmatūra.</p>
     </div>
   </section>
 
@@ -2839,7 +2898,7 @@
           </a>
           <p class="footer-tagline">Stratēģija pirms ieviešanas. Ilgtspējīgi rezultāti.</p>
         </div>
-        <span class="footer-copy">© 2025 Pinpoint AI. Visas tiesības aizsargātas. · <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:inherit;text-decoration:underline;">Privātuma politika</a> · <a href="javascript:void(0)" onclick="reopenConsent()" style="color:inherit;text-decoration:underline;">Sīkdatņu iestatījumi</a></span>
+        <span class="footer-copy">© 2026 Pinpoint AI. Visas tiesības aizsargātas. · <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:inherit;text-decoration:underline;">Privātuma politika</a> · <a href="javascript:void(0)" onclick="reopenConsent()" style="color:inherit;text-decoration:underline;">Sīkdatņu iestatījumi</a></span>
       </div>
     </div>
   </footer>

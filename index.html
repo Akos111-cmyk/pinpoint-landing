@@ -9,6 +9,7 @@
   <link rel="alternate" hreflang="en" href="https://pinpointagents.com/" />
   <link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/" />
   <link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F1117'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23C9A84C'/%3E%3C/svg%3E" />
   <!-- TODO: replace content value with your GSC verification code -->
   <meta name="google-site-verification" content="fFfkN8uYTWwSMPVWG2A3eBOi_J0AdpYLiF723N3JoVE" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2119,6 +2120,98 @@
       /* Footer */
       .footer-tagline { font-size: 11px; }
     }
+
+    /* ══════════════════════════════
+       SURGICAL ADDITIONS — May 2026
+    ══════════════════════════════ */
+
+    /* Inside-the-audit de-emphasis */
+    .solutions-subdued .section-title { font-size: clamp(18px, 2vw, 22px); }
+    .solutions-subdued .chip { background: transparent; border-color: var(--border); color: var(--text-3); }
+
+    /* Sample audit caption */
+    .rp-illustrative {
+      text-align: center;
+      margin-top: 14px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--text-3);
+    }
+    .rp-illustrative::before {
+      content: '◆\00a0';
+      color: var(--gold);
+      font-size: 9px;
+    }
+
+    /* Who: numbered labels */
+    .who-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      line-height: 1;
+      display: inline-block;
+    }
+    .who-card .who-title { margin-bottom: 8px; }
+
+    /* Tenets (replaces testimonials) */
+    .tenets { background: var(--bg); }
+    .tenets-header { text-align: center; max-width: 600px; margin: 0 auto 48px; }
+    .tenets-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .tenet-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 32px 28px;
+      transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s;
+    }
+    .tenet-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold-border);
+      transform: translateY(-2px);
+    }
+    .tenet-mark {
+      font-size: 30px;
+      font-weight: 800;
+      font-style: italic;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+    .tenet-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .tenet-desc {
+      font-size: 14px;
+      color: var(--text-3);
+      line-height: 1.7;
+    }
+    .tenet-anti {
+      text-align: center;
+      margin: 36px auto 0;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text-3);
+      max-width: 520px;
+    }
+    @media (max-width: 768px) {
+      .tenets-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -2274,6 +2367,7 @@
             </div>
           </div>
         </div>
+        <p class="rp-illustrative">Sample audit — illustrative figures</p>
 
       </div>
     </div>
@@ -2429,12 +2523,13 @@
   </section>
 
   <!-- ══════════ HOW WE WORK ══════════ -->
-  <section class="solutions" id="solutions">
+  <!-- ══════════ INSIDE THE AUDIT (5-step methodology, de-emphasized) ══════════ -->
+  <section class="solutions solutions-subdued" id="solutions">
     <div class="container">
       <div class="solutions-header reveal">
-        <div class="chip">How It Works</div>
-        <h2 class="section-title">From audit to running agents — one process, start to finish</h2>
-        <p class="section-sub">Five steps. One project manager. No surprises.</p>
+        <div class="chip">Inside the audit</div>
+        <h2 class="section-title">The five working steps inside every audit</h2>
+        <p class="section-sub">One project manager. No surprises.</p>
       </div>
       <div class="how-steps">
         <div class="step reveal d1">
@@ -2526,23 +2621,28 @@
       </div>
       <div class="who-grid">
         <div class="who-card reveal d1">
-          <div class="who-title-row"><div class="who-icon">💼</div><div class="who-title">Finance & Accounting</div></div>
+          <div class="who-num">01 / Finance</div>
+          <div class="who-title">Finance &amp; Accounting</div>
           <p class="who-desc">Automate AR, AP, reimbursements, and reconciliation — strategy over spreadsheets.</p>
         </div>
         <div class="who-card reveal d2">
-          <div class="who-title-row"><div class="who-icon">📣</div><div class="who-title">Sales & Marketing</div></div>
+          <div class="who-num">02 / Sales</div>
+          <div class="who-title">Sales &amp; Marketing</div>
           <p class="who-desc">Score leads, update CRM automatically, automate SEO routines, and keep campaigns running without manual admin.</p>
         </div>
         <div class="who-card reveal d3">
-          <div class="who-title-row"><div class="who-icon">⚙️</div><div class="who-title">Operations & Production</div></div>
+          <div class="who-num">03 / Ops</div>
+          <div class="who-title">Operations &amp; Production</div>
           <p class="who-desc">Streamline handoffs, sync systems, and close the gaps that slow output down.</p>
         </div>
         <div class="who-card reveal d4">
-          <div class="who-title-row"><div class="who-icon">👥</div><div class="who-title">HR</div></div>
+          <div class="who-num">04 / HR</div>
+          <div class="who-title">HR</div>
           <p class="who-desc">Automate onboarding, document collection, and routine employee queries — faster, with fewer errors.</p>
         </div>
         <div class="who-card reveal d5">
-          <div class="who-title-row"><div class="who-icon">🖥️</div><div class="who-title">Administration & IT</div></div>
+          <div class="who-num">05 / IT</div>
+          <div class="who-title">Administration &amp; IT</div>
           <p class="who-desc">Cut ticket backlogs, automate repetitive requests, and keep internal systems running smoothly.</p>
         </div>
       </div>
@@ -2574,49 +2674,32 @@
     </div>
   </section>
 
-  <!-- ══════════ TESTIMONIALS ══════════ -->
-  <section class="testimonials" id="testimonials">
+  <!-- ══════════ METHODOLOGY — OPERATING PRINCIPLES ══════════ -->
+  <section class="tenets" id="methodology">
     <div class="container">
-      <div class="testimonials-header reveal">
-        <div class="chip">No stranger to the market</div>
-        <h2 class="section-title">Hear from business leaders</h2>
-        <p class="section-sub">Real results from real engagements — not cherry-picked case studies.</p>
+      <div class="tenets-header reveal">
+        <div class="chip">How we work</div>
+        <h2 class="section-title">Three things we always do. And one we don't.</h2>
+        <p class="section-sub">No case-study theatre. Just the operating principles every engagement runs on.</p>
       </div>
-      <div class="testi-grid">
-        <div class="testi-card reveal d1">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"We weren't prepared for how specific the audit findings would be — that alone was worth it. Now we know exactly where to focus."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">VN</div>
-            <div>
-              <div class="testi-name">Vihan N.</div>
-              <div class="testi-role">COO · Zentry</div>
-            </div>
-          </div>
+      <div class="tenets-grid">
+        <div class="tenet-card reveal d1">
+          <div class="tenet-mark">i.</div>
+          <div class="tenet-title">Quantify before you build</div>
+          <p class="tenet-desc">No automation gets built without a number attached: hours saved, euros recovered, payback period. If we can't quantify it, we don't recommend it.</p>
         </div>
-        <div class="testi-card reveal d2">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"Finally, a partner that thinks before it builds. Our ROI was measurable within 90 days."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">MV</div>
-            <div>
-              <div class="testi-name">Maksims V.</div>
-              <div class="testi-role">Director · NordaGroup AS</div>
-            </div>
-          </div>
+        <div class="tenet-card reveal d2">
+          <div class="tenet-mark">ii.</div>
+          <div class="tenet-title">Business need before tech choice</div>
+          <p class="tenet-desc">Tools get picked at step three, never step one. Your problem comes first; the tech that solves it comes second. No vendor lock-in, no favourite stack.</p>
         </div>
-        <div class="testi-card reveal d3">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"The audit-first approach changed everything. We avoided months of costly mistakes."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">AK</div>
-            <div>
-              <div class="testi-name">Aina K.</div>
-              <div class="testi-role">VP Strategy · Fintech Latvia</div>
-            </div>
-          </div>
+        <div class="tenet-card reveal d3">
+          <div class="tenet-mark">iii.</div>
+          <div class="tenet-title">Ship one before five</div>
+          <p class="tenet-desc">One automation live and proven beats five half-built. Quick win first — measured, iterated — then we expand. Compound results, not parallel chaos.</p>
         </div>
       </div>
+      <p class="tenet-anti">And the one we don't: hand over a slide deck and call it done. Every engagement ships working software.</p>
     </div>
   </section>
 
@@ -2721,7 +2804,7 @@
           </a>
           <p class="footer-tagline">Strategy before implementation. Results that last.</p>
         </div>
-        <span class="footer-copy">© 2025 Pinpoint AI. All rights reserved. · <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:inherit;text-decoration:underline;">Privacy Policy</a> · <a href="javascript:void(0)" onclick="reopenConsent()" style="color:inherit;text-decoration:underline;">Cookie Settings</a></span>
+        <span class="footer-copy">© 2026 Pinpoint AI. All rights reserved. · <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:inherit;text-decoration:underline;">Privacy Policy</a> · <a href="javascript:void(0)" onclick="reopenConsent()" style="color:inherit;text-decoration:underline;">Cookie Settings</a></span>
       </div>
     </div>
   </footer>
