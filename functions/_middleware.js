@@ -9,6 +9,9 @@ export async function onRequest({ request, next }) {
     if (langPref === 'en') {
       return Response.redirect(url.origin + '/', 302);
     }
+    if (url.pathname === '/lv') {
+      return Response.redirect(url.origin + '/lv/', 301);
+    }
     return next();
   }
 
