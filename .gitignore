@@ -11,3 +11,7 @@ client_secret*.json
 *.p12
 *.pfx
 .wrangler/
+
+.dev.vars*
+!.dev.vars.example
+!.env.example
