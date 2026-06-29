@@ -5,6 +5,7 @@
     <loc>https://pinpointagents.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pinpointagents.com/"/>
     <xhtml:link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pinpointagents.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -13,6 +14,16 @@
     <loc>https://pinpointagents.com/lv/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pinpointagents.com/"/>
     <xhtml:link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pinpointagents.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pinpointagents.com/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinpointagents.com/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pinpointagents.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -29,6 +40,22 @@
     <loc>https://pinpointagents.com/lv/ai-agenti-pardosana/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pinpointagents.com/"/>
     <xhtml:link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/ai-agenti-pardosana/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pinpointagents.com/lv/pieredzes-stasti/</loc>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/pieredzes-stasti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinpointagents.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pinpointagents.com/lv/pieredzes-stasti/importa-parbaude-muitas-brokeris/</loc>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/pieredzes-stasti/importa-parbaude-muitas-brokeris/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinpointagents.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

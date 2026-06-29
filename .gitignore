@@ -11,3 +11,12 @@ client_secret*.json
 *.p12
 *.pfx
 .wrangler/
+
+# Internal, non-shippable artifacts (previews, drafts, review notes)
+_preview-*.html
+**/_preview-*.html
+_draft-*.md
+**/_draft-*.md
+_PUBLISH-*.md
+_gemini-*.md
+**/_gemini-*.md

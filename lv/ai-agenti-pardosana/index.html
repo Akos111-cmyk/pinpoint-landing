@@ -13,7 +13,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@800&display=swap" rel="stylesheet" />
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -129,7 +128,8 @@
         </svg>
       </a>
       <div class="nav-actions">
-        <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Bezmaksas konsultācija</a>
+        <a href="/lv/pieredzes-stasti/" style="font-size:14px;font-weight:600;color:var(--text-2);text-decoration:none;margin-right:18px;">Pieredzes stāsti</a>
+        <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Bezmaksas konsultācija</a>
         <div class="lang-toggle">
           <a href="/">EN</a>
           <span class="sep">|</span>
@@ -177,10 +177,16 @@
         <li><strong>Ieviešana un optimizācija:</strong> Nodrošinām atbalstu AI aģentu ieviešanā un pastāvīgu veiktspējas uzlabošanu.</li>
       </ol>
 
+      <div style="background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:12px;padding:24px;margin-top:40px;">
+        <p style="font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Pieredzes stāsts</p>
+        <p style="margin-bottom:8px;"><a href="/lv/pieredzes-stasti/importa-parbaude-muitas-brokeris/">Importa pārbaude sekundēs: kā AI atbrīvoja deklarantu laiku</a> — 1–2 stundu manuālā pārbaude maiņā aizstāta ar pārbaudi sekundēs, ar pilnu auditācijas pierakstu.</p>
+        <p style="margin:0;"><a href="/lv/pieredzes-stasti/">Visi pieredzes stāsti →</a></p>
+      </div>
+
       <div class="cta-box">
         <h3>Gatavi ieviest AI aģentus savā pārdošanas komandā?</h3>
         <p>Sāciet ar bezmaksas 30 minūšu konsultāciju. Uzziniet, kā AI automatizācija var palielināt jūsu pārdošanas apjomus.</p>
-        <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn btn-gold">Bezmaksas konsultācija →</a>
+        <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Bezmaksas konsultācija →</a>
       </div>
     </article>
   </div>
@@ -204,11 +210,82 @@
     </div>
   </footer>
 
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)closeContactModal()">
+    <div style="background:#fff;border-radius:12px;max-width:480px;width:100%;padding:40px;position:relative;font-family:'Plus Jakarta Sans',sans-serif;color:#1a1a1a;">
+      <button onclick="closeContactModal()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;line-height:1;" aria-label="Aizvērt">&times;</button>
+      <div id="contact-form-wrap">
+        <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Bezmaksas konsultācija</p>
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-0.01em;">Piesakieties konsultācijai</h2>
+        <p style="font-size:14px;color:#6B7280;margin-bottom:28px;line-height:1.6;">Atstājiet savus kontaktus un mēs sazināsimies 1 darba dienas laikā.</p>
+        <form id="contact-form" onsubmit="submitContactForm(event)" novalidate>
+          <div style="margin-bottom:16px;">
+            <label for="cf-email" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">E-pasta adrese *</label>
+            <input id="cf-email" type="email" required placeholder="jūs@uzņēmums.lv" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;transition:border-color 0.15s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'">
+          </div>
+          <div style="margin-bottom:16px;">
+            <label for="cf-phone" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Tālruņa numurs *</label>
+            <input id="cf-phone" type="tel" required placeholder="+371 2X XXX XXX" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;transition:border-color 0.15s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'">
+          </div>
+          <div style="margin-bottom:24px;">
+            <label for="cf-message" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Ziņojums *</label>
+            <textarea id="cf-message" required rows="4" placeholder="Pastāstiet īsi par savu uzņēmumu un kur AI varētu palīdzēt…" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;resize:vertical;transition:border-color 0.15s;line-height:1.5;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'"></textarea>
+          </div>
+          <div id="contact-error" style="font-size:13px;color:#dc2626;margin-bottom:12px;min-height:18px;"></div>
+          <button id="contact-submit" type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:13px 20px;font-size:15px;">Nosūtīt ziņojumu</button>
+        </form>
+      </div>
+      <div id="contact-success" style="display:none;text-align:center;padding:16px 0;">
+        <div style="font-size:40px;margin-bottom:16px;">✓</div>
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:10px;">Ziņojums nosūtīts</h2>
+        <p style="font-size:14px;color:#6B7280;line-height:1.6;margin-bottom:28px;">Paldies, sazināsimies 1 darba dienas laikā.</p>
+        <button onclick="closeContactModal()" class="btn btn-gold" style="padding:11px 32px;font-size:14px;">Aizvērt</button>
+      </div>
+    </div>
+  </div>
   <script>
-    function openCalendly() {
-      Calendly.initPopupWidget({url: 'https://calendly.com/pinpointagents/30min'});
-      return false;
+    function openContactModal() {
+      var m = document.getElementById('contact-modal');
+      m.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      document.getElementById('contact-form-wrap').style.display = '';
+      document.getElementById('contact-success').style.display = 'none';
+      document.getElementById('contact-form').reset();
+      document.getElementById('contact-error').textContent = '';
+    }
+    function closeContactModal() {
+      document.getElementById('contact-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    async function submitContactForm(e) {
+      e.preventDefault();
+      var btn = document.getElementById('contact-submit');
+      var errEl = document.getElementById('contact-error');
+      errEl.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Sūta…';
+      var email   = document.getElementById('cf-email').value.trim();
+      var phone   = document.getElementById('cf-phone').value.trim();
+      var message = document.getElementById('cf-message').value.trim();
+      try {
+        var res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, phone: phone, message: message, source: 'LV' }),
+        });
+        var data = await res.json();
+        if (data.ok) {
+          document.getElementById('contact-form-wrap').style.display = 'none';
+          document.getElementById('contact-success').style.display = '';
+        } else {
+          errEl.textContent = data.error || 'Kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.';
+          btn.disabled = false;
+          btn.textContent = 'Nosūtīt ziņojumu';
+        }
+      } catch (err) {
+        errEl.textContent = 'Tīkla kļūda. Lūdzu, pārbaudiet savienojumu un mēģiniet vēlreiz.';
+        btn.disabled = false;
+        btn.textContent = 'Nosūtīt ziņojumu';
+      }
     }
   </script>
 </body>

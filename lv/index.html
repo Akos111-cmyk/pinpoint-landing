@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pinpoint AI — AI risinājumi Jūsu biznesam, kas dod rezultātus</title>
-  <meta name="description" content="Pinpoint AI auditē biznesa procesus un ievieš AI aģentus ar augstāko ROI. Investīcija atmaksājas viena ceturkšņa laikā. Piesakiet auditu!" />
+  <title>Pinpoint AI — AI procesu automatizācija biznesam, kas dod rezultātus</title>
+  <meta name="description" content="No AI stratēģijas līdz strādājošai automatizācijai. Identificējam un ieviešam vienu procesu ar vislielāko atdevi. Investīcija atmaksājas viena ceturkšņa laikā." />
   <link rel="canonical" href="https://pinpointagents.com/lv/" />
   <meta property="og:url" content="https://pinpointagents.com/lv/" />
   <link rel="alternate" hreflang="en" href="https://pinpointagents.com/" />
   <link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/" />
+  <link rel="alternate" hreflang="ru" href="https://pinpointagents.com/ru/" />
   <link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F1117'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23C9A84C'/%3E%3C/svg%3E" />
   <!-- TODO: replace content value with your GSC verification code -->
@@ -120,19 +121,9 @@
       box-shadow: 0 4px 16px rgba(201,168,76,0.38);
       transform: translateY(-1px);
     }
-    .btn-outline {
-      background: transparent;
-      color: var(--text-2);
-      border: 1.5px solid var(--border);
-    }
-    .btn-outline:hover {
-      border-color: var(--border-hover);
-      background: var(--white);
-    }
-    .btn-lg {
-      font-size: 15px;
-      padding: 13px 28px;
-    }
+    
+    
+    
 
     /* ── Fade-up reveal ── */
     .reveal {
@@ -313,36 +304,9 @@
       text-align: center;
     }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-pill);
-      padding: 6px 16px 6px 8px;
-      margin-bottom: 28px;
-      box-shadow: var(--shadow-xs);
-    }
-    .hero-badge-dot {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: var(--gold-bg);
-      border: 1px solid var(--gold-border);
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 700;
-      font-family: var(--mono);
-      letter-spacing: 0.08em;
-      padding: 3px 8px;
-      border-radius: var(--radius-pill);
-    }
-    .hero-badge-text {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-2);
-    }
+    
+    
+    
 
     .hero-stars {
       display: flex;
@@ -387,454 +351,168 @@
       margin-bottom: 48px;
     }
 
-    .hero-pills {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 64px;
-    }
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-3);
-      background: var(--bg);
-      border: 1px solid var(--border);
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-    }
-    .hero-pill .dot {
-      width: 6px; height: 6px;
-      background: var(--gold);
-      border-radius: 50%;
-    }
+    
+    
+    
 
     /* Dashboard mockup */
-    .hero-dashboard {
+    
+
+    /* Hero outcome stat trio (one-automation message) */
+    .hero-stats {
       width: 100%;
-      max-width: 920px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-bottom: none;
-      border-radius: 16px 16px 0 0;
-      box-shadow: 0 -4px 40px rgba(0,0,0,0.06), 0 0 0 1px var(--border);
-      overflow: hidden;
+      max-width: 820px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
-    .db-topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--border);
-      background: var(--bg);
-    }
-    .db-dots { display: flex; gap: 6px; }
-    .db-dot { width: 10px; height: 10px; border-radius: 50%; }
-    .db-dot.r { background: #FF5F57; }
-    .db-dot.a { background: #FFBD2E; }
-    .db-dot.g { background: #28CA41; }
-    .db-urlbar {
-      flex: 1;
-      max-width: 320px;
-      margin: 0 auto;
-      background: var(--white);
+    .hs-tile {
+      background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 5px 12px;
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--text-3);
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      border-top: 3px solid var(--gold);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 28px 24px;
+      text-align: center;
     }
-    .db-url-lock { color: var(--gold); font-size: 10px; }
-    .db-header-actions { display: flex; gap: 8px; align-items: center; }
-    .db-hbadge {
+    .hs-num {
       font-family: var(--mono);
-      font-size: 10px;
-      padding: 3px 8px;
-      border-radius: 4px;
-      font-weight: 500;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--gold);
+      letter-spacing: -0.01em;
     }
-    .db-hbadge.live { background: rgba(34,197,94,0.1); color: #16A34A; border: 1px solid rgba(34,197,94,0.2); }
-    .db-hbadge.gold { background: var(--gold-bg); color: var(--gold); border: 1px solid var(--gold-border); }
-
-    .db-body { display: flex; height: 340px; }
-
-    .db-sidebar {
-      width: 180px;
-      border-right: 1px solid var(--border);
-      background: var(--bg);
-      padding: 16px 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      flex-shrink: 0;
-    }
-    .db-sidebar-label {
-      font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: 0.1em;
+    .hs-label {
+      font-size: 13px;
+      font-weight: 700;
       text-transform: uppercase;
-      color: var(--text-3);
-      padding: 4px 8px;
+      letter-spacing: 0.05em;
+      color: var(--text);
       margin-top: 8px;
-      margin-bottom: 4px;
     }
-    .db-sidebar-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 8px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 500;
+    .hs-sub {
+      font-size: 13px;
       color: var(--text-3);
-      cursor: default;
+      line-height: 1.45;
+      margin-top: 10px;
     }
+    @media (max-width: 720px) {
+      .hero-stats { grid-template-columns: 1fr; max-width: 420px; }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+    
+    
     .db-sidebar-item.active {
       background: var(--white);
       color: var(--text);
       box-shadow: var(--shadow-xs);
     }
-    .db-sidebar-icon { font-size: 13px; width: 16px; text-align: center; }
+    
 
-    .db-main { flex: 1; padding: 20px; overflow: hidden; }
+    
 
-    .db-metrics {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-    .db-metric {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 12px 14px;
-    }
-    .db-metric-label {
-      font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      margin-bottom: 6px;
-    }
-    .db-metric-val {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--text);
-      line-height: 1;
-    }
-    .db-metric-val.gold { color: var(--gold); }
-    .db-metric-delta {
-      font-size: 11px;
-      font-weight: 600;
-      color: #16A34A;
-      margin-top: 4px;
-    }
+    
+    
+    
+    
+    
+    
 
-    .db-rows { display: flex; flex-direction: column; gap: 6px; }
-    .db-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      padding: 9px 12px;
-    }
-    .db-row-icon {
-      width: 28px; height: 28px;
-      border-radius: 6px;
-      background: var(--gold-bg);
-      border: 1px solid var(--gold-border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px; color: var(--gold);
-      flex-shrink: 0;
-    }
-    .db-row-body { flex: 1; }
-    .db-row-name { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1; }
-    .db-row-desc { font-size: 10px; color: var(--text-3); margin-top: 2px; font-family: var(--mono); }
-    .db-row-track { width: 80px; }
-    .db-track-bar {
-      height: 4px;
-      background: var(--border);
-      border-radius: 2px;
-      overflow: hidden;
-    }
-    .db-track-fill { height: 100%; background: var(--gold); border-radius: 2px; }
-    .db-track-pct { font-size: 10px; color: var(--text-3); margin-top: 3px; font-family: var(--mono); text-align: right; }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-    .db-stat {
-      border-left: 1px solid var(--border);
-      padding: 20px 0 20px 16px;
-      width: 130px;
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .db-stat-item { }
-    .db-stat-val {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .db-stat-label {
-      font-size: 10px;
-      color: var(--text-3);
-      font-family: var(--mono);
-      margin-top: 3px;
-      letter-spacing: 0.05em;
-    }
-    .db-stat-bar {
-      height: 3px;
-      background: var(--border);
-      border-radius: 2px;
-      margin-top: 6px;
-      overflow: hidden;
-    }
-    .db-stat-fill { height: 100%; background: var(--gold); border-radius: 2px; }
+    
+    
+    
+    
+    
+    
 
     /* ── Diagnostic Report ── */
-    .dr-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    .dr-report-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1;
-    }
-    .dr-report-meta {
-      font-size: 10px;
-      color: var(--text-3);
-      font-family: var(--mono);
-      margin-top: 3px;
-    }
-    .dr-confidential { color: var(--red-text); font-weight: 700; }
-    .dr-summary-pills { display: flex; gap: 6px; flex-shrink: 0; }
-    .dr-pill {
-      font-family: var(--mono);
-      font-size: 9px;
-      font-weight: 500;
-      padding: 3px 8px;
-      border-radius: 4px;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      color: var(--text-3);
-      letter-spacing: 0.04em;
-    }
-    .dr-pill.red {
-      background: var(--red-bg);
-      border-color: var(--red-border);
-      color: var(--red-text);
-    }
-    .dr-cols-header {
-      display: grid;
-      grid-template-columns: 50px 1fr 64px 76px 68px;
-      gap: 8px;
-      padding: 0 10px;
-      margin-bottom: 5px;
-    }
-    .dr-cols-header > div {
-      font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-3);
-    }
-    .dr-rows { display: flex; flex-direction: column; gap: 4px; }
-    .dr-row {
-      display: grid;
-      grid-template-columns: 50px 1fr 64px 76px 68px;
-      gap: 8px;
-      align-items: center;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      padding: 7px 10px;
-    }
-    .dr-sev {
-      font-family: var(--mono);
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      padding: 3px 4px;
-      border-radius: 4px;
-      text-align: center;
-    }
-    .dr-sev.high { background: var(--red-bg); border: 1px solid var(--red-border); color: var(--red-text); }
-    .dr-sev.med  { background: rgba(251,146,60,0.08); border: 1px solid rgba(251,146,60,0.22); color: #C2570A; }
-    .dr-sev.low  { background: var(--gold-bg); border: 1px solid var(--gold-border); color: var(--gold); }
-    .dr-proc { font-size: 11px; font-weight: 600; color: var(--text); }
-    .dr-time { font-family: var(--mono); font-size: 10px; color: var(--text-2); text-align: right; }
-    .dr-cost { font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--red-text); text-align: right; }
-    .dr-auto { font-family: var(--mono); font-size: 9px; font-weight: 600; text-align: center; }
-    .dr-auto.yes     { color: #16A34A; }
-    .dr-auto.partial { color: var(--gold); }
-    .dr-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 8px;
-      padding-top: 8px;
-      border-top: 1px solid var(--border);
-      font-size: 10px;
-      font-family: var(--mono);
-      color: var(--text-3);
-    }
-    .dr-next { color: var(--gold); font-weight: 600; }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /* ── Department badges ── */
-    .rp-dept {
-      font-family: var(--mono);
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      padding: 3px 6px;
-      border-radius: 3px;
-      display: inline-block;
-      white-space: nowrap;
-    }
-    .rp-dept.finance    { background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); color: #9B6F1A; }
-    .rp-dept.operations { background: rgba(100,116,139,0.1); border: 1px solid rgba(100,116,139,0.25); color: #475569; }
-    .rp-dept.marketing  { background: rgba(139,92,246,0.1);  border: 1px solid rgba(139,92,246,0.25); color: #7C3AED; }
-    .rp-dept.sales      { background: rgba(59,130,246,0.1);  border: 1px solid rgba(59,130,246,0.25); color: #2563EB; }
+    
+    
+    
+    
+    
 
     /* ── Report Page ── */
-    .hero-dashboard { border-top: 3px solid var(--gold); }
-    .rp-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      padding: 18px 28px 14px;
-      border-bottom: 1px solid var(--border);
-      background: var(--white);
-    }
-    .rp-agency {
-      font-family: var(--mono);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 5px;
-    }
-    .rp-title {
-      font-size: 15px;
-      font-weight: 800;
-      color: var(--text);
-      letter-spacing: -0.02em;
-    }
-    .rp-client {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-2);
-      text-align: right;
-    }
-    .rp-confidential {
-      font-family: var(--mono);
-      font-size: 9px;
-      font-weight: 700;
-      color: var(--red-text);
-      letter-spacing: 0.08em;
-      text-align: right;
-      margin-top: 5px;
-    }
-    .rp-body { padding: 16px 28px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .rp-section-label {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-    .rp-section-tag {
-      font-family: var(--mono);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: var(--gold-bg);
-      border: 1px solid var(--gold-border);
-      color: var(--gold);
-      padding: 3px 10px;
-      border-radius: 4px;
-      flex-shrink: 0;
-    }
-    .rp-section-sub {
-      font-size: 11px;
-      color: var(--text-3);
-    }
-    .rp-table {
-      width: 100%;
-      min-width: 560px;
-      border-collapse: collapse;
-    }
-    .rp-table thead th {
-      font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      font-weight: 500;
-      padding: 6px 10px;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-      white-space: nowrap;
-    }
-    .rp-table tbody tr { border-bottom: 1px solid var(--border); }
-    .rp-table tbody tr:nth-child(odd) { background: var(--bg); }
-    .rp-table tbody td {
-      padding: 9px 10px;
-      font-size: 12px;
-      color: var(--text-2);
-      white-space: nowrap;
-    }
-    .rp-sev {
-      font-family: var(--mono);
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      padding: 3px 6px;
-      border-radius: 3px;
-      display: inline-block;
-    }
-    .rp-sev.high { background: var(--red-bg); border: 1px solid var(--red-border); color: var(--red-text); }
-    .rp-sev.med  { background: rgba(251,146,60,0.08); border: 1px solid rgba(251,146,60,0.22); color: #C2570A; }
-    .rp-sev.low  { background: var(--gold-bg); border: 1px solid var(--gold-border); color: var(--gold); }
-    .rp-proc { font-weight: 600; color: var(--text); }
-    .rp-saving { font-family: var(--mono); font-weight: 700; color: var(--red-text) !important; }
-    .rp-impl   { font-family: var(--mono); color: var(--text-3) !important; }
-    .rp-payback { font-family: var(--mono); font-weight: 700; color: #16A34A !important; }
-    .rp-auto-yes     { font-family: var(--mono); font-size: 11px; font-weight: 600; color: #16A34A; }
-    .rp-auto-partial { font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--gold); }
-    .rp-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 0 18px;
-      margin-top: 8px;
-      border-top: 1px solid var(--border);
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--text-3);
-    }
-    .rp-page { color: var(--text-3); }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /* ══════════════════════════════
        LOGO BAR
@@ -945,110 +623,23 @@
       flex-direction: column;
       gap: 6px;
     }
-    .pf-main-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
-      min-height: 0;
-    }
-    .pf-left-nodes {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-    }
-    .pf-node {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      flex-shrink: 0;
-    }
-    .pf-circle {
-      width: 52px; height: 52px;
-      border-radius: 50%;
-      background: #fff;
-      border: 1.5px solid #D1D5DB;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    }
-    .pf-circle-dashed {
-      border-style: dashed;
-      border-color: #9CA3AF;
-      background: #F3F4F6;
-    }
-    .pf-circle img {
-      width: 28px; height: 28px; object-fit: contain; border-radius: 6px;
-    }
-    .pf-label {
-      font-size: 9px; font-weight: 700; color: #9CA3AF;
-      text-transform: uppercase; letter-spacing: 0.06em;
-      text-align: center; max-width: 60px; line-height: 1.3;
-    }
-    .pf-connector {
-      display: flex; align-items: center;
-      padding: 0 3px;
-      padding-bottom: 22px;
-      width: 18px; flex-shrink: 0;
-    }
-    .pf-connector-stretch {
-      flex: 0 0 12px;
-    }
-    .pf-connector-line {
-      width: 100%;
-      height: 1.5px;
-      background: #D1D5DB;
-      position: relative;
-    }
-    .pf-connector-line::after {
-      content: '';
-      position: absolute;
-      right: -1px; top: -3.5px;
-      border-top: 4.5px solid transparent;
-      border-bottom: 4.5px solid transparent;
-      border-left: 6px solid #D1D5DB;
-    }
-    .pf-scatter {
-      width: 200px;
-      height: 176px;
-      position: relative;
-      flex-shrink: 0;
-    }
-    .pf-you-node {
-      position: absolute;
-      left: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      z-index: 2;
-    }
-    .pf-svg {
-      position: absolute;
-      top: 0; left: 0;
-      width: 200px; height: 176px;
-      pointer-events: none;
-      z-index: 3;
-    }
-    .pf-tool {
-      position: absolute;
-      display: flex; align-items: center; gap: 5px;
-      background: #fff;
-      border: 1px solid #E5E7EB;
-      border-radius: 6px;
-      padding: 5px 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      white-space: nowrap;
-      z-index: 2;
-    }
-    .pf-tool img {
-      width: 14px; height: 14px; object-fit: contain; flex-shrink: 0;
-    }
-    .pf-tool-name {
-      font-size: 9.5px; font-weight: 600; color: #374151;
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     .pf-caption {
       font-size: 11px; font-weight: 700; color: #374151;
       text-align: center; letter-spacing: -0.01em; flex-shrink: 0;
@@ -1062,157 +653,37 @@
       padding: 14px 16px;
       margin: 0 0 24px;
     }
-    .mock-sol-topbar {
-      display: flex; align-items: center; gap: 6px;
-      margin-bottom: 12px;
-    }
-    .mock-logo-badge {
-      width: 20px; height: 20px; border-radius: 6px;
-      background: var(--gold); display: flex; align-items: center; justify-content: center;
-      font-size: 9px; font-weight: 800; color: #fff;
-    }
-    .mock-breadcrumb { font-size: 9px; color: #9CA3AF; }
-    .mock-sol-body { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .mock-doc-panel {}
-    .mock-doc-label { font-size: 9px; font-weight: 700; color: #374151; margin-bottom: 6px; }
-    .mock-doc-item {
-      display: flex; align-items: center; gap: 6px;
-      padding: 5px 8px; border: 1px solid #E5E7EB; border-radius: 6px; margin-bottom: 4px;
-      background: #fff; font-size: 9px; color: #374151;
-    }
-    .mock-doc-icon { font-size: 10px; }
-    .mock-ai-box {
-      background: rgba(201,168,76,0.06); border: 1px solid var(--gold-border);
-      border-radius: 6px; padding: 8px; margin-top: 6px; font-size: 9px;
-    }
-    .mock-ai-label { font-weight: 700; color: var(--gold); margin-bottom: 3px; font-size: 9px; }
-    .mock-ai-line { color: #6B7280; margin-bottom: 2px; font-size: 8.5px; }
-    .mock-upload-box {
-      border: 1.5px dashed #D1D5DB; border-radius: 6px; padding: 10px;
-      text-align: center; font-size: 8.5px; color: #9CA3AF; margin-top: 6px;
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /* ── 2×2 Impact/Effort Matrix ── */
-    .mock-matrix {
-      background: #F9FAFB;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 10px 14px 8px;
-      margin: 0;
-      height: 270px;
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-    }
-    .mock-matrix-axis-y-wrap {
-      flex: 1;
-      min-height: 0;
-      display: flex;
-      gap: 6px;
-    }
-    .mock-matrix-axis-y-wrap > div:last-child { flex: 1; min-width: 0; display: flex; flex-direction: column; }
-    .mock-matrix-grid {
-      flex: 1;
-      min-height: 0;
-    }
-    .mock-matrix-title {
-      font-family: var(--mono);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .mock-matrix-qw-badge {
-      font-size: 8px;
-      font-weight: 700;
-      background: var(--gold-bg);
-      border: 1px solid var(--gold-border);
-      color: var(--gold);
-      padding: 2px 7px;
-      border-radius: 3px;
-      letter-spacing: 0.05em;
-    }
-    .mock-matrix-grid {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    .mock-matrix-q {
-      padding: 6px 8px;
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
-    .mock-matrix-q.qw {
-      background: rgba(201,168,76,0.06);
-      border-color: var(--gold-border);
-    }
-    .mock-q-label {
-      font-family: var(--mono);
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      opacity: 0.7;
-      line-height: 1;
-    }
-    .mock-matrix-q.qw .mock-q-label { color: var(--gold); opacity: 1; }
-    .mock-dot-item {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      width: 100%;
-    }
-    .mock-dot-circle {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .mock-dot-label {
-      font-family: var(--mono);
-      font-size: 6.8px;
-      color: var(--text-2);
-      white-space: normal;
-      line-height: 1.3;
-      overflow-wrap: break-word;
-    }
-    .mock-matrix-axis-x {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 4px;
-      padding: 0 2px;
-      flex-shrink: 0;
-    }
-    .mock-matrix-axis-x span {
-      font-family: var(--mono);
-      font-size: 7.5px;
-      color: var(--text-3);
-    }
-    .mock-matrix-axis-y {
-      writing-mode: vertical-lr;
-      transform: rotate(180deg);
-      font-family: var(--mono);
-      font-size: 7.5px;
-      color: var(--text-3);
-      letter-spacing: 0.04em;
-      flex: 0 0 auto;
-      width: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /* ── Bullet lists ── */
     .comp-section-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
@@ -1230,23 +701,12 @@
     /* ══════════════════════════════
        SOLUTIONS
     ══════════════════════════════ */
-    .solutions { background: var(--bg); }
-    .solutions-header { text-align: center; max-width: 600px; margin: 0 auto 56px; }
-    .solutions-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
+    
+    
+    
 
     /* ── How We Work: 5-step grid ── */
-    .how-steps {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      margin: 0 auto 24px;
-      max-width: 900px;
-      align-items: stretch;
-    }
+    
     .pm-callout {
       background: var(--white);
       border: 1px solid var(--border);
@@ -1254,7 +714,7 @@
       border-radius: var(--radius-lg);
       padding: 32px 36px;
       max-width: 900px;
-      margin: 0 auto;
+      margin: 32px auto 0;
     }
     .pm-callout-tag {
       font-family: var(--mono);
@@ -1291,272 +751,80 @@
       padding: 5px 12px;
       border-radius: var(--radius-pill);
     }
-    .sol-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
-    }
-    .sol-card:hover {
-      box-shadow: var(--shadow-md);
-      border-color: var(--border-hover);
-      transform: translateY(-2px);
-    }
-    .sol-graphic {
-      height: 160px;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .sol-body { padding: 24px 24px 28px; }
-    .sol-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; letter-spacing: -0.01em; }
-    .sol-desc  { font-size: 14px; color: var(--text-3); line-height: 1.65; }
+    
+    
+    
+    
+    
+    
 
     /* ── Graphic: AI Audit flowchart ── */
-    .g-flowchart {
-      padding: 16px 20px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .g-fc-svg { width: 100%; height: 100%; overflow: visible; }
+    
+    
     /* boxes */
-    .g-fc-rect { fill: #fff; stroke: #D1D5DB; stroke-width: 1.5; rx: 4; }
-    .g-fc-rect-active { fill: #fff; stroke: var(--gold); stroke-width: 1.5; }
-    .g-fc-diamond { fill: #fff; stroke: #D1D5DB; stroke-width: 1.5; }
-    .g-fc-text { font-family: var(--mono); font-size: 7px; fill: #6B7280; }
-    .g-fc-arrow { stroke: #D1D5DB; stroke-width: 1.5; fill: none; marker-end: url(#arr); }
-    .g-fc-hand { font-size: 10px; }
+    
+    
+    
+    
+    
+    
 
     /* ── Graphic: Before/After workflow ── */
-    .g-workflow {
-      padding: 14px 16px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      justify-content: center;
-    }
-    .g-wf-row {
-      display: flex;
-      align-items: center;
-      gap: 0;
-    }
-    .g-wf-label {
-      font-family: var(--mono);
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      width: 44px;
-      flex-shrink: 0;
-      color: var(--text-3);
-    }
-    .g-wf-steps {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      flex: 1;
-    }
-    .g-wf-step {
-      background: #fff;
-      border: 1px solid #E5E7EB;
-      border-radius: 5px;
-      padding: 4px 7px;
-      font-size: 7.5px;
-      font-family: var(--mono);
-      color: var(--text-2);
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 3px;
-    }
-    .g-wf-step.manual { border-color: #FCA5A5; background: #FFF5F5; }
-    .g-wf-step.auto   { border-color: var(--gold-border); background: var(--gold-bg); color: var(--gold); font-weight: 700; }
-    .g-wf-arrow {
-      font-size: 9px; color: #D1D5DB; padding: 0 2px; flex-shrink: 0;
-    }
-    .g-wf-time {
-      font-family: var(--mono);
-      font-size: 7.5px;
-      font-weight: 700;
-      margin-left: 6px;
-      flex-shrink: 0;
-    }
-    .g-wf-time.slow { color: #EF4444; }
-    .g-wf-time.fast { color: #10B981; }
-    .g-wf-divider {
-      border: none;
-      border-top: 1px dashed #E5E7EB;
-      margin: 2px 0;
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /* ── Graphic: Milestone timeline ── */
-    .g-timeline {
-      padding: 20px 20px 12px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      justify-content: center;
-    }
-    .g-tl-track {
-      position: relative;
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      padding-top: 18px;
-    }
-    .g-tl-line {
-      position: absolute;
-      top: 21px;
-      left: 0; right: 0;
-      height: 2px;
-      background: var(--border);
-      z-index: 0;
-    }
-    .g-tl-line-fill {
-      position: absolute;
-      top: 21px;
-      left: 0;
-      width: 62%;
-      height: 2px;
-      background: var(--gold);
-      z-index: 1;
-    }
-    .g-tl-node {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      z-index: 2;
-      flex: 1;
-    }
-    .g-tl-dot {
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      border: 2px solid var(--border);
-      background: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 7px;
-      flex-shrink: 0;
-    }
-    .g-tl-dot.done  { background: var(--gold); border-color: var(--gold); color: #fff; }
+    
+    
+    
+    
+    
+    
+    
     .g-tl-dot.active{ background: #fff; border-color: var(--gold); }
-    .g-tl-dot.future{ background: #fff; border-color: #E5E7EB; }
-    .g-tl-name {
-      font-family: var(--mono);
-      font-size: 7px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      text-align: center;
-      line-height: 1.2;
-    }
-    .g-tl-node.done .g-tl-name  { color: var(--gold); }
+    
+    
+    
     .g-tl-node.active .g-tl-name{ color: var(--text); }
-    .g-tl-week {
-      font-family: var(--mono);
-      font-size: 7px;
-      color: #CBD5E1;
-      text-align: center;
-    }
-    .g-tl-milestone {
-      margin-top: 16px;
-      background: rgba(201,168,76,0.06);
-      border: 1px solid var(--gold-border);
-      border-radius: 6px;
-      padding: 7px 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 9px;
-      font-family: var(--mono);
-    }
-    .g-tl-milestone-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-    .g-tl-milestone-text { color: var(--text-2); }
-    .g-tl-milestone-val  { color: var(--gold); font-weight: 700; margin-left: auto; }
+    
+    
+    
+    
+    
 
     /* ── Graphic: ROI Chart (Strategy) ── */
-    .g-chart {
-      padding: 20px 28px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0;
-      width: 100%;
-    }
-    .g-chart-title { font-size: 9px; font-weight: 700; color: var(--text-3); margin-bottom: 10px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; }
-    .g-chart-area {
-      width: 100%; height: 90px;
-      position: relative;
-    }
-    .g-chart-svg { width: 100%; height: 100%; overflow: visible; }
-    .g-legend {
-      display: flex; gap: 14px; margin-top: 8px;
-    }
-    .g-legend-item { display: flex; align-items: center; gap: 5px; font-size: 9px; color: var(--text-3); }
-    .g-legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    
+    
+    
+    
+    
+    
+    
 
     /* ── Graphic: Workflow integration (Implementation) ── */
-    .g-flow {
-      position: relative;
-      width: 100%; height: 100%;
-    }
-    .g-node {
-      position: absolute;
-      display: flex; flex-direction: column; align-items: center; gap: 4px;
-    }
-    .g-node-icon {
-      width: 40px; height: 40px; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 17px; font-weight: 800;
-      border: 1.5px solid var(--border);
-      background: #fff;
-      box-shadow: var(--shadow-xs);
-    }
-    .g-node-label { font-size: 8px; font-weight: 600; color: var(--text-3); }
-    .g-node-center .g-node-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      background: var(--gold); color: #fff; font-size: 16px;
-      border-color: transparent;
-      box-shadow: 0 4px 14px rgba(201,168,76,0.35);
-    }
-    .g-connector {
-      position: absolute;
-      background: transparent;
-      pointer-events: none;
-    }
+    
+    
+    
+    
+    
+    
 
     /* ── Graphic: Project Management (Kanban) ── */
-    .g-kanban {
-      padding: 16px 20px;
-      gap: 10px;
-      align-items: flex-start;
-      width: 100%;
-    }
-    .g-col { flex: 1; display: flex; flex-direction: column; gap: 6px; }
-    .g-col-label {
-      font-size: 8px; font-weight: 700; color: var(--text-3);
-      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px;
-      font-family: var(--mono);
-    }
-    .g-task {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 6px 8px;
-      font-size: 8.5px; color: var(--text-2); font-weight: 500;
-      display: flex; align-items: center; gap: 5px;
-    }
-    .g-task-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    
+    
+    
+    
+    
 
     /* ══════════════════════════════
        WHO IS THIS FOR
@@ -1602,19 +870,8 @@
       background: radial-gradient(circle, rgba(201,168,76,0.1) 0%, transparent 70%);
       pointer-events: none;
     }
-    .who-icon {
-      width: 28px; height: 28px;
-      border-radius: 8px;
-      background: var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 13px;
-      line-height: 1;
-      flex-shrink: 0;
-      margin-top: 1px;
-      box-shadow: 0 2px 6px rgba(201,168,76,0.3);
-      overflow: hidden;
-    }
-    .who-title-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+    
+    
     .who-title { font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; margin-bottom: 0; }
     .who-desc  { font-size: 14px; color: var(--text-3); line-height: 1.7; }
     @media (max-width: 768px) {
@@ -1676,61 +933,17 @@
     }
 
     /* Feature visual panel */
-    .benefits-visual {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .bv-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 4px;
-    }
-    .bv-title { font-size: 13px; font-weight: 700; color: var(--text); }
-    .bv-badge {
-      font-family: var(--mono);
-      font-size: 10px;
-      padding: 3px 8px;
-      background: var(--gold-bg);
-      color: var(--gold);
-      border: 1px solid var(--gold-border);
-      border-radius: 4px;
-    }
-    .bv-row {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 12px 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .bv-row-num {
-      width: 28px; height: 28px;
-      border-radius: 6px;
-      background: var(--gold);
-      color: #fff;
-      font-size: 11px;
-      font-weight: 800;
-      font-family: var(--mono);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .bv-row-label { flex: 1; font-size: 12px; font-weight: 600; color: var(--text); }
-    .bv-row-status {
-      font-size: 10px;
-      font-weight: 600;
-      padding: 3px 8px;
-      border-radius: 4px;
-    }
-    .bv-row-status.done  { background: rgba(34,197,94,0.1); color: #16A34A; }
-    .bv-row-status.prog  { background: var(--gold-bg); color: var(--gold); }
-    .bv-row-status.queue { background: var(--bg); color: var(--text-3); border: 1px solid var(--border); }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /* ══════════════════════════════
        PROCESS
@@ -1785,50 +998,17 @@
     /* ══════════════════════════════
        TESTIMONIALS
     ══════════════════════════════ */
-    .testimonials { background: var(--bg); }
-    .testimonials-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .testi-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
-    }
-    .testi-card:hover {
-      box-shadow: var(--shadow-md);
-      border-color: var(--gold-border);
-      transform: translateY(-2px);
-    }
-    .testi-stars { color: var(--gold); font-size: 13px; letter-spacing: 1px; }
-    .testi-quote {
-      font-size: 14px;
-      color: var(--text-2);
-      line-height: 1.7;
-      flex: 1;
-    }
-    .testi-author { display: flex; align-items: center; gap: 10px; }
-    .testi-avatar {
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      background: var(--gold);
-      color: #fff;
-      font-size: 12px;
-      font-weight: 800;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .testi-name { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.2; }
-    .testi-role { font-size: 11px; color: var(--text-3); margin-top: 2px; font-family: var(--mono); }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /* ══════════════════════════════
        CTA
@@ -1964,29 +1144,18 @@
       width: auto;
     }
     .footer-tagline { font-size: 12px; color: var(--text-3); font-family: var(--mono); margin-top: 6px; }
-    .footer-nav { display: flex; gap: 48px; flex-wrap: wrap; }
-    .footer-nav-col { }
-    .footer-nav-title { font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
-    .footer-nav-links { display: flex; flex-direction: column; gap: 8px; }
-    .footer-nav-links a { font-size: 13px; color: var(--text-3); text-decoration: none; transition: color 0.15s; }
-    .footer-nav-links a:hover { color: var(--text); }
-    .footer-bottom {
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 12px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
+    .footer-legal { font-size: 11px; color: var(--text-3); font-family: var(--mono); margin-top: 10px; line-height: 1.6; }
+    .footer-legal a { color: inherit; text-decoration: underline; }
+    
+    
+    
+    
+    
+    
+    
     .footer-copy { font-size: 12px; color: var(--text-3); font-family: var(--mono); }
-    .trust-badges { display: flex; gap: 8px; flex-wrap: wrap; }
-    .trust-badge {
-      display: inline-flex; align-items: center; gap: 5px;
-      font-size: 11px; font-weight: 500; font-family: var(--mono);
-      color: var(--text-3);
-      background: var(--bg);
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 5px;
-    }
+    
+    
 
     /* ══════════════════════════════
        RESPONSIVE
@@ -2001,7 +1170,7 @@
       .process-steps { grid-template-columns: 1fr; gap: 12px; }
       .process-steps::after { display: none; }
       .testi-grid { grid-template-columns: repeat(2, 1fr); }
-      .how-steps { grid-template-columns: repeat(5, 1fr); gap: 8px; }
+      .how-steps { grid-template-columns: repeat(4, 1fr); gap: 8px; }
       .how-steps .step { padding: 18px 12px; }
       .comp-cols { gap: 16px; }
       /* Shrink dashboard slightly */
@@ -2133,19 +1302,8 @@
     .solutions-subdued .chip { background: transparent; border-color: var(--border); color: var(--text-3); }
 
     /* Sample audit caption */
-    .rp-illustrative {
-      text-align: center;
-      margin-top: 14px;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.04em;
-      color: var(--text-3);
-    }
-    .rp-illustrative::before {
-      content: '◆\00a0';
-      color: var(--gold);
-      font-size: 9px;
-    }
+    
+    
 
     /* Who: numbered labels */
     .who-num {
@@ -2162,56 +1320,15 @@
     .who-card .who-title { margin-bottom: 8px; }
 
     /* Tenets (replaces testimonials) */
-    .tenets { background: var(--bg); }
-    .tenets-header { text-align: center; max-width: 600px; margin: 0 auto 48px; }
-    .tenets-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .tenet-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
-      padding: 32px 28px;
-      transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s;
-    }
-    .tenet-card:hover {
-      box-shadow: var(--shadow-md);
-      border-color: var(--gold-border);
-      transform: translateY(-2px);
-    }
-    .tenet-mark {
-      font-size: 30px;
-      font-weight: 800;
-      font-style: italic;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 18px;
-    }
-    .tenet-title {
-      font-size: 17px;
-      font-weight: 800;
-      color: var(--text);
-      letter-spacing: -0.01em;
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-    .tenet-desc {
-      font-size: 14px;
-      color: var(--text-3);
-      line-height: 1.7;
-    }
-    .tenet-anti {
-      text-align: center;
-      margin: 36px auto 0;
-      font-size: 13px;
-      font-style: italic;
-      color: var(--text-3);
-      max-width: 520px;
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @media (max-width: 768px) {
       .tenets-grid { grid-template-columns: 1fr; }
     }
@@ -2223,18 +1340,18 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Ko es reāli iegūstu no AI audita?",
+        "name": "Ko es reāli iegūstu?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Prioritizētu automatizācijas iespēju ceļa karti, kur katrai norādītas aprēķinātās ieviešanas izmaksas, prognozētais gada ietaupījums un atpelnīšanās periods. Jūs iegūstat konkrētu plānu, nevis standarta prezentāciju. Katrs ieteikums ir pielāgots jūsu uzņēmumam un pamatots ar datiem no jūsu reālās darbības."
+          "text": "Strādājošu automatizāciju, kas atmaksājas, nevis tikai prezentāciju. Pirms būvējam, kvantificējam paredzamo atdevi: ietaupītās stundas, atgūto naudu, atmaksāšanās periodu. Tad izvēlamies vienu procesu ar vislielāko atdevi un to uzbūvējam un ieviešam. Jūs iegūstat reālu rezultātu, nevis ieteikumu sarakstu."
         }
       },
       {
         "@type": "Question",
-        "name": "Kā audits reāli notiek?",
+        "name": "Kā tas reāli notiek?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Tas ir strukturēts process. Vispirms notiek intervijas ar darbiniekiem, kuri reāli veic darbu, ne tikai ar vadību, lai identificētu patiesās vājās vietas. Pēc tam esošā darba plūsma tiek vizualizēta un analizēta. Secinājumi aptver trīs veidu iespējas: izmaksu samazināšanu (ietaupīts laiks, atslogots personāls), ieņēmumu pieaugumu (ātrākas atbildes potenciālajiem klientiem, labāka konversija, papildpārdošana) un kvalitātes uzlabošanu (mazāk kļūdu, konsekventāki rezultāti). Viss tiek sarindots pēc ietekmes un ieguldāmā darba, un iesniegts kā pakāpenisks rīcības plāns uzņēmuma vadībai."
+          "text": "Strukturēts process trīs soļos. Vispirms notiek ievadsaruna, lai izprastu jūsu biznesu, mērķus un darbplūsmas. Tad noskaidrojam, kur AI dod vislielāko atdevi, aprēķinām izmaksas un atdevi, un izvēlamies vienu automatizāciju, ar ko sākt. Visbeidzot to uzbūvējam, ieviešam un mērām, līdz sasniedzam reālus rezultātus. Projektu vadītājs koordinē visu, tāpēc jūsu komanda tiek iesaistīta tikai tad, kad tas patiešām ir nepieciešams."
         }
       },
       {
@@ -2242,7 +1359,7 @@
         "name": "Cik daudz laika tas prasa, un vai tas traucēs manas komandas darbu?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Audits sākas ar 1–2 stundu darba semināru attiecīgajā nodaļā, kam seko īsas intervijas ar 5–10 komandas darbiniekiem. Pēc tam analītiskais darbs notiek neatkarīgi — no jūsu puses turpmāka iesaiste nav nepieciešama. Ātrie uzlabojumi parasti tiek ieviesti un sāk darboties 2–4 nedēļu laikā kopš ieviešanas posma sākuma. Izstrādes laikā projektu vadītājs pārvalda visu koordināciju, tāpēc jūsu komanda tiek iesaistīta tikai tad, kad tas patiešām ir nepieciešams."
+          "text": "Sākumā nepieciešama īsa ievadsaruna un dažas īsas sarunas ar cilvēkiem, kuri reāli veic darbu. Pēc tam darbu veicam mēs, un no jūsu komandas tālāka iesaistīšanās gandrīz nav nepieciešama. Pirmā automatizācija parasti sāk darboties 2–4 nedēļu laikā. Projektu vadītājs pārvalda visu koordināciju, tāpēc jūsu komanda tiek iesaistīta tikai tad, kad tas patiešām ir nepieciešams."
         }
       },
       {
@@ -2250,15 +1367,7 @@
         "name": "Vai jūs arī izstrādājat un ieviešat risinājumus, vai tikai konsultējat?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Gan, gan. Pilns pakalpojumu cikls ietver gan izstrādi, gan ieviešanu. Risinājumi tiek radīti tieši jums, notestēti un nodoti pilnā darba gatavībā — tie netiek pasniegti kā tehniska specifikācija, ar kuru jūsu IT komandai pašai jātiek galā. Pēc palaišanas ir pieejams arī atbalsta un uzturēšanas pakalpojums, lai viss turpinātu nevainojami darboties, jūsu uzņēmumam attīstoties."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ko darīt, ja vēlos tikai auditu, bet ne risinājumu izstrādi?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Audita gala rezultāts ir pilnvērtīgs un patstāvīgs produkts — jūs varat paņemt rīcības plānu (ceļa karti) un īstenot to ar savu komandu vai citu partneri. Jums nav nekādu saistību turpināt sadarbību ieviešanas posmā. Daudzi klienti izmanto auditu, lai iegūtu iekšējo saskaņojumu un atbalstu pirms lēmuma pieņemšanas par izstrādes posma uzsākšanu."
+          "text": "Gan, gan. Pilns pakalpojumu cikls ietver gan izstrādi, gan ieviešanu. Risinājumi tiek radīti tieši jums, pārbaudīti un nodoti pilnā darba gatavībā. Tie netiek pasniegti kā tehniska specifikācija, ar kuru jūsu IT komandai pašai jātiek galā. Pēc palaišanas ir pieejams arī atbalsta un uzturēšanas pakalpojums, lai viss turpinātu nevainojami darboties, jūsu uzņēmumam attīstoties."
         }
       },
       {
@@ -2266,7 +1375,7 @@
         "name": "Vai ir nepieciešama iekšējā IT komanda, lai šo īstenotu?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nē. Process ir veidots uzņēmuma vadībai un nodaļu vadītājiem, nevis IT inženieriem. Jums nepieciešama tikai piekļuve savām sistēmām un skaidrs redzējums par biznesa mērķiem. Visu tehnisko arhitektūru, integrācijas darbus un rīku izvēli nodrošinām mēs — jūsu uzdevums ir pārzināt savu biznesu, nevis orientēties tehnoloģijās."
+          "text": "Nē. Process ir veidots uzņēmuma vadībai un nodaļu vadītājiem, nevis IT inženieriem. Jums nepieciešama tikai piekļuve savām sistēmām un skaidrs redzējums par biznesa mērķiem. Visu tehnisko arhitektūru, integrācijas darbus un rīku izvēli nodrošinām mēs. Jūsu uzdevums ir pārzināt savu biznesu, nevis orientēties tehnoloģijās."
         }
       }
     ]
@@ -2279,7 +1388,7 @@
     "name": "Pinpoint AI",
     "legalName": "Pinpoint AI SIA",
     "url": "https://pinpointagents.com/lv/",
-    "description": "AI audits un AI aģentu ieviešana biznesam Latvijā — no audita līdz strādājošiem risinājumiem.",
+    "description": "AI procesu automatizācija biznesam Latvijā: no stratēģijas līdz strādājošai automatizācijai ar izmērāmu atdevi.",
     "vatID": "LV40203752802",
     "identifier": {
       "@type": "PropertyValue",
@@ -2335,6 +1444,7 @@
           <li><a href="#pain">Risinājumi</a></li>
           <li><a href="#who">Kam paredzēts</a></li>
           <li><a href="#process">Process</a></li>
+          <li><a href="/lv/pieredzes-stasti/">Pieredzes stāsti</a></li>
           <li><a href="#faq">BUJ</a></li>
         </ul>
         <div class="nav-actions">
@@ -2343,6 +1453,8 @@
             <a href="/" onclick="setLang('en')">EN</a>
             <span class="sep">|</span>
             <a href="/lv/" class="active" onclick="setLang('lv')">LV</a>
+            <span class="sep">|</span>
+            <a href="/ru/" onclick="setLang('ru')">RU</a>
           </div>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
@@ -2355,11 +1467,14 @@
     <a href="#pain"      onclick="closeDrawer()">Risinājumi</a>
     <a href="#who"       onclick="closeDrawer()">Kam paredzēts</a>
     <a href="#process"   onclick="closeDrawer()">Process</a>
+    <a href="/lv/pieredzes-stasti/" onclick="closeDrawer()">Pieredzes stāsti</a>
     <a href="#faq"       onclick="closeDrawer()">BUJ</a>
     <div class="lang-toggle-drawer" aria-label="Valoda">
       <a href="/" onclick="setLang('en');closeDrawer()">EN</a>
       <span class="sep">|</span>
       <a href="/lv/" class="active" onclick="setLang('lv');closeDrawer()">LV</a>
+      <span class="sep">|</span>
+      <a href="/ru/" onclick="setLang('ru');closeDrawer()">RU</a>
     </div>
     <a href="javascript:void(0)" onclick="openContactModal();closeDrawer();return false;" style="color:var(--gold);font-weight:700;">Bezmaksas konsultācija →</a>
   </div>
@@ -2370,106 +1485,39 @@
       <div class="hero-inner">
 
         <div class="hero-stars reveal d1">
-          <span class="stars">★★★★★</span>
-          <span class="caption">Mums uzticas tālredzīgi biznesa līderi</span>
+          <span class="caption">Balstīts uz 18 gadu pieredzi operāciju un procesu vadībā</span>
         </div>
 
         <h1 class="hero-h1 reveal d1">
-          Atrodam problēmu. Kvantificējam to.<br>
-          Tad izstrādājam <span class="highlight">pareizo AI risinājumu.</span>
+          No AI stratēģijas<br>
+          līdz <span class="highlight">strādājošai automatizācijai.</span>
         </h1>
 
         <p class="hero-p reveal d2">
-          Mēs auditējam jūsu darbplūsmas, atklājam automatizācijas ar augstāko ROI, izstrādājam un ieviešam AI aģentus — lai jūsu ieguldījums atmaksātos viena ceturkšņa laikā.
+          Vispirms kvantificējam, kur AI dod vislielāko atdevi. Tad sākam ar vienu automatizāciju, kas atmaksājas visātrāk.
         </p>
 
         <div class="hero-actions reveal d3" style="justify-content:center;">
           <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Bezmaksas konsultācija →</a>
         </div>
 
-        <div class="hero-dashboard reveal d4">
-          <div class="rp-header">
-            <div>
-              <div class="rp-agency">Pinpoint AI</div>
-              <div class="rp-title">AI audits: ieteicamais plāns un ROI</div>
-            </div>
-            <div style="text-align:right">
-              <div class="rp-client">[klienta nosaukums] &nbsp;·&nbsp; 2026. gada aprīlis</div>
-              <div class="rp-confidential">● KONFIDENCIĀLI</div>
-            </div>
+        <div class="hero-stats reveal d4">
+          <div class="hs-tile">
+            <div class="hs-num">1</div>
+            <div class="hs-label">process</div>
+            <div class="hs-sub">Sākam ar vienu procesu, kas dod vislielāko atdevi</div>
           </div>
-          <div class="rp-body">
-            <div class="rp-section-label">
-              <span class="rp-section-tag">Ātrie ieguvumi</span>
-              <span class="rp-section-sub">Automatizācijas ar lielāko efektu, sakārtotas pēc atpelnīšanās ātruma — sāc ar tām</span>
-            </div>
-            <table class="rp-table">
-              <thead>
-                <tr>
-                  <th>Nodaļa</th>
-                  <th>Process</th>
-                  <th>Ietaupīts laiks/ned.</th>
-                  <th>Gada ieguvums</th>
-                  <th>Ieviešanas izm.</th>
-                  <th>Atpelnīšanās</th>
-                  <th>Automatizējams</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="rp-dept finance">Finanses</span></td>
-                  <td class="rp-proc">Rēķinu salīdzināšana</td>
-                  <td>22h</td>
-                  <td class="rp-saving">€17,700</td>
-                  <td class="rp-impl">€3,200</td>
-                  <td class="rp-payback">2.2 mēn.</td>
-                  <td class="rp-auto-yes">✓ Jā</td>
-                </tr>
-                <tr>
-                  <td><span class="rp-dept operations">Operācijas</span></td>
-                  <td class="rp-proc">Atskaites un analītika</td>
-                  <td>18h</td>
-                  <td class="rp-saving">€12,400</td>
-                  <td class="rp-impl">€2,400</td>
-                  <td class="rp-payback">2.3 mēn.</td>
-                  <td class="rp-auto-yes">✓ Jā</td>
-                </tr>
-                <tr>
-                  <td><span class="rp-dept marketing">Mārketings</span></td>
-                  <td class="rp-proc">Atpakaļsaišu pārbaude</td>
-                  <td>10h</td>
-                  <td class="rp-saving">€15,300</td>
-                  <td class="rp-impl">€3,200</td>
-                  <td class="rp-payback">2.5 mēn.</td>
-                  <td class="rp-auto-yes">✓ Jā</td>
-                </tr>
-                <tr>
-                  <td><span class="rp-dept sales">Pārdošana</span></td>
-                  <td class="rp-proc">Potenciālo klientu kvalifikācija</td>
-                  <td>9h</td>
-                  <td class="rp-saving">€6,800</td>
-                  <td class="rp-impl">€2,800</td>
-                  <td class="rp-payback">4.9 mēn.</td>
-                  <td class="rp-auto-yes">✓ Jā</td>
-                </tr>
-                <tr>
-                  <td><span class="rp-dept operations">Operācijas</span></td>
-                  <td class="rp-proc">Datu ievade un sinhronizācija</td>
-                  <td>7h</td>
-                  <td class="rp-saving">€4,600</td>
-                  <td class="rp-impl">€800</td>
-                  <td class="rp-payback">2.1 mēn.</td>
-                  <td class="rp-auto-yes">✓ Jā</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="rp-footer">
-              <span>Ātrie ieguvumi &nbsp;·&nbsp; 5 no 12 atklājumiem &nbsp;·&nbsp; Kopējais identificētais efekts: ~€105,000/gadā pa visiem atklājumiem</span>
-              <span class="rp-page">4. lpp. no 12</span>
-            </div>
+          <div class="hs-tile">
+            <div class="hs-num">1</div>
+            <div class="hs-label">ceturksnis vai ātrāk</div>
+            <div class="hs-sub">Ieguldījums atmaksājas viena ceturkšņa laikā vai ātrāk</div>
+          </div>
+          <div class="hs-tile">
+            <div class="hs-num">0</div>
+            <div class="hs-label">jaunu sistēmu</div>
+            <div class="hs-sub">Strādā ar rīkiem, ko jau lietojat</div>
           </div>
         </div>
-        <p class="rp-illustrative">Audita paraugs — ilustratīvi skaitļnieki</p>
 
       </div>
     </div>
@@ -2478,7 +1526,7 @@
   <!-- ══════════ LOGO BAR ══════════ -->
   <div class="logobar">
     <div class="container">
-    <div class="logobar-label">Savienojas ar rīkiem, ko jūsu komanda jau lieto</div>
+    <div class="logobar-label">Integrējas ar rīkiem, ko jūsu komanda jau lieto</div>
     <div style="overflow:hidden; max-width:900px; margin:0 auto; transform:translateZ(0);">
       <div class="logobar-track" aria-label="Integrācijas">
 
@@ -2577,7 +1625,7 @@
       <div class="pain-header reveal">
         <div class="chip">Vecā pieeja pret jauno</div>
         <h2 class="section-title">AI tiek izmantots, bet tas nesniedz rezultātus.</h2>
-        <p class="section-sub">Lielākā daļa komandu izmanto AI kā palīgu — un joprojām visu darbu veic paši. Mūsdienīgi AI aģenti integrējas uzņēmuma rīkos un reāli paveic darbu.</p>
+        <p class="section-sub">Lielākā daļa komandu izmanto AI kā palīgu un joprojām visu darbu veic paši. Mēs izvēlamies vienu procesu ar vislielāko atdevi, automatizējam to ar AI aģentiem jūsu esošajos rīkos un ieviešam praksē.</p>
       </div>
 
       <div class="comp-cols">
@@ -2594,9 +1642,9 @@
             <div class="comp-section-title">AI bez sistēmas ir tikai lieki soļi</div>
             <ul class="comp-list">
               <li><span class="comp-icon x">✕</span>Tiek uzdoti jautājumi ChatGPT, saņemtas atbildes, bet darbs joprojām jāveic manuāli</li>
-              <li><span class="comp-icon x">✕</span>Dati ir fragmentēti dažādās lietotnēs — nav vienota patiesības avota</li>
-              <li><span class="comp-icon x">✕</span>Nav AI stratēģijas — rīki tiek pievienoti haotiski, bez izmērāmas ietekmes</li>
-              <li><span class="comp-icon x">✕</span>Budžets tiek izšķiests par abonementiem, kurus neviens nespēj pamatot</li>
+              <li><span class="comp-icon x">✕</span>Dati ir fragmentēti dažādās lietotnēs: nav vienota datu avota</li>
+              <li><span class="comp-icon x">✕</span>Nav AI stratēģijas: rīki tiek pievienoti haotiski, bez izmērāmas ietekmes</li>
+              <li><span class="comp-icon x">✕</span>Budžets tiek izšķiests abonementiem, kurus neviens nespēj pamatot</li>
             </ul>
           </div>
         </div>
@@ -2608,61 +1656,17 @@
           </div>
           <div class="mock-solution" style="height:270px;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;">
             <img src="../solution-workflow-v1.png" alt="Risinājums — AI aģenti darbā" style="max-width:75%;max-height:210px;object-fit:contain;display:block;">
-            <div class="pf-caption">Dod norādes AI vienreiz → AI patstāvīgi paveic rutīnas darbus</div>
+            <div class="pf-caption">Izvēlamies vienu procesu → kvantificējam atdevi → uzbūvējam un ieviešam</div>
           </div>
           <div class="comp-col-bullets">
-            <div class="comp-section-title">Aģenti, kas strādā. Rezultāti, kurus iespējams izmērīt.</div>
+            <div class="comp-section-title">Viena automatizācija, kas atmaksājas. Rezultāti, kurus var izmērīt.</div>
             <ul class="comp-list">
-              <li><span class="comp-icon check">✓</span>Katra darbplūsma tiek auditēta, katrs šķērslis — kvantificēts</li>
+              <li><span class="comp-icon check">✓</span>Sākam ar vienu procesu, kas dod vislielāko atdevi, un kvantificējam paredzamo ieguvumu</li>
               <li><span class="comp-icon check">✓</span>Fragmentēti dati tiek apvienoti automatizētās darbplūsmās</li>
               <li><span class="comp-icon check">✓</span>Katrs ieteikums ir pamatots ar prognozētu ROI</li>
-              <li><span class="comp-icon check">✓</span>Izstrādāts un ieviests praksē — nevis tikai prezentācija</li>
+              <li><span class="comp-icon check">✓</span>Izstrādāts un ieviests praksē, nevis tikai parādīts prezentācijā</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ HOW WE WORK ══════════ -->
-  <section class="solutions solutions-subdued" id="solutions">
-    <div class="container">
-      <div class="solutions-header reveal">
-        <div class="chip">Audita iekšpuse</div>
-        <h2 class="section-title">Pieci darba soļi katra audita iekšpusē</h2>
-        <p class="section-sub">Viens projektu vadītājs. Nekādu pārsteigumu.</p>
-      </div>
-      <div class="how-steps">
-        <div class="step reveal d1">
-          <div class="step-header"><div class="step-num">01</div><div class="step-title">Kartēšana</div></div>
-          <p class="step-desc">Darbnīcās analizējam jūsu procesus. Atrodam to, kas ir garlaicīgs, atkārtojas un sagādā grūtības.</p>
-        </div>
-        <div class="step reveal d2">
-          <div class="step-header"><div class="step-num">02</div><div class="step-title">Identificēšana</div></div>
-          <p class="step-desc">Identificējam automatizācijas iespējas ar labāko ietekmes un ieguldīto pūļu attiecību.</p>
-        </div>
-        <div class="step reveal d3">
-          <div class="step-header"><div class="step-num">03</div><div class="step-title">Izvēle</div></div>
-          <p class="step-desc">Izvēlamies piemērotākos rīkus — pirmajā vietā biznesa vajadzības, otrajā tehnoloģijas.</p>
-        </div>
-        <div class="step reveal d4">
-          <div class="step-header"><div class="step-num">04</div><div class="step-title">Izstrāde</div></div>
-          <p class="step-desc">Nodrošinām ātros ieguvumus. Mērām rezultātus. Veicam iterācijas, saglabājot cilvēka iesaisti.</p>
-        </div>
-        <div class="step reveal d4">
-          <div class="step-header"><div class="step-num">05</div><div class="step-title">Pilnveidošana</div></div>
-          <p class="step-desc">Pārejam pie nākamā procesa, tiklīdz pirmais ir sevi pierādījis.</p>
-        </div>
-      </div>
-      <div class="pm-callout reveal">
-        <div class="pm-callout-tag">Projektu vadība — iekļauta</div>
-        <div class="pm-callout-title">Projektu vadība nav atsevišķa pozīcija tāmē. Tā ir iestrādāta katrā sadarbībā.</div>
-        <p class="pm-callout-desc">Katra sadarbība ietver strukturētu izpildi: statusa atjauninājumus, skaidrus atskaites punktus un lēmumu reģistru — lai nekas nepaliktu nepamanīts. Vairāk nekā 18 gadu pieredze operacionālajā darbībā nozīmē, ka mēs zinām, kas nedarbojas, kāpēc tas nedarbojas un kā to salabot.</p>
-        <div class="pm-callout-pills">
-          <span class="pm-callout-pill">Iknedēļas statuss</span>
-          <span class="pm-callout-pill">Viena kontaktpersona</span>
-          <span class="pm-callout-pill">Rakstisks lēmumu reģistrs</span>
-          <span class="pm-callout-pill">Risku un šķēršļu uzskaite</span>
         </div>
       </div>
     </div>
@@ -2675,27 +1679,27 @@
         <div class="benefits-content reveal">
           <div style="text-align:center"><div class="chip">Kāpēc mēs</div></div>
           <h2 class="section-title">Operacionālā pieredze. Ne tikai konsultācijas.</h2>
-          <p class="section-sub">Vairāk nekā 18 gadu praktiska pieredze biznesa procesu optimizācijā sarežģītās, dinamiskās nozarēs — mēs pārzinām no iekšienes tās darba plūsmas, kuras tiek automatizētas.</p>
+          <p class="section-sub">Vairāk nekā 18 gadu praktiska pieredze biznesa procesu automatizācijā un optimizācijā sarežģītās, dinamiskās nozarēs. Mēs pārzinām no iekšienes tās darbplūsmas, kuras tiek automatizētas.</p>
           <div class="benefits-list">
             <div class="benefit-item">
               <div class="benefit-icon">◆</div>
               <div>
-                <div class="benefit-title">Dziļa procesu ekspertīze, AI spēcināta izpilde</div>
-                <p class="benefit-desc">Šis operacionālās pieredzes dziļums ļauj skaidri saprast, kur AI sniedz reālu atdevi — un kur nē.</p>
+                <div class="benefit-title">Dziļa procesu ekspertīze, ar AI darbināta izpilde</div>
+                <p class="benefit-desc">Šis operacionālās pieredzes dziļums ļauj skaidri saprast, kur AI sniedz reālu atdevi, un kur nē.</p>
               </div>
             </div>
             <div class="benefit-item">
               <div class="benefit-icon">★</div>
               <div>
                 <div class="benefit-title">Starpnozaru likumsakarību atpazīšana</div>
-                <p class="benefit-desc">Tās pašas neefektivitātes ar dažādiem nosaukumiem atkārtojas dažādās nozarēs — šo likumsakarību atpazīšana ievērojami samazina problēmu diagnostikas laiku.</p>
+                <p class="benefit-desc">Tās pašas neefektivitātes ar dažādiem nosaukumiem atkārtojas dažādās nozarēs. Šo likumsakarību atpazīšana ievērojami samazina problēmu diagnostikas laiku.</p>
               </div>
             </div>
             <div class="benefit-item">
               <div class="benefit-icon">▲</div>
               <div>
                 <div class="benefit-title">Pārbaudīts reālā darbībā</div>
-                <p class="benefit-desc">Katra metodoloģija ir pārbaudīta reālā darbībā — nevis teorētiski izstrādāta prezentāciju slaidos.</p>
+                <p class="benefit-desc">Katra metodoloģija ir pārbaudīta reālā darbībā, nevis teorētiski izstrādāta prezentāciju slaidos.</p>
               </div>
             </div>
           </div>
@@ -2718,33 +1722,33 @@
       <div class="who-header reveal">
         <div class="chip">Kam paredzēts</div>
         <h2 class="section-title">Veidots komandām aiz biznesa</h2>
-        <p class="section-sub">Stratēģiska AI ieviešana tām nodaļām, kas uztur biznesu darbībā.</p>
+        <p class="section-sub">Uzņēmuma automatizācija sākas nodaļās, kas uztur biznesu. Sākam ar vienu procesu, kas dod vislielāko atdevi.</p>
       </div>
       <div class="who-grid">
         <div class="who-card reveal d1">
           <div class="who-num">01 / Finanses</div>
           <div class="who-title">Finanses un grāmatvedība</div>
-          <p class="who-desc">Automatizē debitoru un kreditoru uzskaiti, izdevumu kompensēšanu un datu saskaņošanu — stratēģija izklājlapu vietā.</p>
+          <p class="who-desc">Automatizējiet debitoru un kreditoru uzskaiti, izdevumu kompensēšanu un datu saskaņošanu. Stratēģija izklājlapu vietā.</p>
         </div>
         <div class="who-card reveal d2">
           <div class="who-num">02 / Pārdošana</div>
           <div class="who-title">Pārdošana un mārketings</div>
-          <p class="who-desc">Kvalificē potenciālos klientus, automātiski atjaunini CRM, automatizē SEO procesus un nodrošini kampaņu norisi bez manuālas administrēšanas.</p>
+          <p class="who-desc">Kvalificējiet potenciālos klientus, automātiski atjauniniet CRM, automatizējiet SEO procesus un nodrošiniet kampaņu norisi bez manuālas administrēšanas.</p>
         </div>
         <div class="who-card reveal d3">
           <div class="who-num">03 / Operācijas</div>
           <div class="who-title">Operatīvā darbība un ražošana</div>
-          <p class="who-desc">Optimizē darba nodošanu, sinhronizē sistēmas un novērs vājos posmus, kas palēnina ražīgumu.</p>
+          <p class="who-desc">Optimizējiet darba nodošanu, sinhronizējiet sistēmas un novērsiet vājos posmus, kas palēnina ražīgumu.</p>
         </div>
         <div class="who-card reveal d4">
           <div class="who-num">04 / Personāls</div>
           <div class="who-title">Personālvadība</div>
-          <p class="who-desc">Automatizē jauno darbinieku uzņemšanu, dokumentu ievākšanu un atbildes uz standarta jautājumiem — ātrāk un precīzāk.</p>
+          <p class="who-desc">Automatizējiet jauno darbinieku uzņemšanu, dokumentu ievākšanu un atbildes uz standarta jautājumiem, ātrāk un precīzāk.</p>
         </div>
         <div class="who-card reveal d5">
           <div class="who-num">05 / IT</div>
           <div class="who-title">Administrācija un IT</div>
-          <p class="who-desc">Samazini neizpildīto pieteikumu skaitu, automatizē rutīnas pieprasījumus un nodrošini nevainojamu iekšējo sistēmu darbību.</p>
+          <p class="who-desc">Samaziniet neizpildīto pieteikumu skaitu, automatizējiet rutīnas pieprasījumus un nodrošiniet nevainojamu iekšējo sistēmu darbību.</p>
         </div>
       </div>
     </div>
@@ -2761,46 +1765,28 @@
       <div class="process-steps">
         <div class="step reveal d1">
           <div class="step-header"><div class="step-num">01</div><div class="step-title">Iepazīšanās un saskaņošana</div></div>
-          <p class="step-desc">Ievadsaruna, lai izprastu jūsu uzņēmuma specifiku un kopīgi izvēlētos pirmo jomu, ko auditēt.</p>
+          <p class="step-desc">Ievadsaruna, lai izprastu jūsu uzņēmuma specifiku, mērķus un esošās darbplūsmas.</p>
         </div>
         <div class="step reveal d2">
-          <div class="step-header"><div class="step-num">02</div><div class="step-title">AI audits</div></div>
-          <p class="step-desc">Plašs saraksts ar identificētām automatizācijas iespējām, kur katrai ir aprēķinātas izmaksas un noteikta prioritāte pēc investīciju atdeves (ROI) — no ātriem uzlabojumiem līdz vērienīgām pārmaiņām. Tehnoloģiju ieteikumi seko pēc tam, nevis otrādi.</p>
+          <div class="step-header"><div class="step-num">02</div><div class="step-title">Iespējas un atdeve</div></div>
+          <p class="step-desc">Noskaidrojam, kur AI dod vislielāko atdevi, aprēķinām izmaksas un atdevi (ROI), un izvēlamies vienu automatizāciju, ar ko sākt. Tehnoloģiju ieteikumi seko pēc tam, nevis otrādi.</p>
         </div>
         <div class="step reveal d3">
           <div class="step-header"><div class="step-num">03</div><div class="step-title">Ieviešana un rezultāti</div></div>
           <p class="step-desc">Pielāgotu AI risinājumu izstrāde un ieviešana, to mērīšana un optimizēšana, līdz tiek sasniegti reāli rezultāti. Konkrēti atskaites punkti, nevis izplūduši termiņi.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ══════════ METODOLOĠIJA — PRINCIPI ══════════ -->
-  <section class="tenets" id="methodology">
-    <div class="container">
-      <div class="tenets-header reveal">
-        <div class="chip">Kā mēs strādājam</div>
-        <h2 class="section-title">Trīs lietas, kuras mēs vienmēr darām. Un viena, kuru nē.</h2>
-        <p class="section-sub">Nekādu izpušķotāju veiksmes stāstu. Tikai principi, pēc kuriem strādājam katrā projektā.</p>
-      </div>
-      <div class="tenets-grid">
-        <div class="tenet-card reveal d1">
-          <div class="tenet-mark">i.</div>
-          <div class="tenet-title">Vispirms kvantificē, tikai tad būvē</div>
-          <p class="tenet-desc">Neviena automatizācija netiek veidota bez skaitļniekiem: ietaupītās stundas, atgūtās naudas summas, atmaksāšanās periods. Ja nevaram to kvantificēt — neiesakām.</p>
-        </div>
-        <div class="tenet-card reveal d2">
-          <div class="tenet-mark">ii.</div>
-          <div class="tenet-title">Biznesa vajadzība pirms tehnoloģijas izvēles</div>
-          <p class="tenet-desc">Rīki tiek izvēlēti trešajā solī, nevis pirmajā. Jūsu problēma ir pirmajā vietā; tehnoloģija, kas to risina, — otrajā. Nekādas atkarības no piegādātāja, nekāda mīļākā rīka.</p>
-        </div>
-        <div class="tenet-card reveal d3">
-          <div class="tenet-mark">iii.</div>
-          <div class="tenet-title">Vispirms viens, tikai tad pieci</div>
-          <p class="tenet-desc">Viena darbojoša un pierādīta automatizācija ir vērtīgāka par piecām pusbūvētām. Vispirms ātrais ieguvums — izmērīts, uzlabots — tad paplašinām. Saliktie rezultāti, nevis paralēlais haoss.</p>
+      <div class="pm-callout reveal">
+        <div class="pm-callout-tag">Projektu vadība ir iekļauta</div>
+        <div class="pm-callout-title">Projektu vadība nav atsevišķa pozīcija tāmē. Tā ir iestrādāta katrā sadarbībā.</div>
+        <p class="pm-callout-desc">Katra sadarbība ietver strukturētu izpildi: statusa atjauninājumus, skaidrus atskaites punktus un lēmumu reģistru, lai nekas nepaliktu nepamanīts. Vairāk nekā 18 gadu pieredze operacionālajā darbībā nozīmē, ka mēs zinām, kas nedarbojas, kāpēc tas nedarbojas un kā to salabot.</p>
+        <div class="pm-callout-pills">
+          <span class="pm-callout-pill">Iknedēļas statuss</span>
+          <span class="pm-callout-pill">Viena kontaktpersona</span>
+          <span class="pm-callout-pill">Rakstisks lēmumu reģistrs</span>
+          <span class="pm-callout-pill">Risku un šķēršļu uzskaite</span>
         </div>
       </div>
-      <p class="tenet-anti">Un viena, kuru nē: iesniegt prezentāciju un teikt, ka darbs paveikts. Katrā projektā tiek piegādāta strādājoša programmatūra.</p>
     </div>
   </section>
 
@@ -2810,27 +1796,27 @@
       <div class="faq-header reveal">
         <div class="chip">BUJ</div>
         <h2 class="section-title">Biežāk uzdotie jautājumi un tiešas atbildes</h2>
-        <p class="section-sub">No pirmās sarunas līdz ieviestam risinājumam — ko sagaidīt katrā posmā.</p>
+        <p class="section-sub">No pirmās sarunas līdz ieviestam risinājumam: ko sagaidīt katrā posmā.</p>
       </div>
       <div class="faq-list reveal d1">
 
         <div class="faq-item">
           <button class="faq-trigger" aria-expanded="false" aria-controls="fq1" id="fqb1">
-            Ko es reāli iegūstu no AI audita?
+            Ko es reāli iegūstu?
             <span class="faq-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="faq-panel" id="fq1" role="region" aria-labelledby="fqb1">
-            <div class="faq-panel-inner">Prioritizētu automatizācijas iespēju ceļa karti, kur katrai norādītas aprēķinātās ieviešanas izmaksas, prognozētais gada ietaupījums un atpelnīšanās periods. Jūs iegūstat konkrētu plānu, nevis standarta prezentāciju. Katrs ieteikums ir pielāgots jūsu uzņēmumam un pamatots ar datiem no jūsu reālās darbības.</div>
+            <div class="faq-panel-inner">Strādājošu automatizāciju, kas atmaksājas, nevis tikai prezentāciju. Pirms būvējam, kvantificējam paredzamo atdevi: ietaupītās stundas, atgūto naudu, atmaksāšanās periodu. Tad izvēlamies vienu procesu ar vislielāko atdevi un to uzbūvējam un ieviešam. Jūs iegūstat reālu rezultātu, nevis ieteikumu sarakstu.</div>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-trigger" aria-expanded="false" aria-controls="fq2" id="fqb2">
-            Kā audits reāli notiek?
+            Kā tas reāli notiek?
             <span class="faq-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="faq-panel" id="fq2" role="region" aria-labelledby="fqb2">
-            <div class="faq-panel-inner">Tas ir strukturēts process. Vispirms notiek intervijas ar darbiniekiem, kuri reāli veic darbu, ne tikai ar vadību, lai identificētu patiesās vājās vietas. Pēc tam esošā darba plūsma tiek vizualizēta un analizēta. Secinājumi aptver trīs veidu iespējas: izmaksu samazināšanu (ietaupīts laiks, atslogots personāls), ieņēmumu pieaugumu (ātrākas atbildes potenciālajiem klientiem, labāka konversija, papildpārdošana) un kvalitātes uzlabošanu (mazāk kļūdu, konsekventāki rezultāti). Viss tiek sarindots pēc ietekmes un ieguldāmā darba, un iesniegts kā pakāpenisks rīcības plāns uzņēmuma vadībai.</div>
+            <div class="faq-panel-inner">Strukturēts process trīs soļos. Vispirms notiek ievadsaruna, lai izprastu jūsu biznesu, mērķus un darbplūsmas. Tad noskaidrojam, kur AI dod vislielāko atdevi, aprēķinām izmaksas un atdevi, un izvēlamies vienu automatizāciju, ar ko sākt. Visbeidzot to uzbūvējam, ieviešam un mērām, līdz sasniedzam reālus rezultātus. Projektu vadītājs koordinē visu, tāpēc jūsu komanda tiek iesaistīta tikai tad, kad tas patiešām ir nepieciešams.</div>
           </div>
         </div>
 
@@ -2840,7 +1826,7 @@
             <span class="faq-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="faq-panel" id="fq4" role="region" aria-labelledby="fqb4">
-            <div class="faq-panel-inner">Audits sākas ar 1–2 stundu darba semināru attiecīgajā nodaļā, kam seko īsas intervijas ar 5–10 komandas darbiniekiem. Pēc tam analītiskais darbs notiek neatkarīgi — no jūsu puses turpmāka iesaiste nav nepieciešama. Ātrie uzlabojumi parasti tiek ieviesti un sāk darboties 2–4 nedēļu laikā kopš ieviešanas posma sākuma. Izstrādes laikā projektu vadītājs pārvalda visu koordināciju, tāpēc jūsu komanda tiek iesaistīta tikai tad, kad tas patiešām ir nepieciešams.</div>
+            <div class="faq-panel-inner">Sākumā nepieciešama īsa ievadsaruna un dažas īsas sarunas ar cilvēkiem, kuri reāli veic darbu. Pēc tam darbu veicam mēs, un no jūsu komandas tālāka iesaistīšanās gandrīz nav nepieciešama. Pirmā automatizācija parasti sāk darboties 2–4 nedēļu laikā. Projektu vadītājs pārvalda visu koordināciju, tāpēc jūsu komanda tiek iesaistīta tikai tad, kad tas patiešām ir nepieciešams.</div>
           </div>
         </div>
 
@@ -2850,17 +1836,7 @@
             <span class="faq-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="faq-panel" id="fq5" role="region" aria-labelledby="fqb5">
-            <div class="faq-panel-inner">Gan, gan. Pilns pakalpojumu cikls ietver gan izstrādi, gan ieviešanu. Risinājumi tiek radīti tieši jums, notestēti un nodoti pilnā darba gatavībā — tie netiek pasniegti kā tehniska specifikācija, ar kuru jūsu IT komandai pašai jātiek galā. Pēc palaišanas ir pieejams arī atbalsta un uzturēšanas pakalpojums, lai viss turpinātu nevainojami darboties, jūsu uzņēmumam attīstoties.</div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-trigger" aria-expanded="false" aria-controls="fq6" id="fqb6">
-            Ko darīt, ja vēlos tikai auditu, bet ne risinājumu izstrādi?
-            <span class="faq-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="faq-panel" id="fq6" role="region" aria-labelledby="fqb6">
-            <div class="faq-panel-inner">Audita gala rezultāts ir pilnvērtīgs un patstāvīgs produkts — jūs varat paņemt rīcības plānu (ceļa karti) un īstenot to ar savu komandu vai citu partneri. Jums nav nekādu saistību turpināt sadarbību ieviešanas posmā. Daudzi klienti izmanto auditu, lai iegūtu iekšējo saskaņojumu un atbalstu pirms lēmuma pieņemšanas par izstrādes posma uzsākšanu.</div>
+            <div class="faq-panel-inner">Gan, gan. Pilns pakalpojumu cikls ietver gan izstrādi, gan ieviešanu. Risinājumi tiek radīti tieši jums, pārbaudīti un nodoti pilnā darba gatavībā. Tie netiek pasniegti kā tehniska specifikācija, ar kuru jūsu IT komandai pašai jātiek galā. Pēc palaišanas ir pieejams arī atbalsta un uzturēšanas pakalpojums, lai viss turpinātu nevainojami darboties, jūsu uzņēmumam attīstoties.</div>
           </div>
         </div>
 
@@ -2870,7 +1846,7 @@
             <span class="faq-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="faq-panel" id="fq8" role="region" aria-labelledby="fqb8">
-            <div class="faq-panel-inner">Nē. Process ir veidots uzņēmuma vadībai un nodaļu vadītājiem, nevis IT inženieriem. Jums nepieciešama tikai piekļuve savām sistēmām un skaidrs redzējums par biznesa mērķiem. Visu tehnisko arhitektūru, integrācijas darbus un rīku izvēli nodrošinām mēs — jūsu uzdevums ir pārzināt savu biznesu, nevis orientēties tehnoloģijās.</div>
+            <div class="faq-panel-inner">Nē. Process ir veidots uzņēmuma vadībai un nodaļu vadītājiem, nevis IT inženieriem. Jums nepieciešama tikai piekļuve savām sistēmām un skaidrs redzējums par biznesa mērķiem. Visu tehnisko arhitektūru, integrācijas darbus un rīku izvēli nodrošinām mēs. Jūsu uzdevums ir pārzināt savu biznesu, nevis orientēties tehnoloģijās.</div>
           </div>
         </div>
 
@@ -2882,8 +1858,8 @@
   <section class="cta-section" id="cta">
     <div class="container">
       <div class="cta-box reveal">
-        <h2 class="section-title">Gatavi atklāt, kur AI patiešām<br>nesīs reālus rezultātus?</h2>
-        <p class="section-sub">Sāciet ar bezmaksas 30 minūšu iepazīšanās sarunu. Jūs iegūsiet pilnīgu skaidrību par to, kur AI var radīt reālu izrāvienu un pievienoto vērtību jūsu biznesam.</p>
+        <h2 class="section-title">Gatavi pirmajai automatizācijai,<br>kas atmaksājas?</h2>
+        <p class="section-sub">Sāciet ar bezmaksas 30 minūšu iepazīšanās sarunu. Kopā noskaidrosim vienu procesu ar vislielāko atdevi un cik ātri tas atmaksāsies.</p>
         <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Bezmaksas konsultācija →</a>
         <p class="cta-trust">Biznesa līderiem, kuri fokusējas uz ilgtspējīgām AI investīcijām.</p>
       </div>
@@ -2904,6 +1880,7 @@
             </svg>
           </a>
           <p class="footer-tagline">Stratēģija pirms ieviešanas. Ilgtspējīgi rezultāti.</p>
+          <p class="footer-legal">SIA "Pinpoint AI" · Reģ. Nr. 40203752802 · PVN LV40203752802 · Rīga, Latvija · <a href="mailto:info@pinpointagents.com">info@pinpointagents.com</a></p>
         </div>
         <span class="footer-copy">© 2026 Pinpoint AI. Visas tiesības aizsargātas. · <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:inherit;text-decoration:underline;">Privātuma politika</a> · <a href="javascript:void(0)" onclick="reopenConsent()" style="color:inherit;text-decoration:underline;">Sīkdatņu iestatījumi</a></span>
       </div>
@@ -3015,7 +1992,7 @@
     setTimeout(alignLogoDots, 1500);
     alignLogoDots();
   </script>
-  <!-- ══════════ GDPR: COOKIE CONSENT + GA4 + CALENDLY LAZY LOAD ══════════ -->
+  <!-- ══════════ GDPR: COOKIE CONSENT + GA4 LAZY LOAD ══════════ -->
   <script>
     var GA_ID = 'G-PTGWFQ9LC2';
 
@@ -3172,7 +2149,7 @@
       <!-- Form state -->
       <div id="contact-form-wrap">
         <p style="font-size:11px;font-family:'DM Mono',monospace;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Bezmaksas konsultācija</p>
-        <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-0.01em;">Piesakies konsultācijai</h2>
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-0.01em;">Piesakieties konsultācijai</h2>
         <p style="font-size:14px;color:#6B7280;margin-bottom:28px;line-height:1.6;">Atstājiet savus kontaktus un mēs sazināsimies 1 darba dienas laikā.</p>
         <form id="contact-form" onsubmit="submitContactForm(event)" novalidate>
           <div style="margin-bottom:16px;">
@@ -3202,7 +2179,7 @@
       <div id="contact-success" style="display:none;text-align:center;padding:16px 0;">
         <div style="font-size:40px;margin-bottom:16px;">✓</div>
         <h2 style="font-size:22px;font-weight:800;margin-bottom:10px;">Ziņojums nosūtīts</h2>
-        <p style="font-size:14px;color:#6B7280;line-height:1.6;margin-bottom:28px;">Paldies — sazināsimies 1 darba dienas laikā.</p>
+        <p style="font-size:14px;color:#6B7280;line-height:1.6;margin-bottom:28px;">Paldies, sazināsimies 1 darba dienas laikā.</p>
         <button onclick="closeContactModal()" class="btn btn-gold" style="padding:11px 32px;font-size:14px;">Aizvērt</button>
       </div>
     </div>
