@@ -68,4 +68,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://pinpointagents.com/lv/pieredzes-stasti/saisu-vertesanas-automatizacija/</loc>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/pieredzes-stasti/saisu-vertesanas-automatizacija/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinpointagents.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
