@@ -174,7 +174,7 @@
       </div>
 
       <h2>Problēma</h2>
-      <p>Katru mēnesi pirms piegādātāju rēķinu apmaksas finanšu komanda salīdzina tos ar uzņēmuma iekšējiem datiem. Līdz šim divi speciālisti manuāli veidoja reģistru aptuveni 60 atsevišķos failos (viens katram piegādātājam), lielākoties kopējot datus no norēķinu sistēmas. Tas aizņēma aptuveni 3 darba dienas katrā ciklā. Process bija lēns, manuālā kopēšana radīja kļūdu risku, un saskaņošana apgrūtināja auditu.</p>
+      <p>Katru mēnesi pirms piegādātāju rēķinu apmaksas finanšu komanda salīdzina tos ar uzņēmuma iekšējiem datiem. Līdz šim divi speciālisti manuāli veidoja reģistru aptuveni 60 atsevišķos failos (viens katram piegādātājam), lielākoties kopējot datus no norēķinu sistēmas. Tas aizņēma aptuveni 8 darba dienas katrā ciklā. Process bija lēns, manuālā kopēšana radīja kļūdu risku, un saskaņošana apgrūtināja auditu.</p>
 
       <h2>Risinājums</h2>
       <p>Pinpoint AI aizstāja aptuveni 60 atsevišķus failus ar vienu konsolidētu pārskatu. Viens kopējs norēķinu datu izvilkums tiek nodots apstrādei Claude AI, kas aprēķina katra piegādātāja komisiju atbilstoši līguma nosacījumiem, veic iebūvētas pārbaudes un atzīmē anomālijas atsevišķā lapā. Risinājums veic arī pašpārbaudi, salīdzinot rezultātu ar references mēneša datiem. Tikai tad, ja pārbaudes ir sekmīgas, process turpinās. Galīgo apstiprinājumu sniedz speciālists.</p>
@@ -192,7 +192,7 @@
       <h2>Rezultāti</h2>
       <ul>
         <li><strong>Viens pārskats desmitiem failu vietā:</strong> viens konsolidēts pārskats aizstāj aptuveni 60 atsevišķus Excel failus.</li>
-        <li><strong>Likvidēts ietilpīgs manuālais darbs:</strong> tiek noņemts aptuveni 3 darba dienu manuālais darbs katrā ikmēneša ciklā, ko iepriekš prasīja reģistra veidošana vairākos desmitos failu.</li>
+        <li><strong>Ietaupītas aptuveni 8 darba dienas ciklā:</strong> tiek likvidēts manuālais darbs, ko katrā ikmēneša ciklā prasīja reģistra veidošana vairākos desmitos failu.</li>
         <li><strong>Iebūvētas pārbaudes un pašpārbaude:</strong> AI salīdzina rezultātu ar references mēnesi un turpina darbu tikai tad, ja kopsummas saskan, novēršot kļūdas, kas rodas, manuāli kopējot datus.</li>
         <li><strong>Uzkrājoša anomāliju noteikšana:</strong> ar katru ciklu anomāliju saraksts tiek papildināts, padarot nākamo pārbaudi vēl precīzāku.</li>
         <li><strong>Finanšu komanda saglabā kontroli:</strong> AI ziņo par atšķirībām salīdzinājumā ar references pārskatu, nevis pats tās koriģē.</li>
