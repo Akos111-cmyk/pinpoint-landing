@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI document automation in logistics: a case study | Pinpoint AI</title>
+  <meta name="description" content="Case study: AI document automation for a logistics company. From 4 hours to 30 minutes per shipment, freeing around 66 hours a month." />
+  <link rel="canonical" href="https://pinpointagents.com/case-studies/logistics-document-automation/" />
+  <link rel="alternate" hreflang="en" href="https://pinpointagents.com/case-studies/logistics-document-automation/" />
+  <link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/pieredzes-stasti/dokumentu-automatizacija-logistika/" />
+  <link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/case-studies/logistics-document-automation/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Document automation in logistics: from 4 hours to 30 minutes per shipment" />
+  <meta property="og:description" content="Case study: AI document automation for a logistics company. From 4 hours to 30 minutes per shipment, freeing around 66 hours a month." />
+  <meta property="og:url" content="https://pinpointagents.com/case-studies/logistics-document-automation/" />
+  <meta property="og:locale" content="en" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Document automation in logistics: from 4 hours to 30 minutes per shipment" />
+  <meta name="twitter:description" content="From 4 hours to 30 minutes per shipment, freeing around 66 hours a month." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F1117'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23C9A84C'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #FFFFFF;
+      --bg: #F7F8FA;
+      --border: #E8EAED;
+      --text: #0F1117;
+      --text-2: #3D4148;
+      --text-3: #6B7280;
+      --gold: #C9A84C;
+      --gold-light: #F5EDD4;
+      --nav-h: 64px;
+    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); height: var(--nav-h); display: flex; align-items: center; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; color: var(--text); }
+    .logoMark { height: 28px; width: auto; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; border: none; transition: all .2s; }
+    .btn-gold { background: var(--gold); color: #fff; }
+    .btn-gold:hover { background: #b8923d; }
+    .nav-link { font-size: 14px; font-weight: 600; color: var(--text-2); text-decoration: none; margin-right: 18px; }
+    .nav-link:hover { color: var(--gold); }
+    .lang-toggle { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; margin-left: 16px; }
+    .lang-toggle a { color: var(--text-3); text-decoration: none; }
+    .lang-toggle a.active { color: var(--gold); }
+    .lang-toggle .sep { color: var(--border); }
+    .nav-actions { display: flex; align-items: center; }
+
+    /* BREADCRUMB */
+    .breadcrumb { padding: 20px 0 0; font-size: 13px; color: var(--text-3); }
+    .breadcrumb a { color: var(--text-3); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* ARTICLE */
+    .article { background: var(--white); border-radius: 16px; padding: 48px; margin: 24px 0 48px; border: 1px solid var(--border); }
+    .article h1 { font-size: 32px; font-weight: 800; line-height: 1.25; margin-bottom: 20px; color: var(--text); }
+    .article h2 { font-size: 20px; font-weight: 700; margin: 36px 0 12px; color: var(--text); }
+    .article p { font-size: 16px; color: var(--text-2); margin-bottom: 16px; }
+    .article ul, .article ol { padding-left: 24px; margin-bottom: 16px; }
+    .article li { font-size: 16px; color: var(--text-2); margin-bottom: 8px; }
+    .article a { color: var(--gold); text-decoration: none; font-weight: 600; }
+    .article a:hover { text-decoration: underline; }
+    .article strong, .article b { color: var(--text); }
+
+    /* SUMMARY CARD */
+    .summary { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 12px; padding: 20px 24px; margin-bottom: 8px; }
+    .summary p { font-size: 15px; margin-bottom: 8px; }
+    .summary p:last-child { margin-bottom: 0; }
+
+    /* RELATED */
+    .related { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--border); }
+    .related h2 { font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .related ul { list-style: none; padding: 0; margin: 0; }
+    .related li { margin-bottom: 8px; }
+
+    /* CTA BOX */
+    .cta-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: 12px; padding: 32px; text-align: center; margin-top: 48px; }
+    .cta-box h3 { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
+    .cta-box p { color: var(--text-2); margin-bottom: 20px; font-size: 15px; }
+    .cta-box .btn-gold { color: #fff; }
+
+    /* FOOTER */
+    .footer { background: var(--text); color: #fff; padding: 32px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-tagline { font-size: 12px; color: #9CA3AF; margin-top: 4px; }
+    .footer-copy { font-size: 12px; color: #9CA3AF; }
+    .footer-legal { font-size: 11px; color: #6B7280; margin-top: 16px; width: 100%; }
+
+    @media (max-width: 640px) {
+      .article { padding: 24px 20px; }
+      .article h1 { font-size: 24px; }
+      .nav-link { display: none; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Document automation in logistics: from 4 hours to 30 minutes per shipment",
+  "description": "Case study: AI document automation for a logistics company. From 4 hours to 30 minutes per shipment, freeing around 66 hours a month.",
+  "author": {
+    "@type": "Organization",
+    "name": "Pinpoint AI"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pinpoint AI",
+    "url": "https://pinpointagents.com/"
+  },
+  "inLanguage": "en",
+  "url": "https://pinpointagents.com/case-studies/logistics-document-automation/",
+  "about": {
+    "@type": "Service",
+    "name": "AI document automation",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Pinpoint AI",
+      "url": "https://pinpointagents.com/"
+    }
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Pinpoint AI",
+      "item": "https://pinpointagents.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case studies",
+      "item": "https://pinpointagents.com/case-studies/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Document automation in logistics"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/lv/" class="nav-logo" aria-label="Pinpoint AI">
+        <svg class="logoMark" viewBox="0 0 720 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pinpoint AI">
+          <text x="0" y="130" fill="currentColor" style="font-family:'Inter',sans-serif;font-weight:800;font-size:120px;letter-spacing:-4px;"><tspan>P</tspan><tspan>ı</tspan><tspan>npoint</tspan></text>
+          <circle cx="97" cy="38" r="15" fill="#C9A84C"/>
+          <rect x="500" y="50" width="3" height="80" rx="1.5" fill="#C8C9CC"/>
+          <text x="520" y="130" fill="#C9A84C" style="font-family:'Inter',sans-serif;font-weight:800;font-size:120px;letter-spacing:-4px;">AI</text>
+        </svg>
+      </a>
+      <div class="nav-actions">
+        <a href="/case-studies/" class="nav-link">Case studies</a>
+        <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Free Automation Audit</a>
+        <div class="lang-toggle">
+          <a href="/" class="active">EN</a>
+          <span class="sep">|</span>
+          <a href="/lv/pieredzes-stasti/dokumentu-automatizacija-logistika/">LV</a>
+          <span class="sep">|</span>
+          <a href="/ru/">RU</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Pinpoint AI</a>
+      <span>›</span>
+      <a href="/case-studies/">Case studies</a>
+      <span>›</span>
+      Document automation in logistics
+    </div>
+
+    <article class="article">
+      <h1>Document automation in logistics: from 4 hours to 30 minutes per shipment</h1>
+
+      <div class="summary">
+        <p><strong>Client:</strong> an international logistics company preparing shipment document sets every day, including weekends.</p>
+        <p><strong>Result:</strong> manual document preparation cut from around 4 hours to 30 minutes per shipment, freeing around 66 hours a month.</p>
+      </div>
+
+      <h2>The problem</h2>
+      <p>For every shipment, an operator had to prepare a standardised set of documents, including the CMR and a packing list with attachments. Incoming files arrived as an unsorted collection in several languages and writing systems. The operator sorted them by hand, extracted the data (manually, or with a general chat tool that often got it wrong), found the matching codes, and filled in several document sets per shipment. That took around 4 hours per shipment, every day, with no days off. Misreadings in addresses or easily confused characters forced re-checks, and one person physically could not keep up with the load.</p>
+
+      <h2>The solution</h2>
+      <p>Pinpoint AI built the automation in its simplest effective shape: a set of workflows, skills, and agents inside Claude Cowork rather than a heavy system engineered from scratch. That made it faster to put in place and cheaper for the client. The deterministic system does all the document preparation, but final approval before anything is sent stays with the operator.</p>
+
+      <h2>How it works</h2>
+      <ol>
+        <li>The operator uploads every incoming file to a designated Google Drive folder.</li>
+        <li>The system classifies each file by its content rather than its filename, and groups documents by what they belong to.</li>
+        <li>Using computer vision, the AI extracts data from documents in different languages and writing systems. Every field gets a confidence level. Where confidence is low, the field is flagged for checking rather than filled in on a guess.</li>
+        <li>Cross-checks between documents surface inconsistencies, such as easily confused characters or identifiers that do not match, and report them to the operator.</li>
+        <li>The AI fills the document templates and prepares the finished sets.</li>
+        <li>The system writes a summary row into a shared tracking sheet and keeps an audit record linking every field back to its source.</li>
+      </ol>
+
+      <h2>Results</h2>
+      <ul>
+        <li><strong>Around 8 times faster:</strong> manual preparation per shipment fell from 4 hours to roughly 30 minutes.</li>
+        <li><strong>Around 66 hours freed a month,</strong> which the team can spend on other work.</li>
+        <li><strong>Fewer errors than manual work:</strong> automated extraction and cross-checks catch inconsistencies a tired person can miss, which cuts the number of re-checks.</li>
+        <li><strong>Under 1 euro per shipment in API usage:</strong> predictable, low running costs.</li>
+        <li><strong>The operator keeps full control:</strong> every field stays editable, and a low confidence level is clearly highlighted.</li>
+      </ul>
+
+      <div class="related">
+        <h2>Related</h2>
+        <ul>
+          <li><a href="/case-studies/import-compliance-checks/">Import checks in seconds: giving declarants their time back</a></li>
+          <li><a href="/case-studies/finance-reconciliation/">Finance reconciliation: from dozens of Excel files to 1 auditable report</a></li>
+          <li><a href="/#results">More automation results</a></li>
+          <li><a href="/lv/pieredzes-stasti/dokumentu-automatizacija-logistika/" hreflang="lv">Read this case study in Latvian</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <h3>Which process in your business would pay back fastest?</h3>
+        <p>Bring us one repetitive process. We map how it works today, identify where automation could remove manual work, and tell you whether it looks worth pursuing. Sometimes the answer is no.</p>
+        <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Book a Free Automation Audit →</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="container" style="max-width:1200px;">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="/" aria-label="Pinpoint AI">
+            <svg viewBox="0 0 720 170" xmlns="http://www.w3.org/2000/svg" style="height:24px;width:auto;" role="img" aria-label="Pinpoint AI">
+              <text x="0" y="130" fill="white" style="font-family:'Inter',sans-serif;font-weight:800;font-size:120px;letter-spacing:-4px;">Pınpoint</text>
+              <circle cx="97" cy="38" r="15" fill="#C9A84C"/>
+              <rect x="500" y="50" width="3" height="80" rx="1.5" fill="#C8C9CC"/>
+              <text x="520" y="130" fill="#C9A84C" style="font-family:'Inter',sans-serif;font-weight:800;font-size:120px;letter-spacing:-4px;">AI</text>
+            </svg>
+          </a>
+          <p class="footer-tagline">Strategy before implementation. Results that last.</p>
+        </div>
+        <span class="footer-copy">© 2026 Pinpoint AI. All rights reserved.</span>
+        <div class="footer-legal">SIA "Pinpoint AI" · Reg. No. 40203752802 · PVN LV40203752802 · Riga, Latvia · info@pinpointagents.com</div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)closeContactModal()">
+    <div style="background:#fff;border-radius:12px;max-width:480px;width:100%;padding:40px;position:relative;font-family:'Plus Jakarta Sans',sans-serif;color:#1a1a1a;">
+      <button onclick="closeContactModal()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;line-height:1;" aria-label="Close">&times;</button>
+      <div id="contact-form-wrap">
+        <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Free Automation Audit</p>
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-0.01em;">Free Automation Audit</h2>
+        <p style="font-size:14px;color:#6B7280;margin-bottom:28px;line-height:1.6;">Tell us about one repetitive process. We will come back within 1 business day.</p>
+        <form id="contact-form" onsubmit="submitContactForm(event)" novalidate>
+          <div style="margin-bottom:16px;">
+            <label for="cf-email" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Email address *</label>
+            <input id="cf-email" type="email" required placeholder="you@company.com" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;transition:border-color 0.15s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'">
+          </div>
+          <div style="margin-bottom:16px;">
+            <label for="cf-phone" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Phone number *</label>
+            <input id="cf-phone" type="tel" required placeholder="+371 2X XXX XXX" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;transition:border-color 0.15s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'">
+          </div>
+          <div style="margin-bottom:24px;">
+            <label for="cf-message" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Message *</label>
+            <textarea id="cf-message" required rows="4" placeholder="Which process eats the most time? Roughly how often does it run, and who does it today?" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;resize:vertical;transition:border-color 0.15s;line-height:1.5;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'"></textarea>
+          </div>
+          <div id="contact-error" style="font-size:13px;color:#dc2626;margin-bottom:12px;min-height:18px;"></div>
+          <button id="contact-submit" type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:13px 20px;font-size:15px;">Send message</button>
+        </form>
+      </div>
+      <div id="contact-success" style="display:none;text-align:center;padding:16px 0;">
+        <div style="font-size:40px;margin-bottom:16px;">✓</div>
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:10px;">Message sent</h2>
+        <p style="font-size:14px;color:#6B7280;line-height:1.6;margin-bottom:28px;">Thanks, we will be in touch within 1 business day.</p>
+        <button onclick="closeContactModal()" class="btn btn-gold" style="padding:11px 32px;font-size:14px;">Close</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openContactModal() {
+      var m = document.getElementById('contact-modal');
+      m.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      document.getElementById('contact-form-wrap').style.display = '';
+      document.getElementById('contact-success').style.display = 'none';
+      document.getElementById('contact-form').reset();
+      document.getElementById('contact-error').textContent = '';
+    }
+    function closeContactModal() {
+      document.getElementById('contact-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    async function submitContactForm(e) {
+      e.preventDefault();
+      var btn = document.getElementById('contact-submit');
+      var errEl = document.getElementById('contact-error');
+      errEl.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      var email   = document.getElementById('cf-email').value.trim();
+      var phone   = document.getElementById('cf-phone').value.trim();
+      var message = document.getElementById('cf-message').value.trim();
+      try {
+        var res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, phone: phone, message: message, source: 'LV' }),
+        });
+        var data = await res.json();
+        if (data.ok) {
+          document.getElementById('contact-form-wrap').style.display = 'none';
+          document.getElementById('contact-success').style.display = '';
+        } else {
+          errEl.textContent = data.error || 'Something went wrong. Please try again.';
+          btn.disabled = false;
+          btn.textContent = 'Send message';
+        }
+      } catch (err) {
+        errEl.textContent = 'Network error. Please check your connection and try again.';
+        btn.disabled = false;
+        btn.textContent = 'Send message';
+      }
+    }
+  </script>
+</body>
+</html>

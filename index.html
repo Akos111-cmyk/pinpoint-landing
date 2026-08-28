@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pinpoint AI — AI Process Automation for Business That Delivers</title>
-  <meta name="description" content="From AI strategy to working automation. We identify and deploy the one process with the highest return. The investment pays back within a quarter." />
+  <title>Pinpoint AI: automate the process costing your team the most</title>
+  <meta name="description" content="Find the process costing your team the most time, then automate it. Pinpoint quantifies the manual work and builds automation into the tools you already use." />
   <link rel="canonical" href="https://pinpointagents.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Pinpoint AI" />
-  <meta property="og:title" content="Pinpoint AI — AI Transformation That Delivers" />
-  <meta property="og:description" content="Pinpoint AI audits your business processes and deploys high-ROI AI agents. The investment pays back within a quarter. Book your free AI audit." />
+  <meta property="og:title" content="Find the process costing your team the most time. Then automate it." />
+  <meta property="og:description" content="We find the manual work that costs the most, put a number on it, and build the automation into the tools you already use. Start with a free Automation Audit." />
   <meta property="og:url" content="https://pinpointagents.com/" />
   <meta property="og:locale" content="en" />
   <meta property="og:locale:alternate" content="lv" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Pinpoint AI — AI Transformation That Delivers" />
-  <meta name="twitter:description" content="Pinpoint AI audits your business processes and deploys high-ROI AI agents. The investment pays back within a quarter. Book your free AI audit." />
+  <meta name="twitter:title" content="Find the process costing your team the most time. Then automate it." />
+  <meta name="twitter:description" content="We find the manual work that costs the most, put a number on it, and build the automation into the tools you already use. Start with a free Automation Audit." />
   <link rel="alternate" hreflang="en" href="https://pinpointagents.com/" />
   <link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/" />
   <link rel="alternate" hreflang="ru" href="https://pinpointagents.com/ru/" />
@@ -68,6 +68,59 @@
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
       max-width: 100vw;
+    }
+
+
+    /* ── Results: quantified proof, numbers dominant ── */
+    .results { background: var(--white); }
+    .results-header { text-align: center; max-width: 640px; margin: 0 auto 36px; }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .result-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .result-tag {
+      font-size: 12px; font-weight: 700; letter-spacing: .04em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+    }
+    .result-figure {
+      font-family: var(--mono);
+      display: flex; flex-direction: column; align-items: center;
+      gap: 2px; margin-bottom: 10px;
+    }
+    .result-figure .from {
+      font-size: 17px; font-weight: 400; color: var(--text-2);
+      text-decoration: line-through; text-decoration-color: var(--border-hover);
+    }
+    .result-figure .arrow { font-size: 15px; color: var(--gold); line-height: 1; }
+    .result-figure .to {
+      font-size: 30px; font-weight: 700; line-height: 1.1;
+      color: var(--text); letter-spacing: -0.02em;
+    }
+    .result-unit { font-size: 13px; color: var(--text-2); margin-bottom: 14px; }
+    .result-what { font-size: 15px; font-weight: 600; color: var(--text); }
+    a.result-card { text-decoration: none; color: inherit; display: block;
+      transition: border-color .2s, transform .2s; }
+    a.result-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .result-more { font-size: 13px; font-weight: 600; color: var(--gold); margin-top: 12px; }
+    .results-note {
+      text-align: center; font-size: 13px; color: var(--text-2);
+      max-width: 640px; margin: 28px auto 0;
+    }
+    @media (max-width: 720px) {
+      .results-grid { grid-template-columns: 1fr; max-width: 420px; }
+      .result-figure .to { font-size: 27px; }
     }
 
     /* ── Shared ── */
@@ -1210,7 +1263,7 @@
       .db-row-track { display: none; }
       .db-row-name { font-size: 11px; }
       .db-row-desc { font-size: 9px; }
-      /* Report/table panels inside dashboard — scroll internally */
+      /* Report/table panels inside dashboard: scroll internally */
       .rp-table { min-width: 480px; }
 
       /* Comparison columns */
@@ -1259,14 +1312,14 @@
       .btn-lg { padding: 13px 24px; font-size: 14px; }
       .hero-badge { display: none; }
 
-      /* Dashboard — scale down to fit */
+      /* Dashboard: scale down to fit */
       .hero-dashboard { transform: scale(0.72); transform-origin: top center; margin-bottom: -22%; }
 
-      /* Testimonials + Steps — single column */
+      /* Testimonials + Steps: single column */
       .testi-grid { grid-template-columns: 1fr; }
       .how-steps { grid-template-columns: 1fr; }
 
-      /* Problem diagram — scale to fit mobile */
+      /* Problem diagram: scale to fit mobile */
       .mock-problem { overflow: hidden; }
       .pf-scatter { flex-shrink: 1; min-width: 0; overflow: hidden; }
 
@@ -1277,7 +1330,7 @@
       .mock-matrix { min-height: 260px; }
       .mock-dot-label { font-size: 6px; }
 
-      /* Who — single column */
+      /* Who: single column */
       .who-grid { grid-template-columns: 1fr; }
       .who-card { padding: 16px 14px 20px; }
 
@@ -1301,7 +1354,7 @@
     }
 
     /* ══════════════════════════════
-       SURGICAL ADDITIONS — May 2026
+       SURGICAL ADDITIONS, May 2026
     ══════════════════════════════ */
 
     /* Inside-the-audit de-emphasis */
@@ -1366,7 +1419,7 @@
         "name": "How much time does this take, and will it disrupt my team?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At the start, a short intro call and a few short conversations with the people who actually do the work. After that, the work happens on our side, with minimal further involvement from your team. The first automation is typically live within 2–4 weeks. A project manager handles all coordination, so your team is involved only when it's truly needed."
+          "text": "At the start, a short intro call and a few short conversations with the people who actually do the work. After that, the work happens on our side, with minimal further involvement from your team. The first automation is typically live within 2 to 4 weeks. A project manager handles all coordination, so your team is involved only when it's truly needed."
         }
       },
       {
@@ -1425,7 +1478,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "AI agent development and implementation",
-            "description": "Custom AI agents built, tested, and integrated into your tools — delivered ready to work."
+            "description": "Custom AI agents built, tested, and integrated into your tools, delivered ready to work."
           }
         }
       ]
@@ -1449,13 +1502,14 @@
           </svg>
         </a>
         <ul class="nav-menu">
+          <li><a href="#results">Results</a></li>
           <li><a href="#pain">Solutions</a></li>
           <li><a href="#who">Who It's For</a></li>
           <li><a href="#process">The Process</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
         <div class="nav-actions">
-          <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Book an Intro</a>
+          <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Free Automation Audit</a>
           <div class="lang-toggle" aria-label="Language">
             <a href="/" class="active" onclick="setLang('en')">EN</a>
             <span class="sep">|</span>
@@ -1482,7 +1536,7 @@
       <span class="sep">|</span>
       <a href="/ru/" onclick="setLang('ru');closeDrawer()">RU</a>
     </div>
-    <a href="javascript:void(0)" onclick="openContactModal();closeDrawer();return false;" style="color:var(--gold);font-weight:700;">Book an Intro →</a>
+    <a href="javascript:void(0)" onclick="openContactModal();closeDrawer();return false;" style="color:var(--gold);font-weight:700;">Free Automation Audit →</a>
   </div>
 
   <!-- ══════════ HERO ══════════ -->
@@ -1495,16 +1549,16 @@
         </div>
 
         <h1 class="hero-h1 reveal d1">
-          From AI strategy<br>
-          to <span class="highlight">working automation.</span>
+          Find the process costing your team the most time.
+          <span class="highlight">Then automate it.</span>
         </h1>
 
         <p class="hero-p reveal d2">
-          First we quantify where AI delivers the highest return. Then we start with one automation that pays back the fastest.
+          Pinpoint identifies high-volume manual work, calculates what it is costing, and builds the automation into the tools your team already uses.
         </p>
 
         <div class="hero-actions reveal d3" style="justify-content:center;">
-          <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Book an Intro →</a>
+          <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Book a Free Automation Audit →</a>
         </div>
 
         <div class="hero-stats reveal d4">
@@ -1626,6 +1680,56 @@
   </div>
 
   <!-- ══════════ COMPARISON (OLD WAY vs NEW WAY) ══════════ -->
+  <!-- ══════════ RESULTS ══════════ -->
+  <section class="results" id="results">
+    <div class="container">
+      <div class="results-header reveal">
+        <h2 class="section-title">What this looks like in practice</h2>
+        <p class="section-sub">Three document-heavy processes, rebuilt so the manual work stops being the bottleneck.</p>
+      </div>
+
+      <div class="results-grid">
+        <a class="result-card reveal d1" href="/case-studies/logistics-document-automation/">
+          <div class="result-tag">Logistics</div>
+          <div class="result-figure">
+            <span class="from">4 hours</span>
+            <span class="arrow">↓</span>
+            <span class="to">30 minutes</span>
+          </div>
+          <div class="result-unit">per shipment, around 66 hours freed a month</div>
+          <div class="result-what">Shipment document processing</div>
+          <div class="result-more">Read the case study →</div>
+        </a>
+
+        <a class="result-card reveal d2" href="/case-studies/import-compliance-checks/">
+          <div class="result-tag">Customs &amp; import</div>
+          <div class="result-figure">
+            <span class="from">1 to 2 hours</span>
+            <span class="arrow">↓</span>
+            <span class="to">seconds</span>
+          </div>
+          <div class="result-unit">per declarant per shift, around 25 to 50 hours a month across the team</div>
+          <div class="result-what">Automated import checking</div>
+          <div class="result-more">Read the case study →</div>
+        </a>
+
+        <a class="result-card reveal d3" href="/case-studies/finance-reconciliation/">
+          <div class="result-tag">Finance</div>
+          <div class="result-figure">
+            <span class="from">60 files</span>
+            <span class="arrow">↓</span>
+            <span class="to">1 report</span>
+          </div>
+          <div class="result-unit">around 8 working days of manual work removed each cycle</div>
+          <div class="result-what">Reconciliation and reporting</div>
+          <div class="result-more">Read the case study →</div>
+        </a>
+      </div>
+
+      <p class="results-note reveal d4">Each of these was built and measured. Automation only makes sense where the volume justifies it, so the first question is always whether the numbers are there.</p>
+    </div>
+  </section>
+
   <section class="pain" id="pain">
     <div class="container">
       <div class="pain-header reveal">
@@ -1641,7 +1745,7 @@
             <div class="comp-pill problem">⊗ Problem</div>
           </div>
           <div class="mock-problem" style="height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;">
-            <img src="problem-workflow.png" alt="Problem — AI without a system" style="max-width:75%;max-height:210px;object-fit:contain;display:block;">
+            <img src="problem-workflow.png" alt="Problem: AI without a system" style="max-width:75%;max-height:210px;object-fit:contain;display:block;">
             <div class="pf-caption">You ask → AI answers → You still do everything yourself</div>
           </div>
           <div class="comp-col-bullets">
@@ -1661,7 +1765,7 @@
             <div class="comp-pill solution">◆ Solution</div>
           </div>
           <div class="mock-solution" style="height:270px;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;">
-            <img src="solution-workflow-v1.png" alt="Solution — AI agents at work" style="max-width:75%;max-height:210px;object-fit:contain;display:block;">
+            <img src="solution-workflow-v1.png" alt="Solution: AI agents at work" style="max-width:75%;max-height:210px;object-fit:contain;display:block;">
             <div class="pf-caption">Pick one process → quantify the return → build and deploy</div>
           </div>
           <div class="comp-col-bullets">
@@ -1832,7 +1936,7 @@
             <span class="faq-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="faq-panel" id="fq4" role="region" aria-labelledby="fqb4">
-            <div class="faq-panel-inner">At the start, a short intro call and a few short conversations with the people who actually do the work. After that, the work happens on our side, with minimal further involvement from your team. The first automation is typically live within 2–4 weeks. A project manager handles all coordination, so your team is involved only when it's truly needed.</div>
+            <div class="faq-panel-inner">At the start, a short intro call and a few short conversations with the people who actually do the work. After that, the work happens on our side, with minimal further involvement from your team. The first automation is typically live within 2 to 4 weeks. A project manager handles all coordination, so your team is involved only when it's truly needed.</div>
           </div>
         </div>
 
@@ -1864,9 +1968,9 @@
   <section class="cta-section" id="cta">
     <div class="container">
       <div class="cta-box reveal">
-        <h2 class="section-title">Ready for your first automation<br>that pays for itself?</h2>
-        <p class="section-sub">Start with a free 30-minute intro call. Together we'll identify the one process with the highest return and how fast it pays back.</p>
-        <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Book an Intro →</a>
+        <h2 class="section-title">Bring us one repetitive process.<br>We'll tell you if it's worth automating.</h2>
+        <p class="section-sub">A free 30-minute Automation Audit. We map how the process works today, identify where automation could remove manual work, and tell you whether it looks worth pursuing. Sometimes the answer is no, and that is a useful answer too.</p>
+        <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Book a Free Automation Audit →</a>
         <p class="cta-trust">For business leaders focused on sustainable AI investments.</p>
       </div>
     </div>
@@ -1894,7 +1998,7 @@
   </footer>
 
   <script>
-    // Language toggle — sets cookie read by Cloudflare Pages Function
+    // Language toggle: sets cookie read by Cloudflare Pages Function
     function setLang(lang) {
       document.cookie = `lang=${lang};path=/;max-age=31536000;SameSite=Lax`;
     }
@@ -2127,13 +2231,13 @@
       <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">When you submit the contact form, we collect your email address, phone number, and message. This data is stored in Google Sheets and used solely to respond to your inquiry. If you accept analytics cookies, <strong>Google Analytics</strong> collects anonymised usage data (pages visited, session duration, approximate location). IP addresses are anonymised.</p>
 
       <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Cookies</h3>
-      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;"><strong>Analytics cookies</strong> (Google Analytics) — set only after you accept. Used to understand how visitors use the site. No other cookies are set by this website.</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;"><strong>Analytics cookies</strong> (Google Analytics), set only after you accept. Used to understand how visitors use the site. No other cookies are set by this website.</p>
 
       <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Third-Party Processors</h3>
       <ul style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;padding-left:20px;">
-        <li><a href="https://policies.google.com/privacy" target="_blank" style="color:#C9A84C;">Google Sheets &amp; Gmail</a> — contact form storage and notification</li>
-        <li><a href="https://policies.google.com/privacy" target="_blank" style="color:#C9A84C;">Google Analytics</a> — site analytics (with consent)</li>
-        <li>Google Fonts — typography (CSS only, no cookies)</li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" style="color:#C9A84C;">Google Sheets &amp; Gmail</a>: contact form storage and notification</li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" style="color:#C9A84C;">Google Analytics</a>: site analytics (with consent)</li>
+        <li>Google Fonts: typography (CSS only, no cookies)</li>
       </ul>
 
       <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;">Legal Basis</h3>
@@ -2154,8 +2258,8 @@
       <!-- Form state -->
       <div id="contact-form-wrap">
         <p style="font-size:11px;font-family:'DM Mono',monospace;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Free Intro</p>
-        <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-0.01em;">Book an Intro</h2>
-        <p style="font-size:14px;color:#6B7280;margin-bottom:28px;line-height:1.6;">Leave your details and we'll be in touch within 1 business day.</p>
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-0.01em;">Free Automation Audit</h2>
+        <p style="font-size:14px;color:#6B7280;margin-bottom:28px;line-height:1.6;">Tell us about one repetitive process. We'll come back within 1 business day.</p>
         <form id="contact-form" onsubmit="submitContactForm(event)" novalidate>
           <div style="margin-bottom:16px;">
             <label for="cf-email" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Email address *</label>
@@ -2171,7 +2275,7 @@
           </div>
           <div style="margin-bottom:24px;">
             <label for="cf-message" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Message *</label>
-            <textarea id="cf-message" required rows="4" placeholder="Tell us briefly about your business and where you feel AI could help…"
+            <textarea id="cf-message" required rows="4" placeholder="Which process eats the most time? Roughly how often does it run, and who does it today?"
               style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;resize:vertical;transition:border-color 0.15s;line-height:1.5;"
               onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'"></textarea>
           </div>
@@ -2184,7 +2288,7 @@
       <div id="contact-success" style="display:none;text-align:center;padding:16px 0;">
         <div style="font-size:40px;margin-bottom:16px;">✓</div>
         <h2 style="font-size:22px;font-weight:800;margin-bottom:10px;">Message sent</h2>
-        <p style="font-size:14px;color:#6B7280;line-height:1.6;margin-bottom:28px;">Thanks — we'll be in touch within 1 business day.</p>
+        <p style="font-size:14px;color:#6B7280;line-height:1.6;margin-bottom:28px;">Thanks, we'll be in touch within 1 business day.</p>
         <button onclick="closeContactModal()" class="btn btn-gold" style="padding:11px 32px;font-size:14px;">Close</button>
       </div>
     </div>

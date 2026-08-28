@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance reconciliation automation: a case study | Pinpoint AI</title>
+  <meta name="description" content="Case study: AI finance reconciliation. Around 60 separate Excel files replaced by 1 auditable report with built-in checks." />
+  <link rel="canonical" href="https://pinpointagents.com/case-studies/finance-reconciliation/" />
+  <link rel="alternate" hreflang="en" href="https://pinpointagents.com/case-studies/finance-reconciliation/" />
+  <link rel="alternate" hreflang="lv" href="https://pinpointagents.com/lv/pieredzes-stasti/finansu-saskanosanas-automatizacija/" />
+  <link rel="alternate" hreflang="x-default" href="https://pinpointagents.com/case-studies/finance-reconciliation/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Finance reconciliation: from dozens of Excel files to 1 auditable report" />
+  <meta property="og:description" content="Case study: AI finance reconciliation. Around 60 separate Excel files replaced by 1 auditable report with built-in checks." />
+  <meta property="og:url" content="https://pinpointagents.com/case-studies/finance-reconciliation/" />
+  <meta property="og:locale" content="en" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Finance reconciliation: from dozens of Excel files to 1 auditable report" />
+  <meta name="twitter:description" content="Around 60 separate Excel files replaced by 1 auditable report with built-in checks." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F1117'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23C9A84C'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #FFFFFF;
+      --bg: #F7F8FA;
+      --border: #E8EAED;
+      --text: #0F1117;
+      --text-2: #3D4148;
+      --text-3: #6B7280;
+      --gold: #C9A84C;
+      --gold-light: #F5EDD4;
+      --nav-h: 64px;
+    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); height: var(--nav-h); display: flex; align-items: center; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; color: var(--text); }
+    .logoMark { height: 28px; width: auto; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; border: none; transition: all .2s; }
+    .btn-gold { background: var(--gold); color: #fff; }
+    .btn-gold:hover { background: #b8923d; }
+    .nav-link { font-size: 14px; font-weight: 600; color: var(--text-2); text-decoration: none; margin-right: 18px; }
+    .nav-link:hover { color: var(--gold); }
+    .lang-toggle { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; margin-left: 16px; }
+    .lang-toggle a { color: var(--text-3); text-decoration: none; }
+    .lang-toggle a.active { color: var(--gold); }
+    .lang-toggle .sep { color: var(--border); }
+    .nav-actions { display: flex; align-items: center; }
+
+    /* BREADCRUMB */
+    .breadcrumb { padding: 20px 0 0; font-size: 13px; color: var(--text-3); }
+    .breadcrumb a { color: var(--text-3); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* ARTICLE */
+    .article { background: var(--white); border-radius: 16px; padding: 48px; margin: 24px 0 48px; border: 1px solid var(--border); }
+    .article h1 { font-size: 32px; font-weight: 800; line-height: 1.25; margin-bottom: 20px; color: var(--text); }
+    .article h2 { font-size: 20px; font-weight: 700; margin: 36px 0 12px; color: var(--text); }
+    .article p { font-size: 16px; color: var(--text-2); margin-bottom: 16px; }
+    .article ul, .article ol { padding-left: 24px; margin-bottom: 16px; }
+    .article li { font-size: 16px; color: var(--text-2); margin-bottom: 8px; }
+    .article a { color: var(--gold); text-decoration: none; font-weight: 600; }
+    .article a:hover { text-decoration: underline; }
+    .article strong, .article b { color: var(--text); }
+
+    /* SUMMARY CARD */
+    .summary { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 12px; padding: 20px 24px; margin-bottom: 8px; }
+    .summary p { font-size: 15px; margin-bottom: 8px; }
+    .summary p:last-child { margin-bottom: 0; }
+
+    /* RELATED */
+    .related { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--border); }
+    .related h2 { font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .related ul { list-style: none; padding: 0; margin: 0; }
+    .related li { margin-bottom: 8px; }
+
+    /* CTA BOX */
+    .cta-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: 12px; padding: 32px; text-align: center; margin-top: 48px; }
+    .cta-box h3 { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
+    .cta-box p { color: var(--text-2); margin-bottom: 20px; font-size: 15px; }
+    .cta-box .btn-gold { color: #fff; }
+
+    /* FOOTER */
+    .footer { background: var(--text); color: #fff; padding: 32px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-tagline { font-size: 12px; color: #9CA3AF; margin-top: 4px; }
+    .footer-copy { font-size: 12px; color: #9CA3AF; }
+    .footer-legal { font-size: 11px; color: #6B7280; margin-top: 16px; width: 100%; }
+
+    @media (max-width: 640px) {
+      .article { padding: 24px 20px; }
+      .article h1 { font-size: 24px; }
+      .nav-link { display: none; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Finance reconciliation: from dozens of Excel files to 1 auditable report",
+  "description": "Case study: AI finance reconciliation. Around 60 separate Excel files replaced by 1 auditable report with built-in checks.",
+  "author": {
+    "@type": "Organization",
+    "name": "Pinpoint AI"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pinpoint AI",
+    "url": "https://pinpointagents.com/"
+  },
+  "inLanguage": "en",
+  "url": "https://pinpointagents.com/case-studies/finance-reconciliation/",
+  "about": {
+    "@type": "Service",
+    "name": "AI finance reconciliation",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Pinpoint AI",
+      "url": "https://pinpointagents.com/"
+    }
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Pinpoint AI",
+      "item": "https://pinpointagents.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case studies",
+      "item": "https://pinpointagents.com/case-studies/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Finance reconciliation"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/lv/" class="nav-logo" aria-label="Pinpoint AI">
+        <svg class="logoMark" viewBox="0 0 720 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pinpoint AI">
+          <text x="0" y="130" fill="currentColor" style="font-family:'Inter',sans-serif;font-weight:800;font-size:120px;letter-spacing:-4px;"><tspan>P</tspan><tspan>ı</tspan><tspan>npoint</tspan></text>
+          <circle cx="97" cy="38" r="15" fill="#C9A84C"/>
+          <rect x="500" y="50" width="3" height="80" rx="1.5" fill="#C8C9CC"/>
+          <text x="520" y="130" fill="#C9A84C" style="font-family:'Inter',sans-serif;font-weight:800;font-size:120px;letter-spacing:-4px;">AI</text>
+        </svg>
+      </a>
+      <div class="nav-actions">
+        <a href="/case-studies/" class="nav-link">Case studies</a>
+        <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Free Automation Audit</a>
+        <div class="lang-toggle">
+          <a href="/" class="active">EN</a>
+          <span class="sep">|</span>
+          <a href="/lv/pieredzes-stasti/finansu-saskanosanas-automatizacija/">LV</a>
+          <span class="sep">|</span>
+          <a href="/ru/">RU</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Pinpoint AI</a>
+      <span>›</span>
+      <a href="/case-studies/">Case studies</a>
+      <span>›</span>
+      Finance reconciliation
+    </div>
+
+    <article class="article">
+      <h1>Finance reconciliation: from dozens of Excel files to 1 auditable report</h1>
+
+      <div class="summary">
+        <p><strong>Client:</strong> an international digital services company; a finance team reconciling supplier commission fees every month.</p>
+        <p><strong>Result:</strong> manual reconciliation across around 60 separate Excel files replaced by 1 consolidated report with automatic checks built in and a comparison against a reference month.</p>
+      </div>
+
+      <h2>The problem</h2>
+      <p>Every month, before supplier invoices are paid, the finance team compares them against the company's internal data. Until now, 2 specialists built a register by hand across around 60 separate files, 1 per supplier, mostly by copying data out of the billing system. That took around 8 working days per cycle. The process was slow, manual copying carried a high risk of error, and reconciling the data made auditing difficult.</p>
+
+      <h2>The solution</h2>
+      <p>Pinpoint AI replaced around 60 separate files with 1 consolidated report. 1 billing data extract is processed by a deterministic system, which calculates each supplier's commission fee according to the contract terms, runs built-in checks, and records anomalies on a separate sheet. The solution also checks itself by comparing the result against a reference month. Only if those checks pass does the process continue. A specialist gives the final approval.</p>
+
+      <h2>How it works</h2>
+      <ol>
+        <li>Instead of around 60 separate files, the system processes 1 consolidated billing extract.</li>
+        <li>The AI calculates each supplier's commission fee according to the contract terms, whether that is a percentage or tiered.</li>
+        <li>Built-in checks and control totals confirm the sums agree. The system checks itself each period and continues only if those checks pass.</li>
+        <li>Anomalies are recorded on a separate sheet: for example, an invoice from a supplier the company no longer works with, or a new client not yet in the register. The anomaly list grows with each cycle, so the next check is more accurate.</li>
+        <li>The system compares the result against the previous reference month and reports only the differences rather than correcting them itself.</li>
+        <li>The process logic and documentation live in a single knowledge base, so changes to the business logic take effect automatically.</li>
+      </ol>
+
+      <h2>Results</h2>
+      <ul>
+        <li><strong>1 report instead of dozens of files:</strong> 1 consolidated report replaces around 60 separate Excel files.</li>
+        <li><strong>Around 8 working days of manual work removed each cycle:</strong> the register building that previously ran across dozens of files is eliminated.</li>
+        <li><strong>Built-in checks and self-verification:</strong> the AI compares the result against a reference month and continues only when the totals agree, preventing the errors that come from copying data by hand.</li>
+        <li><strong>Anomaly detection that compounds:</strong> the anomaly list grows with every cycle, making the next check more accurate.</li>
+        <li><strong>The finance team keeps control:</strong> the AI reports differences against the reference report rather than correcting them itself.</li>
+      </ul>
+
+      <div class="related">
+        <h2>Related</h2>
+        <ul>
+          <li><a href="/case-studies/logistics-document-automation/">Document automation in logistics: from 4 hours to 30 minutes per shipment</a></li>
+          <li><a href="/case-studies/import-compliance-checks/">Import checks in seconds: giving declarants their time back</a></li>
+          <li><a href="/#results">More automation results</a></li>
+          <li><a href="/lv/pieredzes-stasti/finansu-saskanosanas-automatizacija/" hreflang="lv">Read this case study in Latvian</a></li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <h3>Which process in your business would pay back fastest?</h3>
+        <p>Bring us one repetitive process. We map how it works today, identify where automation could remove manual work, and tell you whether it looks worth pursuing. Sometimes the answer is no.</p>
+        <a href="javascript:void(0)" onclick="openContactModal();return false;" class="btn btn-gold">Book a Free Automation Audit →</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="container" style="max-width:1200px;">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="/" aria-label="Pinpoint AI">
+            <svg viewBox="0 0 720 170" xmlns="http://www.w3.org/2000/svg" style="height:24px;width:auto;" role="img" aria-label="Pinpoint AI">
+              <text x="0" y="130" fill="white" style="font-family:'Inter',sans-serif;font-weight:800;font-size:120px;letter-spacing:-4px;">Pınpoint</text>
+              <circle cx="97" cy="38" r="15" fill="#C9A84C"/>
+              <rect x="500" y="50" width="3" height="80" rx="1.5" fill="#C8C9CC"/>
+              <text x="520" y="130" fill="#C9A84C" style="font-family:'Inter',sans-serif;font-weight:800;font-size:120px;letter-spacing:-4px;">AI</text>
+            </svg>
+          </a>
+          <p class="footer-tagline">Strategy before implementation. Results that last.</p>
+        </div>
+        <span class="footer-copy">© 2026 Pinpoint AI. All rights reserved.</span>
+        <div class="footer-legal">SIA "Pinpoint AI" · Reg. No. 40203752802 · PVN LV40203752802 · Riga, Latvia · info@pinpointagents.com</div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)closeContactModal()">
+    <div style="background:#fff;border-radius:12px;max-width:480px;width:100%;padding:40px;position:relative;font-family:'Plus Jakarta Sans',sans-serif;color:#1a1a1a;">
+      <button onclick="closeContactModal()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;line-height:1;" aria-label="Close">&times;</button>
+      <div id="contact-form-wrap">
+        <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Free Automation Audit</p>
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-0.01em;">Free Automation Audit</h2>
+        <p style="font-size:14px;color:#6B7280;margin-bottom:28px;line-height:1.6;">Tell us about one repetitive process. We will come back within 1 business day.</p>
+        <form id="contact-form" onsubmit="submitContactForm(event)" novalidate>
+          <div style="margin-bottom:16px;">
+            <label for="cf-email" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Email address *</label>
+            <input id="cf-email" type="email" required placeholder="you@company.com" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;transition:border-color 0.15s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'">
+          </div>
+          <div style="margin-bottom:16px;">
+            <label for="cf-phone" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Phone number *</label>
+            <input id="cf-phone" type="tel" required placeholder="+371 2X XXX XXX" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;transition:border-color 0.15s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'">
+          </div>
+          <div style="margin-bottom:24px;">
+            <label for="cf-message" style="display:block;font-size:12px;font-weight:600;color:#3D4148;margin-bottom:6px;">Message *</label>
+            <textarea id="cf-message" required rows="4" placeholder="Which process eats the most time? Roughly how often does it run, and who does it today?" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;font-family:inherit;color:#0F1117;outline:none;resize:vertical;transition:border-color 0.15s;line-height:1.5;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#E5E7EB'"></textarea>
+          </div>
+          <div id="contact-error" style="font-size:13px;color:#dc2626;margin-bottom:12px;min-height:18px;"></div>
+          <button id="contact-submit" type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:13px 20px;font-size:15px;">Send message</button>
+        </form>
+      </div>
+      <div id="contact-success" style="display:none;text-align:center;padding:16px 0;">
+        <div style="font-size:40px;margin-bottom:16px;">✓</div>
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:10px;">Message sent</h2>
+        <p style="font-size:14px;color:#6B7280;line-height:1.6;margin-bottom:28px;">Thanks, we will be in touch within 1 business day.</p>
+        <button onclick="closeContactModal()" class="btn btn-gold" style="padding:11px 32px;font-size:14px;">Close</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openContactModal() {
+      var m = document.getElementById('contact-modal');
+      m.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      document.getElementById('contact-form-wrap').style.display = '';
+      document.getElementById('contact-success').style.display = 'none';
+      document.getElementById('contact-form').reset();
+      document.getElementById('contact-error').textContent = '';
+    }
+    function closeContactModal() {
+      document.getElementById('contact-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    async function submitContactForm(e) {
+      e.preventDefault();
+      var btn = document.getElementById('contact-submit');
+      var errEl = document.getElementById('contact-error');
+      errEl.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      var email   = document.getElementById('cf-email').value.trim();
+      var phone   = document.getElementById('cf-phone').value.trim();
+      var message = document.getElementById('cf-message').value.trim();
+      try {
+        var res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, phone: phone, message: message, source: 'LV' }),
+        });
+        var data = await res.json();
+        if (data.ok) {
+          document.getElementById('contact-form-wrap').style.display = 'none';
+          document.getElementById('contact-success').style.display = '';
+        } else {
+          errEl.textContent = data.error || 'Something went wrong. Please try again.';
+          btn.disabled = false;
+          btn.textContent = 'Send message';
+        }
+      } catch (err) {
+        errEl.textContent = 'Network error. Please check your connection and try again.';
+        btn.disabled = false;
+        btn.textContent = 'Send message';
+      }
+    }
+  </script>
+</body>
+</html>
